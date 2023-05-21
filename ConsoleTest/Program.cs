@@ -11,7 +11,8 @@ namespace ConsoleTest
             Joueur joueur = new Joueur(1,"Bleu", "Alice");
             Console.WriteLine(joueur.GetCouleur());
             Partie p = new Partie(2,3,1);
-           p.GetTaillePlateau();
+            
+            p.GetTaillePlateau();
 
         }
     }

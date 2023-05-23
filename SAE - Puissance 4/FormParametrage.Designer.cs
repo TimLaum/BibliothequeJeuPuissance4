@@ -1,6 +1,6 @@
 ﻿namespace SAE___Puissance_4
 {
-    partial class Form1
+    partial class FormParametrage
     {
         /// <summary>
         ///  Required designer variable.

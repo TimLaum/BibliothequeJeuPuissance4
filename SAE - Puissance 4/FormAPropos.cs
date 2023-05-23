@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SAE___Puissance_4
 {
-    public partial class FormPartiePerso : Form
+    public partial class Form1 : Form
     {
-        public FormPartiePerso()
+        public Form1()
         {
             InitializeComponent();
         }

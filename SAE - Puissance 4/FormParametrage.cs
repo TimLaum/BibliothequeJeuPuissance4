@@ -1,8 +1,8 @@
 namespace SAE___Puissance_4
 {
-    public partial class Form1 : Form
+    public partial class FormParametrage : Form
     {
-        public Form1()
+        public FormParametrage()
         {
             InitializeComponent();
         }

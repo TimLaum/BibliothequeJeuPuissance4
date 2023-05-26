@@ -31,7 +31,7 @@
             panel1 = new Panel();
             btnQuitter = new Button();
             btnAPropos = new Button();
-            btPartPerso = new Button();
+            btnPartPerso = new Button();
             btn2J = new Button();
             btn1J = new Button();
             lblTitre = new Label();
@@ -43,7 +43,7 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(btnQuitter);
             panel1.Controls.Add(btnAPropos);
-            panel1.Controls.Add(btPartPerso);
+            panel1.Controls.Add(btnPartPerso);
             panel1.Controls.Add(btn2J);
             panel1.Controls.Add(btn1J);
             panel1.Location = new Point(298, 91);
@@ -76,16 +76,17 @@
             btnAPropos.UseVisualStyleBackColor = true;
             btnAPropos.Click += btnAPropos_Click;
             // 
-            // btPartPerso
+            // btnPartPerso
             // 
-            btPartPerso.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btPartPerso.Location = new Point(105, 195);
-            btPartPerso.Margin = new Padding(3, 2, 3, 2);
-            btPartPerso.Name = "btPartPerso";
-            btPartPerso.Size = new Size(338, 40);
-            btPartPerso.TabIndex = 2;
-            btPartPerso.Text = "Partie Personnalisée";
-            btPartPerso.UseVisualStyleBackColor = true;
+            btnPartPerso.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnPartPerso.Location = new Point(105, 195);
+            btnPartPerso.Margin = new Padding(3, 2, 3, 2);
+            btnPartPerso.Name = "btnPartPerso";
+            btnPartPerso.Size = new Size(338, 40);
+            btnPartPerso.TabIndex = 2;
+            btnPartPerso.Text = "Partie Personnalisée";
+            btnPartPerso.UseVisualStyleBackColor = true;
+            btnPartPerso.Click += btnPartPerso_Click;
             // 
             // btn2J
             // 
@@ -108,6 +109,7 @@
             btn1J.TabIndex = 0;
             btn1J.Text = "1 Joueur";
             btn1J.UseVisualStyleBackColor = true;
+            btn1J.Click += btn1J_Click;
             // 
             // lblTitre
             // 
@@ -132,6 +134,8 @@
             Name = "FormParametrage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            FormClosing += FormParametrage_FormClosing;
+            Load += FormParametrage_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -141,7 +145,7 @@
         private Panel panel1;
         private Button btnQuitter;
         private Button btnAPropos;
-        private Button btPartPerso;
+        private Button btnPartPerso;
         private Button btn2J;
         private Button btn1J;
         private Label lblTitre;

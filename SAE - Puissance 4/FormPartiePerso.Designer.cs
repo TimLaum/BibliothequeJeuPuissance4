@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            radioButton11 = new RadioButton();
-            radioButton10 = new RadioButton();
-            radioButton9 = new RadioButton();
+            rbnRandom = new RadioButton();
+            rbnJ2IA = new RadioButton();
+            rbnJ1 = new RadioButton();
             label5 = new Label();
             lblPseudos = new Label();
             pnlPseudos = new Panel();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txbJ2 = new TextBox();
+            txbJ1 = new TextBox();
             lblJ2 = new Label();
             lblJ1 = new Label();
             panel3 = new Panel();
-            radioButton6 = new RadioButton();
-            radioButton5 = new RadioButton();
-            radioButton4 = new RadioButton();
+            rbnRN = new RadioButton();
+            rbnBN = new RadioButton();
+            rbnRJ = new RadioButton();
             panel2 = new Panel();
             radioButton8 = new RadioButton();
             radioButton7 = new RadioButton();
@@ -54,6 +54,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            panel4 = new Panel();
             pnlPseudos.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -62,50 +63,57 @@
             // 
             // button1
             // 
-            button1.Location = new Point(302, 558);
+            button1.Location = new Point(264, 418);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(269, 57);
+            button1.Size = new Size(235, 43);
             button1.TabIndex = 26;
             button1.Text = "JOUER !";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // radioButton11
+            // rbnRandom
             // 
-            radioButton11.AutoSize = true;
-            radioButton11.Location = new Point(646, 491);
-            radioButton11.Name = "radioButton11";
-            radioButton11.Size = new Size(91, 24);
-            radioButton11.TabIndex = 25;
-            radioButton11.Text = "Aléatoire";
-            radioButton11.UseVisualStyleBackColor = true;
+            rbnRandom.AutoSize = true;
+            rbnRandom.Location = new Point(565, 368);
+            rbnRandom.Margin = new Padding(3, 2, 3, 2);
+            rbnRandom.Name = "rbnRandom";
+            rbnRandom.Size = new Size(72, 19);
+            rbnRandom.TabIndex = 25;
+            rbnRandom.Text = "Aléatoire";
+            rbnRandom.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // rbnJ2IA
             // 
-            radioButton10.AutoSize = true;
-            radioButton10.Location = new Point(382, 491);
-            radioButton10.Name = "radioButton10";
-            radioButton10.Size = new Size(124, 24);
-            radioButton10.TabIndex = 24;
-            radioButton10.Text = "Joueur 2 ou IA";
-            radioButton10.UseVisualStyleBackColor = true;
+            rbnJ2IA.AutoSize = true;
+            rbnJ2IA.Location = new Point(334, 368);
+            rbnJ2IA.Margin = new Padding(3, 2, 3, 2);
+            rbnJ2IA.Name = "rbnJ2IA";
+            rbnJ2IA.Size = new Size(100, 19);
+            rbnJ2IA.TabIndex = 24;
+            rbnJ2IA.Text = "Joueur 2 ou IA";
+            rbnJ2IA.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // rbnJ1
             // 
-            radioButton9.AutoSize = true;
-            radioButton9.Location = new Point(162, 491);
-            radioButton9.Name = "radioButton9";
-            radioButton9.Size = new Size(85, 24);
-            radioButton9.TabIndex = 23;
-            radioButton9.Text = "Joueur 1";
-            radioButton9.UseVisualStyleBackColor = true;
+            rbnJ1.AutoSize = true;
+            rbnJ1.Checked = true;
+            rbnJ1.Location = new Point(142, 368);
+            rbnJ1.Margin = new Padding(3, 2, 3, 2);
+            rbnJ1.Name = "rbnJ1";
+            rbnJ1.Size = new Size(69, 19);
+            rbnJ1.TabIndex = 23;
+            rbnJ1.TabStop = true;
+            rbnJ1.Text = "Joueur 1";
+            rbnJ1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(312, 448);
+            label5.Location = new Point(290, 336);
             label5.Name = "label5";
-            label5.Size = new Size(245, 20);
+            label5.Size = new Size(187, 15);
             label5.TabIndex = 22;
             label5.Text = "Choix du joueur débutant la partie";
             // 
@@ -113,144 +121,162 @@
             // 
             lblPseudos.AutoSize = true;
             lblPseudos.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPseudos.Location = new Point(123, 265);
+            lblPseudos.Location = new Point(108, 199);
             lblPseudos.Name = "lblPseudos";
-            lblPseudos.Size = new Size(124, 38);
+            lblPseudos.Size = new Size(99, 30);
             lblPseudos.TabIndex = 21;
             lblPseudos.Text = "Pseudos";
             // 
             // pnlPseudos
             // 
-            pnlPseudos.Controls.Add(textBox2);
-            pnlPseudos.Controls.Add(textBox1);
+            pnlPseudos.Controls.Add(txbJ2);
+            pnlPseudos.Controls.Add(txbJ1);
             pnlPseudos.Controls.Add(lblJ2);
             pnlPseudos.Controls.Add(lblJ1);
-            pnlPseudos.Location = new Point(101, 289);
+            pnlPseudos.Location = new Point(88, 217);
+            pnlPseudos.Margin = new Padding(3, 2, 3, 2);
             pnlPseudos.Name = "pnlPseudos";
-            pnlPseudos.Size = new Size(689, 140);
+            pnlPseudos.Size = new Size(603, 105);
             pnlPseudos.TabIndex = 20;
             // 
-            // textBox2
+            // txbJ2
             // 
-            textBox2.Location = new Point(280, 81);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(325, 27);
-            textBox2.TabIndex = 3;
+            txbJ2.Location = new Point(245, 61);
+            txbJ2.Margin = new Padding(3, 2, 3, 2);
+            txbJ2.MaxLength = 30;
+            txbJ2.Name = "txbJ2";
+            txbJ2.Size = new Size(285, 23);
+            txbJ2.TabIndex = 3;
             // 
-            // textBox1
+            // txbJ1
             // 
-            textBox1.Location = new Point(280, 25);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(325, 27);
-            textBox1.TabIndex = 2;
+            txbJ1.Location = new Point(245, 19);
+            txbJ1.Margin = new Padding(3, 2, 3, 2);
+            txbJ1.MaxLength = 30;
+            txbJ1.Name = "txbJ1";
+            txbJ1.Size = new Size(285, 23);
+            txbJ1.TabIndex = 2;
             // 
             // lblJ2
             // 
             lblJ2.AutoSize = true;
-            lblJ2.Location = new Point(74, 88);
+            lblJ2.Location = new Point(65, 66);
             lblJ2.Name = "lblJ2";
-            lblJ2.Size = new Size(64, 20);
+            lblJ2.Size = new Size(51, 15);
             lblJ2.TabIndex = 1;
             lblJ2.Text = "Joueur 2";
             // 
             // lblJ1
             // 
             lblJ1.AutoSize = true;
-            lblJ1.Location = new Point(74, 32);
+            lblJ1.Location = new Point(65, 24);
             lblJ1.Name = "lblJ1";
-            lblJ1.Size = new Size(64, 20);
+            lblJ1.Size = new Size(51, 15);
             lblJ1.TabIndex = 0;
             lblJ1.Text = "Joueur 1";
             // 
             // panel3
             // 
-            panel3.Controls.Add(radioButton6);
-            panel3.Controls.Add(radioButton5);
-            panel3.Controls.Add(radioButton4);
-            panel3.Location = new Point(331, 161);
+            panel3.Controls.Add(rbnRN);
+            panel3.Controls.Add(rbnBN);
+            panel3.Controls.Add(rbnRJ);
+            panel3.Location = new Point(290, 121);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(441, 42);
+            panel3.Size = new Size(386, 32);
             panel3.TabIndex = 18;
             // 
-            // radioButton6
+            // rbnRN
             // 
-            radioButton6.AutoSize = true;
-            radioButton6.Location = new Point(305, 10);
-            radioButton6.Name = "radioButton6";
-            radioButton6.Size = new Size(116, 24);
-            radioButton6.TabIndex = 2;
-            radioButton6.Text = "Rouge / Noir";
-            radioButton6.UseVisualStyleBackColor = true;
+            rbnRN.AutoSize = true;
+            rbnRN.Location = new Point(267, 8);
+            rbnRN.Margin = new Padding(3, 2, 3, 2);
+            rbnRN.Name = "rbnRN";
+            rbnRN.Size = new Size(93, 19);
+            rbnRN.TabIndex = 2;
+            rbnRN.Text = "Rouge / Noir";
+            rbnRN.UseVisualStyleBackColor = true;
+            rbnRN.CheckedChanged += rbnRN_CheckedChanged;
             // 
-            // radioButton5
+            // rbnBN
             // 
-            radioButton5.AutoSize = true;
-            radioButton5.Location = new Point(149, 10);
-            radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(109, 24);
-            radioButton5.TabIndex = 1;
-            radioButton5.Text = "Blanc / Noir";
-            radioButton5.UseVisualStyleBackColor = true;
+            rbnBN.AutoSize = true;
+            rbnBN.Location = new Point(130, 8);
+            rbnBN.Margin = new Padding(3, 2, 3, 2);
+            rbnBN.Name = "rbnBN";
+            rbnBN.Size = new Size(88, 19);
+            rbnBN.TabIndex = 1;
+            rbnBN.Text = "Blanc / Noir";
+            rbnBN.UseVisualStyleBackColor = true;
+            rbnBN.CheckedChanged += rbnBN_CheckedChanged;
             // 
-            // radioButton4
+            // rbnRJ
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Checked = true;
-            radioButton4.Location = new Point(3, 10);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(124, 24);
-            radioButton4.TabIndex = 0;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Rouge / Jaune";
-            radioButton4.UseVisualStyleBackColor = true;
+            rbnRJ.AutoSize = true;
+            rbnRJ.Checked = true;
+            rbnRJ.Location = new Point(3, 8);
+            rbnRJ.Margin = new Padding(3, 2, 3, 2);
+            rbnRJ.Name = "rbnRJ";
+            rbnRJ.Size = new Size(100, 19);
+            rbnRJ.TabIndex = 0;
+            rbnRJ.TabStop = true;
+            rbnRJ.Text = "Rouge / Jaune";
+            rbnRJ.UseVisualStyleBackColor = true;
+            rbnRJ.CheckedChanged += rbnRJ_CheckedChanged;
             // 
             // panel2
             // 
             panel2.Controls.Add(radioButton8);
             panel2.Controls.Add(radioButton7);
-            panel2.Location = new Point(331, 209);
+            panel2.Location = new Point(290, 157);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(441, 42);
+            panel2.Size = new Size(386, 32);
             panel2.TabIndex = 19;
             // 
             // radioButton8
             // 
             radioButton8.AutoSize = true;
-            radioButton8.Location = new Point(149, 10);
+            radioButton8.Checked = true;
+            radioButton8.Location = new Point(3, 8);
+            radioButton8.Margin = new Padding(3, 2, 3, 2);
             radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(73, 24);
+            radioButton8.Size = new Size(60, 19);
             radioButton8.TabIndex = 1;
+            radioButton8.TabStop = true;
             radioButton8.Text = "Joueur";
             radioButton8.UseVisualStyleBackColor = true;
             // 
             // radioButton7
             // 
             radioButton7.AutoSize = true;
-            radioButton7.Checked = true;
-            radioButton7.Location = new Point(3, 10);
+            radioButton7.Location = new Point(130, 8);
+            radioButton7.Margin = new Padding(3, 2, 3, 2);
             radioButton7.Name = "radioButton7";
-            radioButton7.Size = new Size(44, 24);
+            radioButton7.Size = new Size(36, 19);
             radioButton7.TabIndex = 0;
-            radioButton7.TabStop = true;
             radioButton7.Text = "IA";
             radioButton7.UseVisualStyleBackColor = true;
+            radioButton7.CheckedChanged += radioButton7_CheckedChanged;
             // 
             // panel1
             // 
             panel1.Controls.Add(radioButton3);
             panel1.Controls.Add(radioButton2);
             panel1.Controls.Add(radioButton1);
-            panel1.Location = new Point(331, 113);
+            panel1.Location = new Point(290, 85);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(441, 42);
+            panel1.Size = new Size(386, 32);
             panel1.TabIndex = 17;
             // 
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(305, 10);
+            radioButton3.Location = new Point(267, 8);
+            radioButton3.Margin = new Padding(3, 2, 3, 2);
             radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(61, 24);
+            radioButton3.Size = new Size(49, 19);
             radioButton3.TabIndex = 2;
             radioButton3.Text = "9 x 9";
             radioButton3.UseVisualStyleBackColor = true;
@@ -258,9 +284,10 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(149, 10);
+            radioButton2.Location = new Point(130, 8);
+            radioButton2.Margin = new Padding(3, 2, 3, 2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(61, 24);
+            radioButton2.Size = new Size(49, 19);
             radioButton2.TabIndex = 1;
             radioButton2.Text = "8 x 8";
             radioButton2.UseVisualStyleBackColor = true;
@@ -269,9 +296,10 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Checked = true;
-            radioButton1.Location = new Point(3, 10);
+            radioButton1.Location = new Point(3, 8);
+            radioButton1.Margin = new Padding(3, 2, 3, 2);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(61, 24);
+            radioButton1.Size = new Size(49, 19);
             radioButton1.TabIndex = 0;
             radioButton1.TabStop = true;
             radioButton1.Text = "6 x 7";
@@ -280,18 +308,18 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(101, 223);
+            label4.Location = new Point(88, 167);
             label4.Name = "label4";
-            label4.Size = new Size(146, 20);
+            label4.Size = new Size(116, 15);
             label4.TabIndex = 16;
             label4.Text = "Choix de l'adversaire";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(101, 175);
+            label3.Location = new Point(88, 131);
             label3.Name = "label3";
-            label3.Size = new Size(127, 20);
+            label3.Size = new Size(102, 15);
             label3.TabIndex = 15;
             label3.Text = "Couleur des pions";
             // 
@@ -299,9 +327,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(101, 125);
+            label2.Location = new Point(88, 94);
             label2.Name = "label2";
-            label2.Size = new Size(118, 20);
+            label2.Size = new Size(92, 15);
             label2.TabIndex = 14;
             label2.Text = "Taille du plateau";
             // 
@@ -309,21 +337,29 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(187, 9);
+            label1.Location = new Point(164, 7);
             label1.Name = "label1";
-            label1.Size = new Size(469, 62);
+            label1.Size = new Size(382, 51);
             label1.TabIndex = 13;
             label1.Text = "Partie Personnalisée";
             // 
+            // panel4
+            // 
+            panel4.Location = new Point(88, 354);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(603, 44);
+            panel4.TabIndex = 27;
+            // 
             // FormPartiePerso
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(860, 646);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(752, 484);
             Controls.Add(button1);
-            Controls.Add(radioButton11);
-            Controls.Add(radioButton10);
-            Controls.Add(radioButton9);
+            Controls.Add(rbnRandom);
+            Controls.Add(rbnJ2IA);
+            Controls.Add(rbnJ1);
             Controls.Add(label5);
             Controls.Add(lblPseudos);
             Controls.Add(pnlPseudos);
@@ -334,8 +370,14 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(panel4);
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "FormPartiePerso";
-            Text = "Form2";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Partie personnalisée";
+            FormClosed += FormPartiePerso_FormClosed;
+            Load += FormPartiePerso_Load;
             pnlPseudos.ResumeLayout(false);
             pnlPseudos.PerformLayout();
             panel3.ResumeLayout(false);
@@ -351,20 +393,20 @@
         #endregion
 
         private Button button1;
-        private RadioButton radioButton11;
-        private RadioButton radioButton10;
-        private RadioButton radioButton9;
+        private RadioButton rbnRandom;
+        private RadioButton rbnJ2IA;
+        private RadioButton rbnJ1;
         private Label label5;
         private Label lblPseudos;
         private Panel pnlPseudos;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txbJ2;
+        private TextBox txbJ1;
         private Label lblJ2;
         private Label lblJ1;
         private Panel panel3;
-        private RadioButton radioButton6;
-        private RadioButton radioButton5;
-        private RadioButton radioButton4;
+        private RadioButton rbnRN;
+        private RadioButton rbnBN;
+        private RadioButton rbnRJ;
         private Panel panel2;
         private RadioButton radioButton8;
         private RadioButton radioButton7;
@@ -376,5 +418,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Panel panel4;
     }
 }

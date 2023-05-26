@@ -51,6 +51,7 @@ namespace BibliothequeJeuPuissance4
             //Ici il n'y a encore aucune vérification pour l'instant
             N_Joueur = _N_Joueur;
             PseudoJoueur = _PseudoJoueur;
+            
         }
 
         public int GetN_Joueur()

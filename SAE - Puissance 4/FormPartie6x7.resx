@@ -60,12 +60,6 @@
   <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="button1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -77,7 +71,7 @@
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAtkAAAI5CAMAAABD19YuAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEU4c+tEfOx2n/GcufWowvbN3Pra
-        5fvz9v7m7fzB0/m0yvdqlvBdje+PsPT///+DqPNRhe4lLT5OAAAACXBIWXMAAAsRAAALEQF/ZF+RAAAh
+        5fvz9v7m7fzB0/m0yvdqlvBdje+PsPT///+DqPNRhe4lLT5OAAAACXBIWXMAAAsMAAALDAE/QCLIAAAh
         eElEQVR4Xu3d63ajOBCF0cEYsLEd+/2fdoDIjpqkVHWkykp35eyf0xnCx2pa4v4fERERERERERERERER
         ERERERERERERERERERERERERERERERERRdMd+uMwTqvTee4vXfrvbrrrbfkFp+0XjOf5dkn/3Q8TdAES
         EN1lHt/2pvme/tjBtR+ntNwP5/6a/rgdEwwCJEAux8+5ydlll+76z7nJ2Lvs0kzQBUiAdHexdzM272+F

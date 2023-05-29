@@ -15,7 +15,11 @@ namespace SAE___Puissance_4
     {
         string colorJ1 = "Rouge";
         string colorJ2IA = "Jaune";
+        int ligne = 6;
+        int colonne = 7;
+        int JoueurDebutant = 1;
         bool exit;
+        Random rnd = new Random();
         public FormPartiePerso()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace SAE___Puissance_4
 
         private void FormPartiePerso_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (exit = true)
+            if (exit == true)
                 Environment.Exit(0);
         }
 
@@ -46,7 +50,7 @@ namespace SAE___Puissance_4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txbJ1.TextLength == 0 && (txbJ2.Enabled == true && txbJ2.TextLength == 0) || txbJ1.TextLength == 0 && txbJ2.Enabled == false)
+            if (txbJ1.TextLength == 0 || (txbJ2.Enabled == true && txbJ2.TextLength == 0) || txbJ1.TextLength == 0 && txbJ2.Enabled == false)
             {
                 MessageBox.Show("Veuillez-rentrer toutes les informations nécessaires !", "Manque d'informations",
                                      MessageBoxButtons.OK,
@@ -57,35 +61,67 @@ namespace SAE___Puissance_4
                 Joueur Joueur1 = new Joueur(1, colorJ1, txbJ1.Text);
                 Joueur Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
                 Label lblPseudoJoueur = new Label();
-                lblPseudoJoueur.Text = Convert.ToString(Joueur1.GetCouleur());
-                MessageBox.Show(colorJ1);
+                Partie Jeu = new Partie(ligne, colonne, JoueurDebutant);
+                FormPartie6x7 newPartie = new FormPartie6x7();
+                this.Hide();
+                newPartie.ShowDialog(this);
+                this.Show();
+                //lblPseudoJoueur.Text = Convert.ToString(Joueur1.GetCouleur());
+                //MessageBox.Show(Convert.ToString(JoueurDebutant));
             }
 
         }
 
-        private void rbnRJ_CheckedChanged(object sender, EventArgs e)
+        private void rbn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbn6x7.Checked)
+            {
+                ligne = 6;
+                colonne = 7;
+            }
+            else if (rbn8x8.Checked)
+            {
+                ligne = 8;
+                colonne = 8;
+            }
+            else
+            {
+                ligne = 9;
+                colonne = 9;
+            }
+        }
+
+        private void rbnQuiDebute(object sender, EventArgs e)
+        {
+            if (rbnJ1.Checked)
+            {
+                JoueurDebutant = 1;
+            }
+            else if (rbnJ2IA.Checked)
+            {
+                JoueurDebutant = 2;
+            }
+            else if (rbnRandom.Checked)
+            {
+                JoueurDebutant = rnd.Next(1, 3);
+            }
+        }
+
+        private void rbnCouleur_CheckedChanged(object sender, EventArgs e)
         {
             if (rbnRJ.Checked)
             {
                 colorJ1 = "Rouge";
                 colorJ2IA = "Jaune";
             }
-        }
-
-        private void rbnBN_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbnBN.Checked)
-            {
-                colorJ1 = "Blanc";
-                colorJ2IA = "Noir";
-            }
-        }
-
-        private void rbnRN_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbnRN.Checked)
+            else if (rbnRN.Checked)
             {
                 colorJ1 = "Rouge";
+                colorJ2IA = "Noir";
+            }
+            else if (rbnBN.Checked)
+            {
+                colorJ1 = "Jaune";
                 colorJ2IA = "Noir";
             }
         }

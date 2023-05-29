@@ -44,5 +44,10 @@ namespace SAE___Puissance_4
             this.Hide();
             PartiePerso.Show();
         }
+
+        private void btn2J_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

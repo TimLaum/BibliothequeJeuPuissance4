@@ -98,6 +98,7 @@
             btn2J.TabIndex = 1;
             btn2J.Text = "2 Joueurs";
             btn2J.UseVisualStyleBackColor = true;
+            btn2J.Click += btn2J_Click;
             // 
             // btn1J
             // 

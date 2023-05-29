@@ -47,9 +47,9 @@
             radioButton8 = new RadioButton();
             radioButton7 = new RadioButton();
             panel1 = new Panel();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
+            rbn9x9 = new RadioButton();
+            rbn8x8 = new RadioButton();
+            rbn6x7 = new RadioButton();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -82,6 +82,7 @@
             rbnRandom.TabIndex = 25;
             rbnRandom.Text = "Aléatoire";
             rbnRandom.UseVisualStyleBackColor = true;
+            rbnRandom.CheckedChanged += rbnQuiDebute;
             // 
             // rbnJ2IA
             // 
@@ -93,6 +94,7 @@
             rbnJ2IA.TabIndex = 24;
             rbnJ2IA.Text = "Joueur 2 ou IA";
             rbnJ2IA.UseVisualStyleBackColor = true;
+            rbnJ2IA.CheckedChanged += rbnQuiDebute;
             // 
             // rbnJ1
             // 
@@ -106,6 +108,7 @@
             rbnJ1.TabStop = true;
             rbnJ1.Text = "Joueur 1";
             rbnJ1.UseVisualStyleBackColor = true;
+            rbnJ1.CheckedChanged += rbnQuiDebute;
             // 
             // label5
             // 
@@ -196,7 +199,7 @@
             rbnRN.TabIndex = 2;
             rbnRN.Text = "Rouge / Noir";
             rbnRN.UseVisualStyleBackColor = true;
-            rbnRN.CheckedChanged += rbnRN_CheckedChanged;
+            rbnRN.CheckedChanged += rbnCouleur_CheckedChanged;
             // 
             // rbnBN
             // 
@@ -204,11 +207,11 @@
             rbnBN.Location = new Point(130, 8);
             rbnBN.Margin = new Padding(3, 2, 3, 2);
             rbnBN.Name = "rbnBN";
-            rbnBN.Size = new Size(88, 19);
+            rbnBN.Size = new Size(89, 19);
             rbnBN.TabIndex = 1;
-            rbnBN.Text = "Blanc / Noir";
+            rbnBN.Text = "Jaune / Noir";
             rbnBN.UseVisualStyleBackColor = true;
-            rbnBN.CheckedChanged += rbnBN_CheckedChanged;
+            rbnBN.CheckedChanged += rbnCouleur_CheckedChanged;
             // 
             // rbnRJ
             // 
@@ -222,7 +225,7 @@
             rbnRJ.TabStop = true;
             rbnRJ.Text = "Rouge / Jaune";
             rbnRJ.UseVisualStyleBackColor = true;
-            rbnRJ.CheckedChanged += rbnRJ_CheckedChanged;
+            rbnRJ.CheckedChanged += rbnCouleur_CheckedChanged;
             // 
             // panel2
             // 
@@ -261,49 +264,52 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(radioButton3);
-            panel1.Controls.Add(radioButton2);
-            panel1.Controls.Add(radioButton1);
+            panel1.Controls.Add(rbn9x9);
+            panel1.Controls.Add(rbn8x8);
+            panel1.Controls.Add(rbn6x7);
             panel1.Location = new Point(290, 85);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(386, 32);
             panel1.TabIndex = 17;
             // 
-            // radioButton3
+            // rbn9x9
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(267, 8);
-            radioButton3.Margin = new Padding(3, 2, 3, 2);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(49, 19);
-            radioButton3.TabIndex = 2;
-            radioButton3.Text = "9 x 9";
-            radioButton3.UseVisualStyleBackColor = true;
+            rbn9x9.AutoSize = true;
+            rbn9x9.Location = new Point(267, 8);
+            rbn9x9.Margin = new Padding(3, 2, 3, 2);
+            rbn9x9.Name = "rbn9x9";
+            rbn9x9.Size = new Size(49, 19);
+            rbn9x9.TabIndex = 2;
+            rbn9x9.Text = "9 x 9";
+            rbn9x9.UseVisualStyleBackColor = true;
+            rbn9x9.CheckedChanged += rbn_CheckedChanged;
             // 
-            // radioButton2
+            // rbn8x8
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(130, 8);
-            radioButton2.Margin = new Padding(3, 2, 3, 2);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(49, 19);
-            radioButton2.TabIndex = 1;
-            radioButton2.Text = "8 x 8";
-            radioButton2.UseVisualStyleBackColor = true;
+            rbn8x8.AutoSize = true;
+            rbn8x8.Location = new Point(130, 8);
+            rbn8x8.Margin = new Padding(3, 2, 3, 2);
+            rbn8x8.Name = "rbn8x8";
+            rbn8x8.Size = new Size(49, 19);
+            rbn8x8.TabIndex = 1;
+            rbn8x8.Text = "8 x 8";
+            rbn8x8.UseVisualStyleBackColor = true;
+            rbn8x8.CheckedChanged += rbn_CheckedChanged;
             // 
-            // radioButton1
+            // rbn6x7
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Checked = true;
-            radioButton1.Location = new Point(3, 8);
-            radioButton1.Margin = new Padding(3, 2, 3, 2);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(49, 19);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "6 x 7";
-            radioButton1.UseVisualStyleBackColor = true;
+            rbn6x7.AutoSize = true;
+            rbn6x7.Checked = true;
+            rbn6x7.Location = new Point(3, 8);
+            rbn6x7.Margin = new Padding(3, 2, 3, 2);
+            rbn6x7.Name = "rbn6x7";
+            rbn6x7.Size = new Size(49, 19);
+            rbn6x7.TabIndex = 0;
+            rbn6x7.TabStop = true;
+            rbn6x7.Text = "6 x 7";
+            rbn6x7.UseVisualStyleBackColor = true;
+            rbn6x7.CheckedChanged += rbn_CheckedChanged;
             // 
             // label4
             // 
@@ -411,9 +417,9 @@
         private RadioButton radioButton8;
         private RadioButton radioButton7;
         private Panel panel1;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private RadioButton rbn9x9;
+        private RadioButton rbn8x8;
+        private RadioButton rbn6x7;
         private Label label4;
         private Label label3;
         private Label label2;

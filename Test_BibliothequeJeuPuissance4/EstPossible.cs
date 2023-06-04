@@ -22,6 +22,7 @@ namespace Test_BibliothequeJeuPuissance4
             Assert.AreEqual(true, resultat);
 
         }
+        /**/
         /*
         [TestMethod]
         public void EstPossible_Taille_8_8_en_5_6_true()

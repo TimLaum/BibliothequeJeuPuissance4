@@ -9,7 +9,7 @@ using static System.Formats.Asn1.AsnWriter;
 
 namespace BibliothequeJeuPuissance4
 {
-	public class Partie
+	 public class Partie
 	{
 		private int lignes {get;}
 		private int colonnes {get;}
@@ -71,7 +71,7 @@ namespace BibliothequeJeuPuissance4
 			return plateau[l,c];
 		}
 
-        public bool EstPossible(int ligne,int colonne)
+         public bool EstPossible(int ligne,int colonne)
         {
             if (plateau[ligne,colonne] == 0)
             {

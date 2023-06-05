@@ -56,6 +56,10 @@ namespace BibliothequeJeuPuissance4
             Console.WriteLine(Convert.ToString(plateau.GetLength(1)));
         }
 
+        public int GetValPlateau(int c,int l)
+        {
+            return plateau[c, l];
+        }
 		public int GetLignes()
 		{
 			return lignes;

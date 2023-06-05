@@ -688,7 +688,8 @@
             Controls.Add(picJoueurActuel);
             Controls.Add(lblTitre6x7);
             Name = "FormPartie6x7";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Puissance 4";
             Load += FormPartie6x7_Load;
             ((System.ComponentModel.ISupportInitialize)picJoueurActuel).EndInit();
             ((System.ComponentModel.ISupportInitialize)picPlateau6x7).EndInit();

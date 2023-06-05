@@ -65,7 +65,8 @@ namespace SAE___Puissance_4
                 FormPartie6x7 newPartie = new FormPartie6x7();
                 this.Hide();
                 newPartie.ShowDialog(this);
-                this.Show();
+                exit = false;
+                this.Close();
                 //lblPseudoJoueur.Text = Convert.ToString(Joueur1.GetCouleur());
                 //MessageBox.Show(Convert.ToString(JoueurDebutant));
             }

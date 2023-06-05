@@ -46,19 +46,17 @@
             panel1.Controls.Add(btnPartPerso);
             panel1.Controls.Add(btn2J);
             panel1.Controls.Add(btn1J);
-            panel1.Location = new Point(298, 91);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(341, 121);
             panel1.Name = "panel1";
-            panel1.Size = new Size(559, 472);
+            panel1.Size = new Size(639, 629);
             panel1.TabIndex = 3;
             // 
             // btnQuitter
             // 
             btnQuitter.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnQuitter.Location = new Point(194, 377);
-            btnQuitter.Margin = new Padding(3, 2, 3, 2);
+            btnQuitter.Location = new Point(222, 503);
             btnQuitter.Name = "btnQuitter";
-            btnQuitter.Size = new Size(160, 41);
+            btnQuitter.Size = new Size(183, 55);
             btnQuitter.TabIndex = 4;
             btnQuitter.Text = "Quitter";
             btnQuitter.UseVisualStyleBackColor = true;
@@ -67,10 +65,9 @@
             // btnAPropos
             // 
             btnAPropos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnAPropos.Location = new Point(105, 270);
-            btnAPropos.Margin = new Padding(3, 2, 3, 2);
+            btnAPropos.Location = new Point(120, 360);
             btnAPropos.Name = "btnAPropos";
-            btnAPropos.Size = new Size(338, 40);
+            btnAPropos.Size = new Size(386, 53);
             btnAPropos.TabIndex = 3;
             btnAPropos.Text = "A Propos";
             btnAPropos.UseVisualStyleBackColor = true;
@@ -79,10 +76,9 @@
             // btnPartPerso
             // 
             btnPartPerso.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnPartPerso.Location = new Point(105, 195);
-            btnPartPerso.Margin = new Padding(3, 2, 3, 2);
+            btnPartPerso.Location = new Point(120, 260);
             btnPartPerso.Name = "btnPartPerso";
-            btnPartPerso.Size = new Size(338, 40);
+            btnPartPerso.Size = new Size(386, 53);
             btnPartPerso.TabIndex = 2;
             btnPartPerso.Text = "Partie Personnalisée";
             btnPartPerso.UseVisualStyleBackColor = true;
@@ -91,10 +87,9 @@
             // btn2J
             // 
             btn2J.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn2J.Location = new Point(105, 120);
-            btn2J.Margin = new Padding(3, 2, 3, 2);
+            btn2J.Location = new Point(120, 160);
             btn2J.Name = "btn2J";
-            btn2J.Size = new Size(338, 40);
+            btn2J.Size = new Size(386, 53);
             btn2J.TabIndex = 1;
             btn2J.Text = "2 Joueurs";
             btn2J.UseVisualStyleBackColor = true;
@@ -103,10 +98,9 @@
             // btn1J
             // 
             btn1J.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btn1J.Location = new Point(105, 45);
-            btn1J.Margin = new Padding(3, 2, 3, 2);
+            btn1J.Location = new Point(120, 60);
             btn1J.Name = "btn1J";
-            btn1J.Size = new Size(338, 40);
+            btn1J.Size = new Size(386, 53);
             btn1J.TabIndex = 0;
             btn1J.Text = "1 Joueur";
             btn1J.UseVisualStyleBackColor = true;
@@ -116,21 +110,20 @@
             // 
             lblTitre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblTitre.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitre.Location = new Point(452, 11);
+            lblTitre.Location = new Point(517, 15);
             lblTitre.Name = "lblTitre";
-            lblTitre.Size = new Size(227, 51);
+            lblTitre.Size = new Size(281, 68);
             lblTitre.TabIndex = 2;
             lblTitre.Text = "Puissance 4";
             // 
             // FormParametrage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1152, 610);
+            ClientSize = new Size(1317, 813);
             Controls.Add(panel1);
             Controls.Add(lblTitre);
-            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "FormParametrage";
             StartPosition = FormStartPosition.CenterScreen;

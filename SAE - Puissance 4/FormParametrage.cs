@@ -34,10 +34,7 @@ namespace SAE___Puissance_4
 
         private void btn1J_Click(object sender, EventArgs e)
         {
-            exit = false;
-            Form PartiePerso = new FormPartiePerso();
-            this.Hide();
-            PartiePerso.Show();
+
         }
 
         private void btnPartPerso_Click(object sender, EventArgs e)
@@ -45,7 +42,8 @@ namespace SAE___Puissance_4
             exit = false;
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
-            PartiePerso.Show();
+            PartiePerso.ShowDialog();
+            this.Show();
         }
 
         private void btn2J_Click(object sender, EventArgs e)

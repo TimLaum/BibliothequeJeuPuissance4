@@ -33,5 +33,58 @@ namespace SAE___Puissance_4
             this.Close();
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox33_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox32_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox41_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox21_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox29_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox30_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox26_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox39_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox35_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

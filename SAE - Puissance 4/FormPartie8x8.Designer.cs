@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             lblTitre6x7 = new Label();
-            btnAbandon = new Button();
-            lblTourJoueur = new Label();
-            picJoueurActuel = new PictureBox();
-            panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)picJoueurActuel).BeginInit();
+            btnAbandon8x8 = new Button();
+            lblTourJoueur8x8 = new Label();
+            picJActuel8x8 = new PictureBox();
+            pnlPlateau8x8 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)picJActuel8x8).BeginInit();
             SuspendLayout();
             // 
             // lblTitre6x7
@@ -46,54 +46,54 @@
             lblTitre6x7.TabIndex = 1;
             lblTitre6x7.Text = "Puissance 4";
             // 
-            // btnAbandon
+            // btnAbandon8x8
             // 
-            btnAbandon.Location = new Point(617, 748);
-            btnAbandon.Name = "btnAbandon";
-            btnAbandon.Size = new Size(319, 51);
-            btnAbandon.TabIndex = 6;
-            btnAbandon.Text = "Abandonner la partie";
-            btnAbandon.UseVisualStyleBackColor = true;
+            btnAbandon8x8.Location = new Point(617, 748);
+            btnAbandon8x8.Name = "btnAbandon8x8";
+            btnAbandon8x8.Size = new Size(319, 51);
+            btnAbandon8x8.TabIndex = 6;
+            btnAbandon8x8.Text = "Abandonner la partie";
+            btnAbandon8x8.UseVisualStyleBackColor = true;
             // 
-            // lblTourJoueur
+            // lblTourJoueur8x8
             // 
-            lblTourJoueur.AutoSize = true;
-            lblTourJoueur.Location = new Point(296, 801);
-            lblTourJoueur.Name = "lblTourJoueur";
-            lblTourJoueur.Size = new Size(130, 20);
-            lblTourJoueur.TabIndex = 5;
-            lblTourJoueur.Text = "Au tour du Joueur ";
+            lblTourJoueur8x8.AutoSize = true;
+            lblTourJoueur8x8.Location = new Point(296, 801);
+            lblTourJoueur8x8.Name = "lblTourJoueur8x8";
+            lblTourJoueur8x8.Size = new Size(130, 20);
+            lblTourJoueur8x8.TabIndex = 5;
+            lblTourJoueur8x8.Text = "Au tour du Joueur ";
             // 
-            // picJoueurActuel
+            // picJActuel8x8
             // 
-            picJoueurActuel.BackgroundImageLayout = ImageLayout.Zoom;
-            picJoueurActuel.Location = new Point(329, 747);
-            picJoueurActuel.Name = "picJoueurActuel";
-            picJoueurActuel.Size = new Size(46, 52);
-            picJoueurActuel.SizeMode = PictureBoxSizeMode.Zoom;
-            picJoueurActuel.TabIndex = 4;
-            picJoueurActuel.TabStop = false;
+            picJActuel8x8.BackgroundImageLayout = ImageLayout.Zoom;
+            picJActuel8x8.Location = new Point(329, 747);
+            picJActuel8x8.Name = "picJActuel8x8";
+            picJActuel8x8.Size = new Size(46, 52);
+            picJActuel8x8.SizeMode = PictureBoxSizeMode.Zoom;
+            picJActuel8x8.TabIndex = 4;
+            picJActuel8x8.TabStop = false;
             // 
-            // panel1
+            // pnlPlateau8x8
             // 
-            panel1.Location = new Point(236, 112);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(826, 629);
-            panel1.TabIndex = 7;
+            pnlPlateau8x8.Location = new Point(236, 112);
+            pnlPlateau8x8.Name = "pnlPlateau8x8";
+            pnlPlateau8x8.Size = new Size(826, 629);
+            pnlPlateau8x8.TabIndex = 7;
             // 
             // FormPartie8x8
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1268, 841);
-            Controls.Add(panel1);
-            Controls.Add(btnAbandon);
-            Controls.Add(lblTourJoueur);
-            Controls.Add(picJoueurActuel);
+            Controls.Add(pnlPlateau8x8);
+            Controls.Add(btnAbandon8x8);
+            Controls.Add(lblTourJoueur8x8);
+            Controls.Add(picJActuel8x8);
             Controls.Add(lblTitre6x7);
             Name = "FormPartie8x8";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)picJoueurActuel).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picJActuel8x8).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,9 +101,9 @@
         #endregion
 
         private Label lblTitre6x7;
-        private Button btnAbandon;
-        private Label lblTourJoueur;
-        private PictureBox picJoueurActuel;
-        private Panel panel1;
+        private Button btnAbandon8x8;
+        private Label lblTourJoueur8x8;
+        private PictureBox picJActuel8x8;
+        private Panel pnlPlateau8x8;
     }
 }

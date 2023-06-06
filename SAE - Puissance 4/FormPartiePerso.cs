@@ -14,16 +14,17 @@ namespace SAE___Puissance_4
 {
     public partial class FormPartiePerso : Form
     {
+        FormParametrage frmParam;
         string colorJ1 = "Rouge";
         string colorJ2IA = "Jaune";
         int ligne = 6;
         int colonne = 7;
         int JoueurDebutant = 1;
         bool exit;
-        Random rnd = new Random(); 
+        Random rnd = new Random();
         public Partie Jeu;
         public Joueur Joueur1;
-        public Joueur Joueur2IA ;
+        public Joueur Joueur2IA;
 
 
         public FormPartiePerso()
@@ -33,7 +34,13 @@ namespace SAE___Puissance_4
 
         private void FormPartiePerso_Load(object sender, EventArgs e)
         {
+            frmParam = (FormParametrage)this.Owner;
             exit = true;
+            if (frmParam.type_form)
+            {
+                rbnIA.Checked=true;
+            }
+
         }
 
         private void FormPartiePerso_FormClosed(object sender, FormClosedEventArgs e)
@@ -44,7 +51,7 @@ namespace SAE___Puissance_4
 
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton7.Checked)
+            if (rbnIA.Checked)
             {
                 txbJ2.Enabled = false;
             }
@@ -64,18 +71,18 @@ namespace SAE___Puissance_4
             }
             else
             {
-                 Joueur1 = new Joueur(1, colorJ1, txbJ1.Text);
-                 Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
+                Joueur1 = new Joueur(1, colorJ1, txbJ1.Text);
+                Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
                 Label lblPseudoJoueur = new Label();
                 Jeu = new Partie(ligne, colonne, JoueurDebutant);
 
-                if(rbn6x7.Checked)
+                if (rbn6x7.Checked)
                 {
                     FormPartie6x7 newPartie = new FormPartie6x7();
                     this.Hide();
                     newPartie.ShowDialog(this);
                 }
-                else if(rbn8x8.Checked )
+                else if (rbn8x8.Checked)
                 {
                     FormPartie8x8 newPartie = new FormPartie8x8();
                     this.Hide();

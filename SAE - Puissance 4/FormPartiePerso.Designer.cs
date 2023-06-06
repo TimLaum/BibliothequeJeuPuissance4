@@ -44,8 +44,8 @@
             rbnBN = new RadioButton();
             rbnRJ = new RadioButton();
             panel2 = new Panel();
-            radioButton8 = new RadioButton();
-            radioButton7 = new RadioButton();
+            rbnJoueur = new RadioButton();
+            rbnIA = new RadioButton();
             panel1 = new Panel();
             rbn9x9 = new RadioButton();
             rbn8x8 = new RadioButton();
@@ -229,38 +229,38 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(radioButton8);
-            panel2.Controls.Add(radioButton7);
+            panel2.Controls.Add(rbnJoueur);
+            panel2.Controls.Add(rbnIA);
             panel2.Location = new Point(290, 157);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(386, 32);
             panel2.TabIndex = 19;
             // 
-            // radioButton8
+            // rbnJoueur
             // 
-            radioButton8.AutoSize = true;
-            radioButton8.Checked = true;
-            radioButton8.Location = new Point(3, 8);
-            radioButton8.Margin = new Padding(3, 2, 3, 2);
-            radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(60, 19);
-            radioButton8.TabIndex = 1;
-            radioButton8.TabStop = true;
-            radioButton8.Text = "Joueur";
-            radioButton8.UseVisualStyleBackColor = true;
+            rbnJoueur.AutoSize = true;
+            rbnJoueur.Checked = true;
+            rbnJoueur.Location = new Point(3, 8);
+            rbnJoueur.Margin = new Padding(3, 2, 3, 2);
+            rbnJoueur.Name = "rbnJoueur";
+            rbnJoueur.Size = new Size(60, 19);
+            rbnJoueur.TabIndex = 1;
+            rbnJoueur.TabStop = true;
+            rbnJoueur.Text = "Joueur";
+            rbnJoueur.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rbnIA
             // 
-            radioButton7.AutoSize = true;
-            radioButton7.Location = new Point(130, 8);
-            radioButton7.Margin = new Padding(3, 2, 3, 2);
-            radioButton7.Name = "radioButton7";
-            radioButton7.Size = new Size(36, 19);
-            radioButton7.TabIndex = 0;
-            radioButton7.Text = "IA";
-            radioButton7.UseVisualStyleBackColor = true;
-            radioButton7.CheckedChanged += radioButton7_CheckedChanged;
+            rbnIA.AutoSize = true;
+            rbnIA.Location = new Point(130, 8);
+            rbnIA.Margin = new Padding(3, 2, 3, 2);
+            rbnIA.Name = "rbnIA";
+            rbnIA.Size = new Size(36, 19);
+            rbnIA.TabIndex = 0;
+            rbnIA.Text = "IA";
+            rbnIA.UseVisualStyleBackColor = true;
+            rbnIA.CheckedChanged += radioButton7_CheckedChanged;
             // 
             // panel1
             // 
@@ -414,8 +414,8 @@
         private RadioButton rbnBN;
         private RadioButton rbnRJ;
         private Panel panel2;
-        private RadioButton radioButton8;
-        private RadioButton radioButton7;
+        private RadioButton rbnJoueur;
+        private RadioButton rbnIA;
         private Panel panel1;
         private RadioButton rbn9x9;
         private RadioButton rbn8x8;

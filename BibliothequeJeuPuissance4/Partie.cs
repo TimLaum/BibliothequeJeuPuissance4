@@ -14,7 +14,7 @@ namespace BibliothequeJeuPuissance4
 		private int lignes {get;}
 		private int colonnes {get;}
 		private int[,] plateau { get; set; }
-        private int JoueurActif { get; }
+        private int JoueurActif { get; set; }
 
 		public void InitPlateau()
 		{
@@ -31,6 +31,14 @@ namespace BibliothequeJeuPuissance4
         {
             var (ligne, colonne) = CoupAJouer[0];
             plateau[ligne, colonne] = N_Joueur;
+            if (JoueurActif == 1)
+            {
+                JoueurActif = 2;
+            }
+            else
+            {
+                JoueurActif = 1;
+            }
         }
         public void GenererPlateau()
         {

@@ -3,6 +3,7 @@ namespace SAE___Puissance_4
     public partial class FormParametrage : Form
     {
         bool exit;
+        public bool type_form;
         public FormParametrage()
         {
             InitializeComponent();
@@ -34,24 +35,30 @@ namespace SAE___Puissance_4
 
         private void btn1J_Click(object sender, EventArgs e)
         {
-
+            exit = false;
+            type_form = true;
+            Form PartiePerso = new FormPartiePerso();
+            this.Hide();
+            PartiePerso.Show(this);
         }
 
         private void btnPartPerso_Click(object sender, EventArgs e)
         {
             exit = false;
+            type_form = false;
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
             PartiePerso.ShowDialog();
-            this.Show();
+            this.Show(this);
         }
 
         private void btn2J_Click(object sender, EventArgs e)
         {
             exit = false;
+            type_form = false;
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
-            PartiePerso.Show();
+            PartiePerso.Show(this);
         }
     }
 }

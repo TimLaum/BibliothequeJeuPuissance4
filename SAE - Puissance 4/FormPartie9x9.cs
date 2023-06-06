@@ -20,21 +20,21 @@ namespace SAE___Puissance_4
         private void FormPartie9x9_Load(object sender, EventArgs e)
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
-            refreshPicJoueurActuel();
+            ChoixPicCouleurPion(picJActuel9x9);
 
         }
-        private void refreshPicJoueurActuel()
+        private void ChoixPicCouleurPion(PictureBox pic)
         {
             if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
             {
                 string x = frmPrmPerso.Joueur1.GetCouleur();
                 if (x == "Rouge")
                 {
-                    picJActuel9x9.Image = Properties.Resources.Pion_Rouge;
+                    pic.Image = Properties.Resources.Pion_Rouge;
                 }
                 if (x == "Jaune")
                 {
-                    picJActuel9x9.Image = Properties.Resources.Pion_Jaune;
+                    pic.Image = Properties.Resources.Pion_Jaune;
                 }
             }
             else
@@ -42,11 +42,11 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur2IA.GetCouleur();
                 if (x == "Noir")
                 {
-                    picJActuel9x9.Image = Properties.Resources.Pion_Noir;
+                    pic.Image = Properties.Resources.Pion_Noir;
                 }
                 if (x == "Jaune")
                 {
-                    picJActuel9x9.Image = Properties.Resources.Pion_Jaune;
+                    pic.Image = Properties.Resources.Pion_Jaune;
                 }
             }
         }

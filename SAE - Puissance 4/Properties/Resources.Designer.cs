@@ -99,5 +99,25 @@ namespace SAE___Puissance_4.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Plateau_9_9v1 {
+            get {
+                object obj = ResourceManager.GetObject("Plateau_9_9v1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Plateau_9_9v2 {
+            get {
+                object obj = ResourceManager.GetObject("Plateau_9_9v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

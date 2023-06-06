@@ -103,6 +103,16 @@ namespace SAE___Puissance_4.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Plateau_8_8v5 {
+            get {
+                object obj = ResourceManager.GetObject("Plateau_8_8v5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Plateau_9_9v1 {
             get {
                 object obj = ResourceManager.GetObject("Plateau_9_9v1", resourceCulture);

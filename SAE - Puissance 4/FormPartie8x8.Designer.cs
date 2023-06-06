@@ -48,7 +48,7 @@
             // 
             // btnAbandon8x8
             // 
-            btnAbandon8x8.Location = new Point(617, 748);
+            btnAbandon8x8.Location = new Point(628, 859);
             btnAbandon8x8.Name = "btnAbandon8x8";
             btnAbandon8x8.Size = new Size(319, 51);
             btnAbandon8x8.TabIndex = 6;
@@ -58,7 +58,7 @@
             // lblTourJoueur8x8
             // 
             lblTourJoueur8x8.AutoSize = true;
-            lblTourJoueur8x8.Location = new Point(296, 801);
+            lblTourJoueur8x8.Location = new Point(307, 912);
             lblTourJoueur8x8.Name = "lblTourJoueur8x8";
             lblTourJoueur8x8.Size = new Size(130, 20);
             lblTourJoueur8x8.TabIndex = 5;
@@ -67,7 +67,7 @@
             // picJActuel8x8
             // 
             picJActuel8x8.BackgroundImageLayout = ImageLayout.Zoom;
-            picJActuel8x8.Location = new Point(329, 747);
+            picJActuel8x8.Location = new Point(340, 858);
             picJActuel8x8.Name = "picJActuel8x8";
             picJActuel8x8.Size = new Size(46, 52);
             picJActuel8x8.SizeMode = PictureBoxSizeMode.Zoom;
@@ -76,16 +76,17 @@
             // 
             // pnlPlateau8x8
             // 
-            pnlPlateau8x8.Location = new Point(236, 112);
+            pnlPlateau8x8.BackgroundImage = Properties.Resources.Plateau_8_8v5;
+            pnlPlateau8x8.Location = new Point(189, 94);
             pnlPlateau8x8.Name = "pnlPlateau8x8";
-            pnlPlateau8x8.Size = new Size(826, 629);
+            pnlPlateau8x8.Size = new Size(848, 718);
             pnlPlateau8x8.TabIndex = 7;
             // 
             // FormPartie8x8
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1268, 841);
+            ClientSize = new Size(1444, 962);
             Controls.Add(pnlPlateau8x8);
             Controls.Add(btnAbandon8x8);
             Controls.Add(lblTourJoueur8x8);

@@ -77,7 +77,7 @@
             // pnlPlateau8x8
             // 
             pnlPlateau8x8.BackgroundImage = Properties.Resources.Plateau_8_8v5;
-            pnlPlateau8x8.Location = new Point(189, 94);
+            pnlPlateau8x8.Location = new Point(174, 97);
             pnlPlateau8x8.Name = "pnlPlateau8x8";
             pnlPlateau8x8.Size = new Size(848, 718);
             pnlPlateau8x8.TabIndex = 7;

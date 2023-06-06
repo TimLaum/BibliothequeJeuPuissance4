@@ -62,9 +62,25 @@ namespace SAE___Puissance_4
                 Joueur Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
                 Label lblPseudoJoueur = new Label();
                 Partie Jeu = new Partie(ligne, colonne, JoueurDebutant);
-                FormPartie6x7 newPartie = new FormPartie6x7();
-                this.Hide();
-                newPartie.ShowDialog(this);
+
+                if(rbn6x7.Checked)
+                {
+                    FormPartie6x7 newPartie = new FormPartie6x7();
+                    this.Hide();
+                    newPartie.ShowDialog(this);
+                }
+                else if(rbn8x8.Checked )
+                {
+                    FormPartie8x8 newPartie = new FormPartie8x8();
+                    this.Hide();
+                    newPartie.ShowDialog(this);
+                }
+                else
+                {
+                    FormPartie6x7 newPartie = new FormPartie6x7();
+                    this.Hide();
+                    newPartie.ShowDialog(this);
+                }
                 exit = false;
                 this.Close();
                 //lblPseudoJoueur.Text = Convert.ToString(Joueur1.GetCouleur());

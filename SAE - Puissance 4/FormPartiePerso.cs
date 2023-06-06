@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SAE___Puissance_4
 {
     public partial class FormPartiePerso : Form
@@ -19,7 +20,12 @@ namespace SAE___Puissance_4
         int colonne = 7;
         int JoueurDebutant = 1;
         bool exit;
-        Random rnd = new Random();
+        Random rnd = new Random(); 
+        public Partie Jeu;
+        public Joueur Joueur1;
+        public Joueur Joueur2IA ;
+
+
         public FormPartiePerso()
         {
             InitializeComponent();
@@ -58,10 +64,10 @@ namespace SAE___Puissance_4
             }
             else
             {
-                Joueur Joueur1 = new Joueur(1, colorJ1, txbJ1.Text);
-                Joueur Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
+                 Joueur1 = new Joueur(1, colorJ1, txbJ1.Text);
+                 Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
                 Label lblPseudoJoueur = new Label();
-                Partie Jeu = new Partie(ligne, colonne, JoueurDebutant);
+                Jeu = new Partie(ligne, colonne, JoueurDebutant);
 
                 if(rbn6x7.Checked)
                 {

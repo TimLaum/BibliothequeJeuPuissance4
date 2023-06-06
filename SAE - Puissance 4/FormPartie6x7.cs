@@ -17,6 +17,7 @@ namespace SAE___Puissance_4
 {
     public partial class FormPartie6x7 : Form
     {
+        private FormPartiePerso frmPrmPerso;
         public FormPartie6x7()
         {
             InitializeComponent();
@@ -24,67 +25,37 @@ namespace SAE___Puissance_4
 
         private void FormPartie6x7_Load(object sender, EventArgs e)
         {
-            pictureBox44.Visible = true;
-            pictureBox44.Image = Properties.Resources.Pion_Noir;
+            frmPrmPerso = (FormPartiePerso)this.Owner;
+            if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
+            {
+                string x = frmPrmPerso.Joueur1.GetCouleur();
+                if (x == "Rouge")
+                {
+                    picJoueurActuel.Image = Properties.Resources.Pion_Rouge;
+                }
+                if (x == "Jaune")
+                {
+                    picJoueurActuel.Image = Properties.Resources.Pion_Jaune;
+                }
+            }
+            else
+            {
+                string x = frmPrmPerso.Joueur2IA.GetCouleur();
+                if (x == "Noir")
+                {
+                    picJoueurActuel.Image = Properties.Resources.Pion_Noir;
+                }
+                if (x == "Jaune")
+                {
+                    picJoueurActuel.Image = Properties.Resources.Pion_Jaune;
+                }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox36_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox33_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox32_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox41_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox21_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox29_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox30_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox26_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox22_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox39_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox35_Click(object sender, EventArgs e)
-        {
-        }
+        }     
     }
 }

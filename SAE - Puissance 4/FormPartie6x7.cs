@@ -26,6 +26,17 @@ namespace SAE___Puissance_4
         private void FormPartie6x7_Load(object sender, EventArgs e)
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
+            refreshPicJoueurActuel();
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }     
+        private void refreshPicJoueurActuel()
+        {
             if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
             {
                 string x = frmPrmPerso.Joueur1.GetCouleur();
@@ -50,12 +61,6 @@ namespace SAE___Puissance_4
                     picJoueurActuel.Image = Properties.Resources.Pion_Jaune;
                 }
             }
-
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }     
     }
 }

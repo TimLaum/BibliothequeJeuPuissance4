@@ -20,6 +20,11 @@ namespace SAE___Puissance_4
         private void FormPartie9x9_Load(object sender, EventArgs e)
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
+            refreshPicJoueurActuel();
+
+        }
+        private void refreshPicJoueurActuel()
+        {
             if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
             {
                 string x = frmPrmPerso.Joueur1.GetCouleur();
@@ -44,7 +49,6 @@ namespace SAE___Puissance_4
                     picJActuel9x9.Image = Properties.Resources.Pion_Jaune;
                 }
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)

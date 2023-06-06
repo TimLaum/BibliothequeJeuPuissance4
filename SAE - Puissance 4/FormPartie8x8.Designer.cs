@@ -220,6 +220,7 @@
             // pnlPlateau8x8
             // 
             pnlPlateau8x8.BackgroundImage = Properties.Resources.Plateau_8_8v5;
+<<<<<<< HEAD
             pnlPlateau8x8.Controls.Add(pictureBox64);
             pnlPlateau8x8.Controls.Add(pictureBox65);
             pnlPlateau8x8.Controls.Add(pictureBox66);
@@ -291,6 +292,8 @@
             pnlPlateau8x8.Controls.Add(pictureBox3);
             pnlPlateau8x8.Controls.Add(pictureBox2);
             pnlPlateau8x8.Controls.Add(pictureBox1);
+=======
+>>>>>>> dd362921950a326e6aff43c5bc6f2ec44698351f
             pnlPlateau8x8.Location = new Point(174, 97);
             pnlPlateau8x8.Name = "pnlPlateau8x8";
             pnlPlateau8x8.Size = new Size(848, 718);

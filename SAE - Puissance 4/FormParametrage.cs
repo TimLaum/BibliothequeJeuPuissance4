@@ -40,7 +40,7 @@ namespace SAE___Puissance_4
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
             PartiePerso.ShowDialog(this);
-            this.Close();
+            this.Show();
         }
 
         private void btnPartPerso_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace SAE___Puissance_4
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
             PartiePerso.ShowDialog(this);
-            this.Close();
+            this.Show();
         }
 
         private void btn2J_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace SAE___Puissance_4
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
             PartiePerso.ShowDialog(this);
-            this.Close();
+            this.Show();
         }
     }
 }

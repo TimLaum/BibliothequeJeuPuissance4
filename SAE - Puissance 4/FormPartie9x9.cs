@@ -55,5 +55,114 @@ namespace SAE___Puissance_4
         {
             this.Close();
         }
+
+        private void pictureBox63_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox62_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox61_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox60_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox59_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox58_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox57_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox56_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox55_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox64_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox65_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox66_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox67_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox68_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox69_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox70_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox71_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox72_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox81_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox80_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox79_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox78_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox77_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox76_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox75_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox74_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox73_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -906,6 +906,7 @@
             // 
             // pnlC1
             // 
+            pnlC1.BackColor = Color.Transparent;
             pnlC1.Controls.Add(picA6);
             pnlC1.Controls.Add(picA0);
             pnlC1.Controls.Add(picA1);
@@ -922,6 +923,7 @@
             // 
             // pnlC2
             // 
+            pnlC2.BackColor = Color.Transparent;
             pnlC2.Controls.Add(picB1);
             pnlC2.Controls.Add(picB0);
             pnlC2.Controls.Add(pictureBox30);
@@ -938,6 +940,7 @@
             // 
             // pnlC3
             // 
+            pnlC3.BackColor = Color.Transparent;
             pnlC3.Controls.Add(picC3);
             pnlC3.Controls.Add(picC0);
             pnlC3.Controls.Add(picC1);
@@ -954,6 +957,7 @@
             // 
             // pnlC4
             // 
+            pnlC4.BackColor = Color.Transparent;
             pnlC4.Controls.Add(picD5);
             pnlC4.Controls.Add(picD0);
             pnlC4.Controls.Add(picD1);
@@ -970,6 +974,7 @@
             // 
             // pnlC5
             // 
+            pnlC5.BackColor = Color.Transparent;
             pnlC5.Controls.Add(picE4);
             pnlC5.Controls.Add(picE0);
             pnlC5.Controls.Add(picE1);
@@ -986,6 +991,7 @@
             // 
             // pnlC6
             // 
+            pnlC6.BackColor = Color.Transparent;
             pnlC6.Controls.Add(picF6);
             pnlC6.Controls.Add(picF0);
             pnlC6.Controls.Add(picF1);
@@ -1002,6 +1008,7 @@
             // 
             // pnlC7
             // 
+            pnlC7.BackColor = Color.Transparent;
             pnlC7.Controls.Add(picG6);
             pnlC7.Controls.Add(picG0);
             pnlC7.Controls.Add(picG1);
@@ -1018,6 +1025,7 @@
             // 
             // pnlC8
             // 
+            pnlC8.BackColor = Color.Transparent;
             pnlC8.Controls.Add(picH3);
             pnlC8.Controls.Add(picH0);
             pnlC8.Controls.Add(picH1);

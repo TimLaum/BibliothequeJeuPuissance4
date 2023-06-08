@@ -39,7 +39,7 @@ namespace SAE___Puissance_4
             type_form = true;
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
-            PartiePerso.Show(this);
+            PartiePerso.ShowDialog(this);
         }
 
         private void btnPartPerso_Click(object sender, EventArgs e)
@@ -48,8 +48,8 @@ namespace SAE___Puissance_4
             type_form = false;
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
-            PartiePerso.ShowDialog();
-            this.Show(this);
+            PartiePerso.ShowDialog(this);
+            
         }
 
         private void btn2J_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace SAE___Puissance_4
             type_form = false;
             Form PartiePerso = new FormPartiePerso();
             this.Hide();
-            PartiePerso.Show(this);
+            PartiePerso.ShowDialog(this);
         }
     }
 }

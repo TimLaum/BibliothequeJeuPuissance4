@@ -87,7 +87,7 @@ namespace SAE___Puissance_4
                 if (frmPrmPerso.Jeu.GetPion(i, 1) == 0)
                 {
                     CoupAJouer.Add((i, 1));
-                    ChoixPicCouleurPion((PictureBox)panel1.Controls[i]);
+                    ChoixPicCouleurPion((PictureBox)pnlC1.Controls[i]);
                     frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
                     i = frmPrmPerso.Jeu.GetLignes();
 

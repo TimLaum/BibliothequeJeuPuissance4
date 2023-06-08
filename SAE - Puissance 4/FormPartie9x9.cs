@@ -164,5 +164,10 @@ namespace SAE___Puissance_4
         private void pictureBox73_Click(object sender, EventArgs e)
         {
         }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -90,7 +90,7 @@ namespace SAE___Puissance_4
                 }
                 else
                 {
-                    FormPartie6x7 newPartie = new FormPartie6x7();
+                    FormPartie9x9 newPartie = new FormPartie9x9();
                     this.Hide();
                     newPartie.ShowDialog(this);
                 }

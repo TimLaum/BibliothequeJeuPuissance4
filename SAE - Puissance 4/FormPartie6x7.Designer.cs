@@ -142,7 +142,7 @@
             lblTitre6x7.Anchor = AnchorStyles.Top;
             lblTitre6x7.AutoSize = true;
             lblTitre6x7.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitre6x7.Location = new Point(401, 9);
+            lblTitre6x7.Location = new Point(390, 50);
             lblTitre6x7.Name = "lblTitre6x7";
             lblTitre6x7.Size = new Size(227, 51);
             lblTitre6x7.TabIndex = 0;
@@ -152,10 +152,10 @@
             // 
             picJoueurActuel.Anchor = AnchorStyles.Bottom;
             picJoueurActuel.BackgroundImageLayout = ImageLayout.Zoom;
-            picJoueurActuel.Location = new Point(257, 637);
+            picJoueurActuel.Location = new Point(290, 655);
             picJoueurActuel.Margin = new Padding(3, 2, 3, 2);
             picJoueurActuel.Name = "picJoueurActuel";
-            picJoueurActuel.Size = new Size(40, 39);
+            picJoueurActuel.Size = new Size(40, 40);
             picJoueurActuel.SizeMode = PictureBoxSizeMode.Zoom;
             picJoueurActuel.TabIndex = 1;
             picJoueurActuel.TabStop = false;
@@ -164,7 +164,7 @@
             // 
             lblTourJoueur.Anchor = AnchorStyles.Bottom;
             lblTourJoueur.AutoSize = true;
-            lblTourJoueur.Location = new Point(228, 678);
+            lblTourJoueur.Location = new Point(265, 700);
             lblTourJoueur.Name = "lblTourJoueur";
             lblTourJoueur.Size = new Size(105, 15);
             lblTourJoueur.TabIndex = 2;
@@ -173,7 +173,7 @@
             // btnAbandon
             // 
             btnAbandon.Anchor = AnchorStyles.Bottom;
-            btnAbandon.Location = new Point(528, 637);
+            btnAbandon.Location = new Point(510, 655);
             btnAbandon.Margin = new Padding(3, 2, 3, 2);
             btnAbandon.Name = "btnAbandon";
             btnAbandon.Size = new Size(279, 38);
@@ -275,7 +275,7 @@
             pnlC7.Controls.Add(pictureBox40);
             pnlC7.Controls.Add(pictureBox41);
             pnlC7.Controls.Add(pictureBox42);
-            pnlC7.Location = new Point(722, 89);
+            pnlC7.Location = new Point(722, 130);
             pnlC7.Margin = new Padding(3, 2, 3, 2);
             pnlC7.Name = "pnlC7";
             pnlC7.Size = new Size(85, 510);
@@ -373,7 +373,7 @@
             pnlC6.Controls.Add(pictureBox35);
             pnlC6.Controls.Add(pictureBox36);
             pnlC6.ForeColor = Color.Transparent;
-            pnlC6.Location = new Point(637, 89);
+            pnlC6.Location = new Point(637, 130);
             pnlC6.Margin = new Padding(3, 2, 3, 2);
             pnlC6.Name = "pnlC6";
             pnlC6.Size = new Size(85, 510);
@@ -469,7 +469,7 @@
             pnlC5.Controls.Add(pictureBox24);
             pnlC5.Controls.Add(pictureBox25);
             pnlC5.Controls.Add(pictureBox26);
-            pnlC5.Location = new Point(552, 89);
+            pnlC5.Location = new Point(552, 130);
             pnlC5.Margin = new Padding(3, 2, 3, 2);
             pnlC5.Name = "pnlC5";
             pnlC5.Size = new Size(85, 510);
@@ -565,7 +565,7 @@
             pnlC4.Controls.Add(pictureBox18);
             pnlC4.Controls.Add(pictureBox19);
             pnlC4.Controls.Add(pictureBox20);
-            pnlC4.Location = new Point(467, 89);
+            pnlC4.Location = new Point(467, 130);
             pnlC4.Margin = new Padding(3, 2, 3, 2);
             pnlC4.Name = "pnlC4";
             pnlC4.Size = new Size(85, 510);
@@ -661,7 +661,7 @@
             pnlC3.Controls.Add(picC2);
             pnlC3.Controls.Add(picC1);
             pnlC3.Controls.Add(picC0);
-            pnlC3.Location = new Point(382, 89);
+            pnlC3.Location = new Point(382, 130);
             pnlC3.Margin = new Padding(3, 2, 3, 2);
             pnlC3.Name = "pnlC3";
             pnlC3.Size = new Size(85, 510);
@@ -757,7 +757,7 @@
             pnlC2.Controls.Add(picB2);
             pnlC2.Controls.Add(picB1);
             pnlC2.Controls.Add(picB0);
-            pnlC2.Location = new Point(297, 89);
+            pnlC2.Location = new Point(297, 130);
             pnlC2.Margin = new Padding(3, 2, 3, 2);
             pnlC2.Name = "pnlC2";
             pnlC2.Size = new Size(85, 510);
@@ -853,7 +853,7 @@
             pnlC1.Controls.Add(picA2);
             pnlC1.Controls.Add(picA1);
             pnlC1.Controls.Add(picA0);
-            pnlC1.Location = new Point(212, 89);
+            pnlC1.Location = new Point(212, 130);
             pnlC1.Margin = new Padding(3, 2, 3, 2);
             pnlC1.Name = "pnlC1";
             pnlC1.Size = new Size(85, 510);
@@ -883,7 +883,7 @@
             picPlateau.BackgroundImageLayout = ImageLayout.Zoom;
             picPlateau.BorderStyle = BorderStyle.FixedSingle;
             picPlateau.Image = Properties.Resources.plateau6x7v5;
-            picPlateau.Location = new Point(212, 89);
+            picPlateau.Location = new Point(212, 130);
             picPlateau.Margin = new Padding(3, 2, 3, 2);
             picPlateau.Name = "picPlateau";
             picPlateau.Size = new Size(595, 510);

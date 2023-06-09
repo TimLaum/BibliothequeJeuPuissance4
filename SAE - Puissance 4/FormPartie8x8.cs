@@ -23,7 +23,26 @@ namespace SAE___Puissance_4
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
             ChoixPicCouleurPion(picJActuel8x8);
+            Panel_Transparence(pnlC1);
+            Panel_Transparence(pnlC2);
+            Panel_Transparence(pnlC3);
+            Panel_Transparence(pnlC4);
+            Panel_Transparence(pnlC5);
+            Panel_Transparence(pnlC6);
+            Panel_Transparence(pnlC7);
+            Panel_Transparence(pnlC8);
         }
+
+        private void Panel_Transparence(Panel p)
+        {
+            var posi = this.PointToScreen(p.Location);
+            posi = picPlateau.PointToClient(posi);
+            p.Parent = picPlateau;
+            p.Location = posi;
+            p.BackColor = Color.FromArgb(0, 0, 0, 0);
+
+        }
+
 
         private void rejouer(bool win, string pseudo)
         {
@@ -55,11 +74,11 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur1.GetCouleur();
                 if (x == "Rouge")
                 {
-                    pic.Image = Properties.Resources.Pion_Rouge;
+                    pic.Image = Properties.Resources.PionRougeP8x8;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.Pion_Jaune;
+                    pic.Image = Properties.Resources.PionJauneP8x8;
                 }
             }
             else
@@ -67,11 +86,11 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur2IA.GetCouleur();
                 if (x == "Noir")
                 {
-                    pic.Image = Properties.Resources.Pion_Noir;
+                    pic.Image = Properties.Resources.PionNoirP8x8;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.Pion_Jaune;
+                    pic.Image = Properties.Resources.PionJauneP8x8;
                 }
             }
         }
@@ -79,11 +98,6 @@ namespace SAE___Puissance_4
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void pictureBox26_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)

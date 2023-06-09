@@ -273,7 +273,7 @@
             pnlC9.Location = new Point(740, 130);
             pnlC9.Margin = new Padding(3, 2, 3, 2);
             pnlC9.Name = "pnlC9";
-            pnlC9.Size = new Size(66, 510);
+            pnlC9.Size = new Size(68, 510);
             pnlC9.TabIndex = 60;
             pnlC9.Click += pnlC_Click;
             pnlC9.MouseEnter += pnlC_MouseEnter;

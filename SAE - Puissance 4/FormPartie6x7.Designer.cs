@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPartie6x7));
             lblTitre6x7 = new Label();
             picJoueurActuel = new PictureBox();
             lblTourJoueur = new Label();
@@ -39,7 +38,6 @@
             picA2 = new PictureBox();
             picA1 = new PictureBox();
             picA0 = new PictureBox();
-            pnlPlateau6x7 = new Panel();
             pnlC7 = new Panel();
             pictureBox37 = new PictureBox();
             pictureBox38 = new PictureBox();
@@ -83,6 +81,7 @@
             picB1 = new PictureBox();
             picB0 = new PictureBox();
             pnlC1 = new Panel();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picJoueurActuel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picA3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picA5).BeginInit();
@@ -90,7 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)picA2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picA1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picA0).BeginInit();
-            pnlPlateau6x7.SuspendLayout();
             pnlC7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox37).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox38).BeginInit();
@@ -134,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)picB1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picB0).BeginInit();
             pnlC1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblTitre6x7
@@ -248,22 +247,6 @@
             picA0.TabIndex = 43;
             picA0.TabStop = false;
             // 
-            // pnlPlateau6x7
-            // 
-            pnlPlateau6x7.BackgroundImage = (Image)resources.GetObject("pnlPlateau6x7.BackgroundImage");
-            pnlPlateau6x7.Controls.Add(pnlC7);
-            pnlPlateau6x7.Controls.Add(pnlC6);
-            pnlPlateau6x7.Controls.Add(pnlC5);
-            pnlPlateau6x7.Controls.Add(pnlC4);
-            pnlPlateau6x7.Controls.Add(pnlC3);
-            pnlPlateau6x7.Controls.Add(pnlC2);
-            pnlPlateau6x7.Controls.Add(pnlC1);
-            pnlPlateau6x7.ForeColor = SystemColors.ControlText;
-            pnlPlateau6x7.Location = new Point(185, 83);
-            pnlPlateau6x7.Name = "pnlPlateau6x7";
-            pnlPlateau6x7.Size = new Size(729, 683);
-            pnlPlateau6x7.TabIndex = 57;
-            // 
             // pnlC7
             // 
             pnlC7.BackColor = Color.Transparent;
@@ -273,7 +256,7 @@
             pnlC7.Controls.Add(pictureBox40);
             pnlC7.Controls.Add(pictureBox41);
             pnlC7.Controls.Add(pictureBox42);
-            pnlC7.Location = new Point(605, 49);
+            pnlC7.Location = new Point(819, 143);
             pnlC7.Name = "pnlC7";
             pnlC7.Size = new Size(101, 632);
             pnlC7.TabIndex = 58;
@@ -355,13 +338,15 @@
             // pnlC6
             // 
             pnlC6.BackColor = Color.Transparent;
+            pnlC6.BackgroundImageLayout = ImageLayout.None;
             pnlC6.Controls.Add(pictureBox27);
             pnlC6.Controls.Add(pictureBox32);
             pnlC6.Controls.Add(pictureBox33);
             pnlC6.Controls.Add(pictureBox34);
             pnlC6.Controls.Add(pictureBox35);
             pnlC6.Controls.Add(pictureBox36);
-            pnlC6.Location = new Point(509, 48);
+            pnlC6.ForeColor = Color.Transparent;
+            pnlC6.Location = new Point(719, 143);
             pnlC6.Name = "pnlC6";
             pnlC6.Size = new Size(101, 632);
             pnlC6.TabIndex = 58;
@@ -449,7 +434,7 @@
             pnlC5.Controls.Add(pictureBox24);
             pnlC5.Controls.Add(pictureBox25);
             pnlC5.Controls.Add(pictureBox26);
-            pnlC5.Location = new Point(410, 49);
+            pnlC5.Location = new Point(618, 143);
             pnlC5.Name = "pnlC5";
             pnlC5.Size = new Size(101, 632);
             pnlC5.TabIndex = 58;
@@ -537,7 +522,7 @@
             pnlC4.Controls.Add(pictureBox18);
             pnlC4.Controls.Add(pictureBox19);
             pnlC4.Controls.Add(pictureBox20);
-            pnlC4.Location = new Point(310, 48);
+            pnlC4.Location = new Point(518, 143);
             pnlC4.Name = "pnlC4";
             pnlC4.Size = new Size(101, 632);
             pnlC4.TabIndex = 58;
@@ -625,7 +610,7 @@
             pnlC3.Controls.Add(picC2);
             pnlC3.Controls.Add(picC1);
             pnlC3.Controls.Add(picC0);
-            pnlC3.Location = new Point(213, 48);
+            pnlC3.Location = new Point(419, 143);
             pnlC3.Name = "pnlC3";
             pnlC3.Size = new Size(101, 632);
             pnlC3.TabIndex = 58;
@@ -713,7 +698,7 @@
             pnlC2.Controls.Add(picB2);
             pnlC2.Controls.Add(picB1);
             pnlC2.Controls.Add(picB0);
-            pnlC2.Location = new Point(115, 48);
+            pnlC2.Location = new Point(326, 143);
             pnlC2.Name = "pnlC2";
             pnlC2.Size = new Size(101, 632);
             pnlC2.TabIndex = 58;
@@ -801,12 +786,24 @@
             pnlC1.Controls.Add(picA2);
             pnlC1.Controls.Add(picA1);
             pnlC1.Controls.Add(picA0);
-            pnlC1.Location = new Point(17, 48);
+            pnlC1.Location = new Point(225, 143);
             pnlC1.Name = "pnlC1";
             pnlC1.Size = new Size(101, 632);
             pnlC1.TabIndex = 57;
             pnlC1.Click += pnlC_Click;
             pnlC1.MouseEnter += pnlC_MouseEnter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Image = Properties.Resources.Plateau_6_7_v3__1_;
+            pictureBox1.Location = new Point(210, 98);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(722, 703);
+            pictureBox1.TabIndex = 59;
+            pictureBox1.TabStop = false;
             // 
             // FormPartie6x7
             // 
@@ -814,11 +811,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(1182, 1055);
+            Controls.Add(pnlC7);
             Controls.Add(btnAbandon);
+            Controls.Add(pnlC6);
             Controls.Add(lblTourJoueur);
+            Controls.Add(pnlC5);
+            Controls.Add(pnlC4);
             Controls.Add(picJoueurActuel);
             Controls.Add(lblTitre6x7);
-            Controls.Add(pnlPlateau6x7);
+            Controls.Add(pnlC3);
+            Controls.Add(pnlC2);
+            Controls.Add(pnlC1);
+            Controls.Add(pictureBox1);
             Name = "FormPartie6x7";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Puissance 4";
@@ -830,7 +834,6 @@
             ((System.ComponentModel.ISupportInitialize)picA2).EndInit();
             ((System.ComponentModel.ISupportInitialize)picA1).EndInit();
             ((System.ComponentModel.ISupportInitialize)picA0).EndInit();
-            pnlPlateau6x7.ResumeLayout(false);
             pnlC7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox37).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox38).EndInit();
@@ -874,6 +877,7 @@
             ((System.ComponentModel.ISupportInitialize)picB1).EndInit();
             ((System.ComponentModel.ISupportInitialize)picB0).EndInit();
             pnlC1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -892,7 +896,6 @@
         private PictureBox picA0;
         private PictureBox pictureBox43;
         private PictureBox pictureBox44;
-        private Panel pnlPlateau6x7;
         private Panel pnlC1;
         private Panel pnlC7;
         private PictureBox pictureBox37;
@@ -936,5 +939,6 @@
         private PictureBox picB2;
         private PictureBox picB1;
         private PictureBox picB0;
+        private PictureBox pictureBox1;
     }
 }

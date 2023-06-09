@@ -272,11 +272,14 @@
             pnlC8.Name = "pnlC8";
             pnlC8.Size = new Size(95, 715);
             pnlC8.TabIndex = 8;
+            pnlC8.Click += pnlC_Click;
             pnlC8.Paint += panel7_Paint;
+            pnlC8.MouseEnter += pnlC_MouseEnter;
             // 
             // picH3
             // 
             picH3.BackColor = Color.Transparent;
+            picH3.Enabled = false;
             picH3.Location = new Point(5, 273);
             picH3.Name = "picH3";
             picH3.Size = new Size(85, 85);
@@ -286,6 +289,7 @@
             // picH0
             // 
             picH0.BackColor = Color.Transparent;
+            picH0.Enabled = false;
             picH0.Location = new Point(5, 5);
             picH0.Name = "picH0";
             picH0.Size = new Size(85, 85);
@@ -295,6 +299,7 @@
             // picH1
             // 
             picH1.BackColor = Color.Transparent;
+            picH1.Enabled = false;
             picH1.Location = new Point(5, 94);
             picH1.Name = "picH1";
             picH1.Size = new Size(85, 85);
@@ -304,6 +309,7 @@
             // picH2
             // 
             picH2.BackColor = Color.Transparent;
+            picH2.Enabled = false;
             picH2.Location = new Point(5, 183);
             picH2.Name = "picH2";
             picH2.Size = new Size(85, 85);
@@ -313,6 +319,7 @@
             // picH4
             // 
             picH4.BackColor = Color.Transparent;
+            picH4.Enabled = false;
             picH4.Location = new Point(5, 361);
             picH4.Name = "picH4";
             picH4.Size = new Size(85, 85);
@@ -322,6 +329,7 @@
             // picH5
             // 
             picH5.BackColor = Color.Transparent;
+            picH5.Enabled = false;
             picH5.Location = new Point(5, 450);
             picH5.Name = "picH5";
             picH5.Size = new Size(85, 85);
@@ -331,6 +339,7 @@
             // picH6
             // 
             picH6.BackColor = Color.Transparent;
+            picH6.Enabled = false;
             picH6.Location = new Point(5, 539);
             picH6.Name = "picH6";
             picH6.Size = new Size(85, 85);
@@ -340,6 +349,7 @@
             // picH7
             // 
             picH7.BackColor = Color.Transparent;
+            picH7.Enabled = false;
             picH7.Location = new Point(5, 627);
             picH7.Name = "picH7";
             picH7.Size = new Size(85, 85);
@@ -361,11 +371,14 @@
             pnlC7.Name = "pnlC7";
             pnlC7.Size = new Size(95, 715);
             pnlC7.TabIndex = 8;
+            pnlC7.Click += pnlC_Click;
             pnlC7.Paint += panel6_Paint;
+            pnlC7.MouseEnter += pnlC_MouseEnter;
             // 
             // picG6
             // 
             picG6.BackColor = Color.Transparent;
+            picG6.Enabled = false;
             picG6.Location = new Point(5, 539);
             picG6.Name = "picG6";
             picG6.Size = new Size(85, 85);
@@ -375,6 +388,7 @@
             // picG0
             // 
             picG0.BackColor = Color.Transparent;
+            picG0.Enabled = false;
             picG0.Location = new Point(5, 5);
             picG0.Name = "picG0";
             picG0.Size = new Size(85, 85);
@@ -384,6 +398,7 @@
             // picG1
             // 
             picG1.BackColor = Color.Transparent;
+            picG1.Enabled = false;
             picG1.Location = new Point(5, 94);
             picG1.Name = "picG1";
             picG1.Size = new Size(85, 85);
@@ -393,6 +408,7 @@
             // picG2
             // 
             picG2.BackColor = Color.Transparent;
+            picG2.Enabled = false;
             picG2.Location = new Point(5, 183);
             picG2.Name = "picG2";
             picG2.Size = new Size(85, 85);
@@ -402,6 +418,7 @@
             // picG3
             // 
             picG3.BackColor = Color.Transparent;
+            picG3.Enabled = false;
             picG3.Location = new Point(5, 273);
             picG3.Name = "picG3";
             picG3.Size = new Size(85, 85);
@@ -411,6 +428,7 @@
             // picG4
             // 
             picG4.BackColor = Color.Transparent;
+            picG4.Enabled = false;
             picG4.Location = new Point(5, 361);
             picG4.Name = "picG4";
             picG4.Size = new Size(85, 85);
@@ -420,6 +438,7 @@
             // picG5
             // 
             picG5.BackColor = Color.Transparent;
+            picG5.Enabled = false;
             picG5.Location = new Point(5, 450);
             picG5.Name = "picG5";
             picG5.Size = new Size(85, 85);
@@ -429,6 +448,7 @@
             // picG7
             // 
             picG7.BackColor = Color.Transparent;
+            picG7.Enabled = false;
             picG7.Location = new Point(5, 627);
             picG7.Name = "picG7";
             picG7.Size = new Size(85, 85);
@@ -450,11 +470,14 @@
             pnlC6.Name = "pnlC6";
             pnlC6.Size = new Size(95, 715);
             pnlC6.TabIndex = 8;
+            pnlC6.Click += pnlC_Click;
             pnlC6.Paint += panel5_Paint;
+            pnlC6.MouseEnter += pnlC_MouseEnter;
             // 
             // picF6
             // 
             picF6.BackColor = Color.Transparent;
+            picF6.Enabled = false;
             picF6.Location = new Point(5, 537);
             picF6.Name = "picF6";
             picF6.Size = new Size(85, 85);
@@ -464,6 +487,7 @@
             // picF0
             // 
             picF0.BackColor = Color.Transparent;
+            picF0.Enabled = false;
             picF0.Location = new Point(5, 4);
             picF0.Name = "picF0";
             picF0.Size = new Size(85, 85);
@@ -473,6 +497,7 @@
             // picF1
             // 
             picF1.BackColor = Color.Transparent;
+            picF1.Enabled = false;
             picF1.Location = new Point(5, 93);
             picF1.Name = "picF1";
             picF1.Size = new Size(85, 85);
@@ -482,6 +507,7 @@
             // picF2
             // 
             picF2.BackColor = Color.Transparent;
+            picF2.Enabled = false;
             picF2.Location = new Point(5, 183);
             picF2.Name = "picF2";
             picF2.Size = new Size(85, 85);
@@ -492,6 +518,7 @@
             // picF3
             // 
             picF3.BackColor = Color.Transparent;
+            picF3.Enabled = false;
             picF3.Location = new Point(5, 271);
             picF3.Name = "picF3";
             picF3.Size = new Size(85, 85);
@@ -501,6 +528,7 @@
             // picF4
             // 
             picF4.BackColor = Color.Transparent;
+            picF4.Enabled = false;
             picF4.Location = new Point(5, 360);
             picF4.Name = "picF4";
             picF4.Size = new Size(85, 85);
@@ -510,6 +538,7 @@
             // picF5
             // 
             picF5.BackColor = Color.Transparent;
+            picF5.Enabled = false;
             picF5.Location = new Point(5, 449);
             picF5.Name = "picF5";
             picF5.Size = new Size(85, 85);
@@ -519,6 +548,7 @@
             // picF7
             // 
             picF7.BackColor = Color.Transparent;
+            picF7.Enabled = false;
             picF7.Location = new Point(5, 627);
             picF7.Name = "picF7";
             picF7.Size = new Size(85, 85);
@@ -540,11 +570,14 @@
             pnlC5.Name = "pnlC5";
             pnlC5.Size = new Size(95, 715);
             pnlC5.TabIndex = 8;
+            pnlC5.Click += pnlC_Click;
             pnlC5.Paint += panel4_Paint;
+            pnlC5.MouseEnter += pnlC_MouseEnter;
             // 
             // picE4
             // 
             picE4.BackColor = Color.Transparent;
+            picE4.Enabled = false;
             picE4.Location = new Point(5, 361);
             picE4.Name = "picE4";
             picE4.Size = new Size(85, 85);
@@ -554,6 +587,7 @@
             // picE0
             // 
             picE0.BackColor = Color.Transparent;
+            picE0.Enabled = false;
             picE0.Location = new Point(5, 5);
             picE0.Name = "picE0";
             picE0.Size = new Size(85, 85);
@@ -563,6 +597,7 @@
             // picE1
             // 
             picE1.BackColor = Color.Transparent;
+            picE1.Enabled = false;
             picE1.Location = new Point(5, 94);
             picE1.Name = "picE1";
             picE1.Size = new Size(85, 85);
@@ -572,6 +607,7 @@
             // picE2
             // 
             picE2.BackColor = Color.Transparent;
+            picE2.Enabled = false;
             picE2.Location = new Point(5, 183);
             picE2.Name = "picE2";
             picE2.Size = new Size(85, 85);
@@ -581,6 +617,7 @@
             // picE3
             // 
             picE3.BackColor = Color.Transparent;
+            picE3.Enabled = false;
             picE3.Location = new Point(5, 273);
             picE3.Name = "picE3";
             picE3.Size = new Size(85, 85);
@@ -590,6 +627,7 @@
             // picE5
             // 
             picE5.BackColor = Color.Transparent;
+            picE5.Enabled = false;
             picE5.Location = new Point(5, 450);
             picE5.Name = "picE5";
             picE5.Size = new Size(85, 85);
@@ -599,6 +637,7 @@
             // picE6
             // 
             picE6.BackColor = Color.Transparent;
+            picE6.Enabled = false;
             picE6.Location = new Point(5, 539);
             picE6.Name = "picE6";
             picE6.Size = new Size(85, 85);
@@ -608,6 +647,7 @@
             // picE7
             // 
             picE7.BackColor = Color.Transparent;
+            picE7.Enabled = false;
             picE7.Location = new Point(5, 627);
             picE7.Name = "picE7";
             picE7.Size = new Size(85, 85);
@@ -629,11 +669,14 @@
             pnlC4.Name = "pnlC4";
             pnlC4.Size = new Size(95, 715);
             pnlC4.TabIndex = 8;
+            pnlC4.Click += pnlC_Click;
             pnlC4.Paint += panel3_Paint;
+            pnlC4.MouseEnter += pnlC_MouseEnter;
             // 
             // picD5
             // 
             picD5.BackColor = Color.Transparent;
+            picD5.Enabled = false;
             picD5.Location = new Point(5, 451);
             picD5.Name = "picD5";
             picD5.Size = new Size(85, 85);
@@ -643,6 +686,7 @@
             // picD0
             // 
             picD0.BackColor = Color.Transparent;
+            picD0.Enabled = false;
             picD0.Location = new Point(5, 6);
             picD0.Name = "picD0";
             picD0.Size = new Size(85, 85);
@@ -652,6 +696,7 @@
             // picD1
             // 
             picD1.BackColor = Color.Transparent;
+            picD1.Enabled = false;
             picD1.Location = new Point(5, 95);
             picD1.Name = "picD1";
             picD1.Size = new Size(85, 85);
@@ -661,6 +706,7 @@
             // picD2
             // 
             picD2.BackColor = Color.Transparent;
+            picD2.Enabled = false;
             picD2.Location = new Point(5, 184);
             picD2.Name = "picD2";
             picD2.Size = new Size(85, 85);
@@ -670,6 +716,7 @@
             // picD3
             // 
             picD3.BackColor = Color.Transparent;
+            picD3.Enabled = false;
             picD3.Location = new Point(5, 274);
             picD3.Name = "picD3";
             picD3.Size = new Size(85, 85);
@@ -679,6 +726,7 @@
             // picD4
             // 
             picD4.BackColor = Color.Transparent;
+            picD4.Enabled = false;
             picD4.Location = new Point(5, 362);
             picD4.Name = "picD4";
             picD4.Size = new Size(85, 85);
@@ -688,6 +736,7 @@
             // picD6
             // 
             picD6.BackColor = Color.Transparent;
+            picD6.Enabled = false;
             picD6.Location = new Point(5, 540);
             picD6.Name = "picD6";
             picD6.Size = new Size(85, 85);
@@ -697,6 +746,7 @@
             // picD7
             // 
             picD7.BackColor = Color.Transparent;
+            picD7.Enabled = false;
             picD7.Location = new Point(5, 628);
             picD7.Name = "picD7";
             picD7.Size = new Size(85, 85);
@@ -718,11 +768,14 @@
             pnlC3.Name = "pnlC3";
             pnlC3.Size = new Size(95, 715);
             pnlC3.TabIndex = 8;
+            pnlC3.Click += pnlC_Click;
             pnlC3.Paint += panel2_Paint;
+            pnlC3.MouseEnter += pnlC_MouseEnter;
             // 
             // picC3
             // 
             picC3.BackColor = Color.Transparent;
+            picC3.Enabled = false;
             picC3.Location = new Point(5, 273);
             picC3.Name = "picC3";
             picC3.Size = new Size(85, 85);
@@ -732,6 +785,7 @@
             // picC0
             // 
             picC0.BackColor = Color.Transparent;
+            picC0.Enabled = false;
             picC0.Location = new Point(5, 5);
             picC0.Name = "picC0";
             picC0.Size = new Size(85, 85);
@@ -741,6 +795,7 @@
             // picC1
             // 
             picC1.BackColor = Color.Transparent;
+            picC1.Enabled = false;
             picC1.Location = new Point(5, 94);
             picC1.Name = "picC1";
             picC1.Size = new Size(85, 85);
@@ -750,6 +805,7 @@
             // picC2
             // 
             picC2.BackColor = Color.Transparent;
+            picC2.Enabled = false;
             picC2.Location = new Point(5, 183);
             picC2.Name = "picC2";
             picC2.Size = new Size(85, 85);
@@ -759,6 +815,7 @@
             // picC4
             // 
             picC4.BackColor = Color.Transparent;
+            picC4.Enabled = false;
             picC4.Location = new Point(5, 361);
             picC4.Name = "picC4";
             picC4.Size = new Size(85, 85);
@@ -768,6 +825,7 @@
             // picC5
             // 
             picC5.BackColor = Color.Transparent;
+            picC5.Enabled = false;
             picC5.Location = new Point(5, 450);
             picC5.Name = "picC5";
             picC5.Size = new Size(85, 85);
@@ -777,6 +835,7 @@
             // picC6
             // 
             picC6.BackColor = Color.Transparent;
+            picC6.Enabled = false;
             picC6.Location = new Point(5, 539);
             picC6.Name = "picC6";
             picC6.Size = new Size(85, 85);
@@ -786,6 +845,7 @@
             // picC7
             // 
             picC7.BackColor = Color.Transparent;
+            picC7.Enabled = false;
             picC7.Location = new Point(5, 627);
             picC7.Name = "picC7";
             picC7.Size = new Size(85, 85);
@@ -807,7 +867,9 @@
             pnlC2.Name = "pnlC2";
             pnlC2.Size = new Size(95, 715);
             pnlC2.TabIndex = 8;
+            pnlC2.Click += pnlC_Click;
             pnlC2.Paint += panel1_Paint;
+            pnlC2.MouseEnter += pnlC_MouseEnter;
             // 
             // picB1
             // 
@@ -872,6 +934,7 @@
             // picB6
             // 
             picB6.BackColor = Color.Transparent;
+            picB6.Enabled = false;
             picB6.Location = new Point(4, 540);
             picB6.Name = "picB6";
             picB6.Size = new Size(85, 85);
@@ -881,6 +944,7 @@
             // picB7
             // 
             picB7.BackColor = Color.Transparent;
+            picB7.Enabled = false;
             picB7.Location = new Point(4, 628);
             picB7.Name = "picB7";
             picB7.Size = new Size(85, 85);
@@ -902,13 +966,15 @@
             pnlC1.Name = "pnlC1";
             pnlC1.Size = new Size(95, 715);
             pnlC1.TabIndex = 8;
+            pnlC1.Click += pnlC_Click;
             pnlC1.Paint += pnlC1_Paint;
+            pnlC1.MouseEnter += pnlC_MouseEnter;
             // 
             // picA6
             // 
             picA6.BackColor = Color.Transparent;
             picA6.Enabled = false;
-            picA6.Location = new Point(7, 540);
+            picA6.Location = new Point(9, 629);
             picA6.Name = "picA6";
             picA6.Size = new Size(85, 85);
             picA6.TabIndex = 28;
@@ -978,7 +1044,7 @@
             // 
             picA7.BackColor = Color.Transparent;
             picA7.Enabled = false;
-            picA7.Location = new Point(7, 628);
+            picA7.Location = new Point(7, 542);
             picA7.Name = "picA7";
             picA7.Size = new Size(85, 85);
             picA7.TabIndex = 36;
@@ -1044,13 +1110,14 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1445, 963);
+            ClientSize = new Size(1217, 963);
             Controls.Add(pnlPlateau8x8);
             Controls.Add(btnAbandon8x8);
             Controls.Add(lblTourJoueur8x8);
             Controls.Add(picJActuel8x8);
             Controls.Add(lblTitre6x7);
             Name = "FormPartie8x8";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += FormPartie8x8_Load;
             ((System.ComponentModel.ISupportInitialize)picJActuel8x8).EndInit();

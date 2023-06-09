@@ -23,10 +23,10 @@ namespace SAE___Puissance_4
         {
             InitializeComponent();
         }
-        private void rejouer(bool win,string pseudo)
+        private void rejouer(bool win, string pseudo)
         {
-            if (win) 
-            { 
+            if (win)
+            {
                 DialogResult rejouer = MessageBox.Show($"Victoire du joueur {pseudo}\n\nSouhaitez-vous rejouer?", "Victoire !", MessageBoxButtons.YesNo);
                 if (rejouer == DialogResult.Yes)
                     this.Close();
@@ -120,11 +120,11 @@ namespace SAE___Puissance_4
                     CoupAJouer.Add((columnNumber, i));
                     ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
                     frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
-                    if(frmPrmPerso.Jeu.EstTerminee() == 1)
-                        rejouer(true,frmPrmPerso.Joueur1.GetPseudoJoueur());
-                    else if(frmPrmPerso.Jeu.EstTerminee() == 2)
+                    if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                        rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
+                    else if (frmPrmPerso.Jeu.EstTerminee() == 2)
                         rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
-                    else if(frmPrmPerso.Jeu.EstTerminee() ==0 )
+                    else if (frmPrmPerso.Jeu.EstTerminee() == 0)
                         rejouer(false, "");
                     ChoixPicCouleurPion(picJoueurActuel);
                     break;

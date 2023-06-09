@@ -164,22 +164,17 @@ namespace BibliothequeJeuPuissance4
         }
         public bool EstPlein()
         {
-            bool verif = false;
             for(int ligne = 0; ligne < lignes;ligne++)
             {
                 for(int colonne =0; colonne < colonnes;colonne++)
                 {
                     if (plateau[ligne,colonne] == 0)
                     {
-                        verif = false;
-                    }
-                    else
-                    {
-                        verif = true;
+                        return false;
                     }
                 }
             }
-            return verif;
+            return true;
         }
     }
 }

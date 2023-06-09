@@ -93,6 +93,36 @@ namespace SAE___Puissance_4.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PionJauneP6x7 {
+            get {
+                object obj = ResourceManager.GetObject("PionJauneP6x7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PionNoirP6x7 {
+            get {
+                object obj = ResourceManager.GetObject("PionNoirP6x7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PionRougeP6x7 {
+            get {
+                object obj = ResourceManager.GetObject("PionRougeP6x7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Plateau_6_7_v3__1_ {
             get {
                 object obj = ResourceManager.GetObject("Plateau_6_7_v3 (1)", resourceCulture);
@@ -136,6 +166,16 @@ namespace SAE___Puissance_4.Properties {
         internal static System.Drawing.Bitmap Plateau_9_9v2 {
             get {
                 object obj = ResourceManager.GetObject("Plateau_9_9v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plateau6x7v5 {
+            get {
+                object obj = ResourceManager.GetObject("plateau6x7v5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

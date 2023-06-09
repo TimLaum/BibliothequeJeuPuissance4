@@ -79,11 +79,11 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur1.GetCouleur();
                 if (x == "Rouge")
                 {
-                    pic.Image = Properties.Resources.Pion_Rouge;
+                    pic.Image = Properties.Resources.PionRougeP6x7;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.Pion_Jaune;
+                    pic.Image = Properties.Resources.PionJauneP6x7;
                 }
             }
             else
@@ -91,11 +91,11 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur2IA.GetCouleur();
                 if (x == "Noir")
                 {
-                    pic.Image = Properties.Resources.Pion_Noir;
+                    pic.Image = Properties.Resources.PionNoirP6x7;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.Pion_Jaune;
+                    pic.Image = Properties.Resources.PionJauneP6x7;
                 }
             }
         }
@@ -152,6 +152,60 @@ namespace SAE___Puissance_4
                 i++;
             }
 
+        }
+
+        private void pnlC1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlC2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pnlC3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pnlC4_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pnlC5_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pnlC6_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pnlC7_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void picA2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picPlateau_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void picA3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void picA4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void picA5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pnlC1_Paint_1(object sender, PaintEventArgs e)
+        {
         }
     }
 }

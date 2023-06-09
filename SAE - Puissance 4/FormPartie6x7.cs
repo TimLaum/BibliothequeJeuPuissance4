@@ -50,9 +50,28 @@ namespace SAE___Puissance_4
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
             ChoixPicCouleurPion(picJoueurActuel);
+            Panel_Transparence(this, pnlC1);
+            Panel_Transparence(this, pnlC2);
+            Panel_Transparence(this, pnlC3);
+            Panel_Transparence(this, pnlC4);
+            Panel_Transparence(this, pnlC5);
+            Panel_Transparence(this, pnlC6);
+            Panel_Transparence(this, pnlC7);
 
 
         }
+        private void Panel_Transparence(Form PartiePartie6x7, Panel p)
+        {
+            var posi = this.PointToScreen(p.Location);
+            posi = picPlateau.PointToClient(posi);
+            p.Parent = picPlateau;
+            p.Location = posi;
+            p.BackColor = Color.FromArgb(0, 0, 0, 0);
+
+        }
+
+
+
         private void ChoixPicCouleurPion(PictureBox pic)
         {
             if (frmPrmPerso.Jeu.GetJoueurActif() == 1)

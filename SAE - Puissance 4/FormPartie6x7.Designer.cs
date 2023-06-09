@@ -40,42 +40,6 @@
             picA1 = new PictureBox();
             picA0 = new PictureBox();
             pnlPlateau6x7 = new Panel();
-            pnlC1 = new Panel();
-            pnlC2 = new Panel();
-            picB5 = new PictureBox();
-            picB4 = new PictureBox();
-            picB3 = new PictureBox();
-            picB2 = new PictureBox();
-            picB1 = new PictureBox();
-            picB0 = new PictureBox();
-            pnlC3 = new Panel();
-            pictureBox9 = new PictureBox();
-            picC4 = new PictureBox();
-            picC3 = new PictureBox();
-            picC2 = new PictureBox();
-            picC1 = new PictureBox();
-            picC0 = new PictureBox();
-            pnlC4 = new Panel();
-            pictureBox15 = new PictureBox();
-            pictureBox16 = new PictureBox();
-            pictureBox17 = new PictureBox();
-            pictureBox18 = new PictureBox();
-            pictureBox19 = new PictureBox();
-            pictureBox20 = new PictureBox();
-            pnlC5 = new Panel();
-            pictureBox21 = new PictureBox();
-            pictureBox22 = new PictureBox();
-            pictureBox23 = new PictureBox();
-            pictureBox24 = new PictureBox();
-            pictureBox25 = new PictureBox();
-            pictureBox26 = new PictureBox();
-            pnlC6 = new Panel();
-            pictureBox27 = new PictureBox();
-            pictureBox32 = new PictureBox();
-            pictureBox33 = new PictureBox();
-            pictureBox34 = new PictureBox();
-            pictureBox35 = new PictureBox();
-            pictureBox36 = new PictureBox();
             pnlC7 = new Panel();
             pictureBox37 = new PictureBox();
             pictureBox38 = new PictureBox();
@@ -83,6 +47,42 @@
             pictureBox40 = new PictureBox();
             pictureBox41 = new PictureBox();
             pictureBox42 = new PictureBox();
+            pnlC6 = new Panel();
+            pictureBox27 = new PictureBox();
+            pictureBox32 = new PictureBox();
+            pictureBox33 = new PictureBox();
+            pictureBox34 = new PictureBox();
+            pictureBox35 = new PictureBox();
+            pictureBox36 = new PictureBox();
+            pnlC5 = new Panel();
+            pictureBox21 = new PictureBox();
+            pictureBox22 = new PictureBox();
+            pictureBox23 = new PictureBox();
+            pictureBox24 = new PictureBox();
+            pictureBox25 = new PictureBox();
+            pictureBox26 = new PictureBox();
+            pnlC4 = new Panel();
+            pictureBox15 = new PictureBox();
+            pictureBox16 = new PictureBox();
+            pictureBox17 = new PictureBox();
+            pictureBox18 = new PictureBox();
+            pictureBox19 = new PictureBox();
+            pictureBox20 = new PictureBox();
+            pnlC3 = new Panel();
+            pictureBox9 = new PictureBox();
+            picC4 = new PictureBox();
+            picC3 = new PictureBox();
+            picC2 = new PictureBox();
+            picC1 = new PictureBox();
+            picC0 = new PictureBox();
+            pnlC2 = new Panel();
+            picB5 = new PictureBox();
+            picB4 = new PictureBox();
+            picB3 = new PictureBox();
+            picB2 = new PictureBox();
+            picB1 = new PictureBox();
+            picB0 = new PictureBox();
+            pnlC1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)picJoueurActuel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picA3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picA5).BeginInit();
@@ -91,42 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)picA1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picA0).BeginInit();
             pnlPlateau6x7.SuspendLayout();
-            pnlC1.SuspendLayout();
-            pnlC2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picB5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picB4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picB3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picB2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picB1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picB0).BeginInit();
-            pnlC3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picC4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picC3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picC2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picC1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picC0).BeginInit();
-            pnlC4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
-            pnlC5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
-            pnlC6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox32).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox33).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox34).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox35).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox36).BeginInit();
             pnlC7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox37).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox38).BeginInit();
@@ -134,24 +98,61 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox40).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox41).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox42).BeginInit();
+            pnlC6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox32).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox33).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox34).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox35).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).BeginInit();
+            pnlC5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
+            pnlC4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
+            pnlC3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picC4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picC3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picC2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picC1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picC0).BeginInit();
+            pnlC2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picB5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picB4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picB3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picB2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picB1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picB0).BeginInit();
+            pnlC1.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitre6x7
             // 
             lblTitre6x7.AutoSize = true;
             lblTitre6x7.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitre6x7.Location = new Point(405, 9);
+            lblTitre6x7.Location = new Point(354, 7);
             lblTitre6x7.Name = "lblTitre6x7";
-            lblTitre6x7.Size = new Size(280, 62);
+            lblTitre6x7.Size = new Size(227, 51);
             lblTitre6x7.TabIndex = 0;
             lblTitre6x7.Text = "Puissance 4";
             // 
             // picJoueurActuel
             // 
             picJoueurActuel.BackgroundImageLayout = ImageLayout.Zoom;
-            picJoueurActuel.Location = new Point(273, 807);
+            picJoueurActuel.Location = new Point(239, 605);
+            picJoueurActuel.Margin = new Padding(3, 2, 3, 2);
             picJoueurActuel.Name = "picJoueurActuel";
-            picJoueurActuel.Size = new Size(46, 52);
+            picJoueurActuel.Size = new Size(40, 39);
             picJoueurActuel.SizeMode = PictureBoxSizeMode.Zoom;
             picJoueurActuel.TabIndex = 1;
             picJoueurActuel.TabStop = false;
@@ -159,17 +160,18 @@
             // lblTourJoueur
             // 
             lblTourJoueur.AutoSize = true;
-            lblTourJoueur.Location = new Point(240, 861);
+            lblTourJoueur.Location = new Point(210, 646);
             lblTourJoueur.Name = "lblTourJoueur";
-            lblTourJoueur.Size = new Size(130, 20);
+            lblTourJoueur.Size = new Size(105, 15);
             lblTourJoueur.TabIndex = 2;
             lblTourJoueur.Text = "Au tour du Joueur ";
             // 
             // btnAbandon
             // 
-            btnAbandon.Location = new Point(561, 808);
+            btnAbandon.Location = new Point(491, 606);
+            btnAbandon.Margin = new Padding(3, 2, 3, 2);
             btnAbandon.Name = "btnAbandon";
-            btnAbandon.Size = new Size(319, 51);
+            btnAbandon.Size = new Size(279, 38);
             btnAbandon.TabIndex = 3;
             btnAbandon.Text = "Abandonner la partie";
             btnAbandon.UseVisualStyleBackColor = true;
@@ -180,9 +182,10 @@
             picA3.BackColor = Color.Transparent;
             picA3.BackgroundImageLayout = ImageLayout.None;
             picA3.Enabled = false;
-            picA3.Location = new Point(7, 323);
+            picA3.Location = new Point(6, 242);
+            picA3.Margin = new Padding(3, 2, 3, 2);
             picA3.Name = "picA3";
-            picA3.Size = new Size(90, 85);
+            picA3.Size = new Size(79, 64);
             picA3.SizeMode = PictureBoxSizeMode.Zoom;
             picA3.TabIndex = 15;
             picA3.TabStop = false;
@@ -192,9 +195,10 @@
             picA5.BackColor = Color.Transparent;
             picA5.BackgroundImageLayout = ImageLayout.None;
             picA5.Enabled = false;
-            picA5.Location = new Point(8, 531);
+            picA5.Location = new Point(7, 398);
+            picA5.Margin = new Padding(3, 2, 3, 2);
             picA5.Name = "picA5";
-            picA5.Size = new Size(90, 85);
+            picA5.Size = new Size(79, 64);
             picA5.SizeMode = PictureBoxSizeMode.Zoom;
             picA5.TabIndex = 22;
             picA5.TabStop = false;
@@ -204,9 +208,10 @@
             picA4.BackColor = Color.Transparent;
             picA4.BackgroundImageLayout = ImageLayout.None;
             picA4.Enabled = false;
-            picA4.Location = new Point(8, 427);
+            picA4.Location = new Point(7, 320);
+            picA4.Margin = new Padding(3, 2, 3, 2);
             picA4.Name = "picA4";
-            picA4.Size = new Size(90, 85);
+            picA4.Size = new Size(79, 64);
             picA4.SizeMode = PictureBoxSizeMode.Zoom;
             picA4.TabIndex = 40;
             picA4.TabStop = false;
@@ -216,9 +221,10 @@
             picA2.BackColor = Color.Transparent;
             picA2.BackgroundImageLayout = ImageLayout.None;
             picA2.Enabled = false;
-            picA2.Location = new Point(6, 219);
+            picA2.Location = new Point(5, 164);
+            picA2.Margin = new Padding(3, 2, 3, 2);
             picA2.Name = "picA2";
-            picA2.Size = new Size(90, 85);
+            picA2.Size = new Size(79, 64);
             picA2.SizeMode = PictureBoxSizeMode.Zoom;
             picA2.TabIndex = 41;
             picA2.TabStop = false;
@@ -228,9 +234,10 @@
             picA1.BackColor = Color.Transparent;
             picA1.BackgroundImageLayout = ImageLayout.None;
             picA1.Enabled = false;
-            picA1.Location = new Point(6, 114);
+            picA1.Location = new Point(5, 86);
+            picA1.Margin = new Padding(3, 2, 3, 2);
             picA1.Name = "picA1";
-            picA1.Size = new Size(90, 85);
+            picA1.Size = new Size(79, 64);
             picA1.SizeMode = PictureBoxSizeMode.Zoom;
             picA1.TabIndex = 42;
             picA1.TabStop = false;
@@ -241,9 +248,10 @@
             picA0.BackColor = Color.Transparent;
             picA0.BackgroundImageLayout = ImageLayout.None;
             picA0.Enabled = false;
-            picA0.Location = new Point(6, 13);
+            picA0.Location = new Point(5, 10);
+            picA0.Margin = new Padding(3, 2, 3, 2);
             picA0.Name = "picA0";
-            picA0.Size = new Size(90, 85);
+            picA0.Size = new Size(79, 64);
             picA0.SizeMode = PictureBoxSizeMode.Zoom;
             picA0.TabIndex = 43;
             picA0.TabStop = false;
@@ -259,455 +267,11 @@
             pnlPlateau6x7.Controls.Add(pnlC2);
             pnlPlateau6x7.Controls.Add(pnlC1);
             pnlPlateau6x7.ForeColor = SystemColors.ControlText;
-            pnlPlateau6x7.Location = new Point(185, 83);
+            pnlPlateau6x7.Location = new Point(162, 62);
+            pnlPlateau6x7.Margin = new Padding(3, 2, 3, 2);
             pnlPlateau6x7.Name = "pnlPlateau6x7";
-            pnlPlateau6x7.Size = new Size(729, 683);
+            pnlPlateau6x7.Size = new Size(638, 512);
             pnlPlateau6x7.TabIndex = 57;
-            // 
-            // pnlC1
-            // 
-            pnlC1.BackColor = Color.Transparent;
-            pnlC1.Controls.Add(picA5);
-            pnlC1.Controls.Add(picA4);
-            pnlC1.Controls.Add(picA3);
-            pnlC1.Controls.Add(picA2);
-            pnlC1.Controls.Add(picA1);
-            pnlC1.Controls.Add(picA0);
-            pnlC1.Location = new Point(17, 48);
-            pnlC1.Name = "pnlC1";
-            pnlC1.Size = new Size(100, 632);
-            pnlC1.TabIndex = 57;
-            pnlC1.Click += panel1_Click;
-            // 
-            // pnlC2
-            // 
-            pnlC2.BackColor = Color.Transparent;
-            pnlC2.Controls.Add(picB5);
-            pnlC2.Controls.Add(picB4);
-            pnlC2.Controls.Add(picB3);
-            pnlC2.Controls.Add(picB2);
-            pnlC2.Controls.Add(picB1);
-            pnlC2.Controls.Add(picB0);
-            pnlC2.Location = new Point(115, 48);
-            pnlC2.Name = "pnlC2";
-            pnlC2.Size = new Size(100, 632);
-            pnlC2.TabIndex = 58;
-            // 
-            // picB5
-            // 
-            picB5.BackColor = Color.Transparent;
-            picB5.BackgroundImageLayout = ImageLayout.None;
-            picB5.Enabled = false;
-            picB5.Location = new Point(8, 531);
-            picB5.Name = "picB5";
-            picB5.Size = new Size(90, 85);
-            picB5.SizeMode = PictureBoxSizeMode.Zoom;
-            picB5.TabIndex = 22;
-            picB5.TabStop = false;
-            // 
-            // picB4
-            // 
-            picB4.BackColor = Color.Transparent;
-            picB4.BackgroundImageLayout = ImageLayout.None;
-            picB4.Enabled = false;
-            picB4.Location = new Point(8, 427);
-            picB4.Name = "picB4";
-            picB4.Size = new Size(90, 85);
-            picB4.SizeMode = PictureBoxSizeMode.Zoom;
-            picB4.TabIndex = 40;
-            picB4.TabStop = false;
-            // 
-            // picB3
-            // 
-            picB3.BackColor = Color.Transparent;
-            picB3.BackgroundImageLayout = ImageLayout.None;
-            picB3.Enabled = false;
-            picB3.Location = new Point(7, 323);
-            picB3.Name = "picB3";
-            picB3.Size = new Size(90, 85);
-            picB3.SizeMode = PictureBoxSizeMode.Zoom;
-            picB3.TabIndex = 15;
-            picB3.TabStop = false;
-            // 
-            // picB2
-            // 
-            picB2.BackColor = Color.Transparent;
-            picB2.BackgroundImageLayout = ImageLayout.None;
-            picB2.Enabled = false;
-            picB2.Location = new Point(6, 219);
-            picB2.Name = "picB2";
-            picB2.Size = new Size(90, 85);
-            picB2.SizeMode = PictureBoxSizeMode.Zoom;
-            picB2.TabIndex = 41;
-            picB2.TabStop = false;
-            // 
-            // picB1
-            // 
-            picB1.BackColor = Color.Transparent;
-            picB1.BackgroundImageLayout = ImageLayout.None;
-            picB1.Enabled = false;
-            picB1.Location = new Point(6, 114);
-            picB1.Name = "picB1";
-            picB1.Size = new Size(90, 85);
-            picB1.SizeMode = PictureBoxSizeMode.Zoom;
-            picB1.TabIndex = 42;
-            picB1.TabStop = false;
-            // 
-            // picB0
-            // 
-            picB0.BackColor = Color.Transparent;
-            picB0.BackgroundImageLayout = ImageLayout.None;
-            picB0.Enabled = false;
-            picB0.Location = new Point(6, 13);
-            picB0.Name = "picB0";
-            picB0.Size = new Size(90, 85);
-            picB0.SizeMode = PictureBoxSizeMode.Zoom;
-            picB0.TabIndex = 43;
-            picB0.TabStop = false;
-            // 
-            // pnlC3
-            // 
-            pnlC3.BackColor = Color.Transparent;
-            pnlC3.Controls.Add(pictureBox9);
-            pnlC3.Controls.Add(picC4);
-            pnlC3.Controls.Add(picC3);
-            pnlC3.Controls.Add(picC2);
-            pnlC3.Controls.Add(picC1);
-            pnlC3.Controls.Add(picC0);
-            pnlC3.Location = new Point(213, 48);
-            pnlC3.Name = "pnlC3";
-            pnlC3.Size = new Size(100, 632);
-            pnlC3.TabIndex = 58;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.BackColor = Color.Transparent;
-            pictureBox9.BackgroundImageLayout = ImageLayout.None;
-            pictureBox9.Enabled = false;
-            pictureBox9.Location = new Point(8, 531);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(90, 85);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 22;
-            pictureBox9.TabStop = false;
-            // 
-            // picC4
-            // 
-            picC4.BackColor = Color.Transparent;
-            picC4.BackgroundImageLayout = ImageLayout.None;
-            picC4.Enabled = false;
-            picC4.Location = new Point(8, 427);
-            picC4.Name = "picC4";
-            picC4.Size = new Size(90, 85);
-            picC4.SizeMode = PictureBoxSizeMode.Zoom;
-            picC4.TabIndex = 40;
-            picC4.TabStop = false;
-            // 
-            // picC3
-            // 
-            picC3.BackColor = Color.Transparent;
-            picC3.BackgroundImageLayout = ImageLayout.None;
-            picC3.Enabled = false;
-            picC3.Location = new Point(7, 323);
-            picC3.Name = "picC3";
-            picC3.Size = new Size(90, 85);
-            picC3.SizeMode = PictureBoxSizeMode.Zoom;
-            picC3.TabIndex = 15;
-            picC3.TabStop = false;
-            // 
-            // picC2
-            // 
-            picC2.BackColor = Color.Transparent;
-            picC2.BackgroundImageLayout = ImageLayout.None;
-            picC2.Enabled = false;
-            picC2.Location = new Point(6, 219);
-            picC2.Name = "picC2";
-            picC2.Size = new Size(90, 85);
-            picC2.SizeMode = PictureBoxSizeMode.Zoom;
-            picC2.TabIndex = 41;
-            picC2.TabStop = false;
-            // 
-            // picC1
-            // 
-            picC1.BackColor = Color.Transparent;
-            picC1.BackgroundImageLayout = ImageLayout.None;
-            picC1.Enabled = false;
-            picC1.Location = new Point(6, 114);
-            picC1.Name = "picC1";
-            picC1.Size = new Size(90, 85);
-            picC1.SizeMode = PictureBoxSizeMode.Zoom;
-            picC1.TabIndex = 42;
-            picC1.TabStop = false;
-            // 
-            // picC0
-            // 
-            picC0.BackColor = Color.Transparent;
-            picC0.BackgroundImageLayout = ImageLayout.None;
-            picC0.Enabled = false;
-            picC0.Location = new Point(6, 13);
-            picC0.Name = "picC0";
-            picC0.Size = new Size(90, 85);
-            picC0.SizeMode = PictureBoxSizeMode.Zoom;
-            picC0.TabIndex = 43;
-            picC0.TabStop = false;
-            // 
-            // pnlC4
-            // 
-            pnlC4.BackColor = Color.Transparent;
-            pnlC4.Controls.Add(pictureBox15);
-            pnlC4.Controls.Add(pictureBox16);
-            pnlC4.Controls.Add(pictureBox17);
-            pnlC4.Controls.Add(pictureBox18);
-            pnlC4.Controls.Add(pictureBox19);
-            pnlC4.Controls.Add(pictureBox20);
-            pnlC4.Location = new Point(310, 48);
-            pnlC4.Name = "pnlC4";
-            pnlC4.Size = new Size(100, 632);
-            pnlC4.TabIndex = 58;
-            // 
-            // pictureBox15
-            // 
-            pictureBox15.BackColor = Color.Transparent;
-            pictureBox15.BackgroundImageLayout = ImageLayout.None;
-            pictureBox15.Enabled = false;
-            pictureBox15.Location = new Point(8, 531);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(90, 85);
-            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox15.TabIndex = 22;
-            pictureBox15.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            pictureBox16.BackColor = Color.Transparent;
-            pictureBox16.BackgroundImageLayout = ImageLayout.None;
-            pictureBox16.Enabled = false;
-            pictureBox16.Location = new Point(8, 427);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(90, 85);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 40;
-            pictureBox16.TabStop = false;
-            // 
-            // pictureBox17
-            // 
-            pictureBox17.BackColor = Color.Transparent;
-            pictureBox17.BackgroundImageLayout = ImageLayout.None;
-            pictureBox17.Enabled = false;
-            pictureBox17.Location = new Point(7, 323);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(90, 85);
-            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox17.TabIndex = 15;
-            pictureBox17.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            pictureBox18.BackColor = Color.Transparent;
-            pictureBox18.BackgroundImageLayout = ImageLayout.None;
-            pictureBox18.Enabled = false;
-            pictureBox18.Location = new Point(6, 219);
-            pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(90, 85);
-            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox18.TabIndex = 41;
-            pictureBox18.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            pictureBox19.BackColor = Color.Transparent;
-            pictureBox19.BackgroundImageLayout = ImageLayout.None;
-            pictureBox19.Enabled = false;
-            pictureBox19.Location = new Point(6, 114);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(90, 85);
-            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox19.TabIndex = 42;
-            pictureBox19.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            pictureBox20.BackColor = Color.Transparent;
-            pictureBox20.BackgroundImageLayout = ImageLayout.None;
-            pictureBox20.Enabled = false;
-            pictureBox20.Location = new Point(6, 13);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(90, 85);
-            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox20.TabIndex = 43;
-            pictureBox20.TabStop = false;
-            // 
-            // pnlC5
-            // 
-            pnlC5.BackColor = Color.Transparent;
-            pnlC5.Controls.Add(pictureBox21);
-            pnlC5.Controls.Add(pictureBox22);
-            pnlC5.Controls.Add(pictureBox23);
-            pnlC5.Controls.Add(pictureBox24);
-            pnlC5.Controls.Add(pictureBox25);
-            pnlC5.Controls.Add(pictureBox26);
-            pnlC5.Location = new Point(410, 49);
-            pnlC5.Name = "pnlC5";
-            pnlC5.Size = new Size(100, 632);
-            pnlC5.TabIndex = 58;
-            // 
-            // pictureBox21
-            // 
-            pictureBox21.BackColor = Color.Transparent;
-            pictureBox21.BackgroundImageLayout = ImageLayout.None;
-            pictureBox21.Enabled = false;
-            pictureBox21.Location = new Point(8, 531);
-            pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(90, 85);
-            pictureBox21.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox21.TabIndex = 22;
-            pictureBox21.TabStop = false;
-            // 
-            // pictureBox22
-            // 
-            pictureBox22.BackColor = Color.Transparent;
-            pictureBox22.BackgroundImageLayout = ImageLayout.None;
-            pictureBox22.Enabled = false;
-            pictureBox22.Location = new Point(8, 427);
-            pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(90, 85);
-            pictureBox22.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox22.TabIndex = 40;
-            pictureBox22.TabStop = false;
-            // 
-            // pictureBox23
-            // 
-            pictureBox23.BackColor = Color.Transparent;
-            pictureBox23.BackgroundImageLayout = ImageLayout.None;
-            pictureBox23.Enabled = false;
-            pictureBox23.Location = new Point(7, 323);
-            pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(90, 85);
-            pictureBox23.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox23.TabIndex = 15;
-            pictureBox23.TabStop = false;
-            // 
-            // pictureBox24
-            // 
-            pictureBox24.BackColor = Color.Transparent;
-            pictureBox24.BackgroundImageLayout = ImageLayout.None;
-            pictureBox24.Enabled = false;
-            pictureBox24.Location = new Point(6, 219);
-            pictureBox24.Name = "pictureBox24";
-            pictureBox24.Size = new Size(90, 85);
-            pictureBox24.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox24.TabIndex = 41;
-            pictureBox24.TabStop = false;
-            // 
-            // pictureBox25
-            // 
-            pictureBox25.BackColor = Color.Transparent;
-            pictureBox25.BackgroundImageLayout = ImageLayout.None;
-            pictureBox25.Enabled = false;
-            pictureBox25.Location = new Point(6, 114);
-            pictureBox25.Name = "pictureBox25";
-            pictureBox25.Size = new Size(90, 85);
-            pictureBox25.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox25.TabIndex = 42;
-            pictureBox25.TabStop = false;
-            // 
-            // pictureBox26
-            // 
-            pictureBox26.BackColor = Color.Transparent;
-            pictureBox26.BackgroundImageLayout = ImageLayout.None;
-            pictureBox26.Enabled = false;
-            pictureBox26.Location = new Point(6, 13);
-            pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(90, 85);
-            pictureBox26.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox26.TabIndex = 43;
-            pictureBox26.TabStop = false;
-            // 
-            // pnlC6
-            // 
-            pnlC6.BackColor = Color.Transparent;
-            pnlC6.Controls.Add(pictureBox27);
-            pnlC6.Controls.Add(pictureBox32);
-            pnlC6.Controls.Add(pictureBox33);
-            pnlC6.Controls.Add(pictureBox34);
-            pnlC6.Controls.Add(pictureBox35);
-            pnlC6.Controls.Add(pictureBox36);
-            pnlC6.Location = new Point(509, 48);
-            pnlC6.Name = "pnlC6";
-            pnlC6.Size = new Size(100, 632);
-            pnlC6.TabIndex = 58;
-            // 
-            // pictureBox27
-            // 
-            pictureBox27.BackColor = Color.Transparent;
-            pictureBox27.BackgroundImageLayout = ImageLayout.None;
-            pictureBox27.Enabled = false;
-            pictureBox27.Location = new Point(8, 531);
-            pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(90, 85);
-            pictureBox27.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox27.TabIndex = 22;
-            pictureBox27.TabStop = false;
-            // 
-            // pictureBox32
-            // 
-            pictureBox32.BackColor = Color.Transparent;
-            pictureBox32.BackgroundImageLayout = ImageLayout.None;
-            pictureBox32.Enabled = false;
-            pictureBox32.Location = new Point(8, 427);
-            pictureBox32.Name = "pictureBox32";
-            pictureBox32.Size = new Size(90, 85);
-            pictureBox32.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox32.TabIndex = 40;
-            pictureBox32.TabStop = false;
-            // 
-            // pictureBox33
-            // 
-            pictureBox33.BackColor = Color.Transparent;
-            pictureBox33.BackgroundImageLayout = ImageLayout.None;
-            pictureBox33.Enabled = false;
-            pictureBox33.Location = new Point(7, 323);
-            pictureBox33.Name = "pictureBox33";
-            pictureBox33.Size = new Size(90, 85);
-            pictureBox33.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox33.TabIndex = 15;
-            pictureBox33.TabStop = false;
-            // 
-            // pictureBox34
-            // 
-            pictureBox34.BackColor = Color.Transparent;
-            pictureBox34.BackgroundImageLayout = ImageLayout.None;
-            pictureBox34.Enabled = false;
-            pictureBox34.Location = new Point(6, 219);
-            pictureBox34.Name = "pictureBox34";
-            pictureBox34.Size = new Size(90, 85);
-            pictureBox34.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox34.TabIndex = 41;
-            pictureBox34.TabStop = false;
-            // 
-            // pictureBox35
-            // 
-            pictureBox35.BackColor = Color.Transparent;
-            pictureBox35.BackgroundImageLayout = ImageLayout.None;
-            pictureBox35.Enabled = false;
-            pictureBox35.Location = new Point(6, 114);
-            pictureBox35.Name = "pictureBox35";
-            pictureBox35.Size = new Size(90, 85);
-            pictureBox35.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox35.TabIndex = 42;
-            pictureBox35.TabStop = false;
-            // 
-            // pictureBox36
-            // 
-            pictureBox36.BackColor = Color.Transparent;
-            pictureBox36.BackgroundImageLayout = ImageLayout.None;
-            pictureBox36.Enabled = false;
-            pictureBox36.Location = new Point(6, 13);
-            pictureBox36.Name = "pictureBox36";
-            pictureBox36.Size = new Size(90, 85);
-            pictureBox36.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox36.TabIndex = 43;
-            pictureBox36.TabStop = false;
             // 
             // pnlC7
             // 
@@ -718,19 +282,23 @@
             pnlC7.Controls.Add(pictureBox40);
             pnlC7.Controls.Add(pictureBox41);
             pnlC7.Controls.Add(pictureBox42);
-            pnlC7.Location = new Point(605, 49);
+            pnlC7.Location = new Point(529, 37);
+            pnlC7.Margin = new Padding(3, 2, 3, 2);
             pnlC7.Name = "pnlC7";
-            pnlC7.Size = new Size(100, 632);
+            pnlC7.Size = new Size(88, 474);
             pnlC7.TabIndex = 58;
+            pnlC7.Click += pnlC_Click;
+            pnlC7.MouseEnter += pnlC_MouseEnter;
             // 
             // pictureBox37
             // 
             pictureBox37.BackColor = Color.Transparent;
             pictureBox37.BackgroundImageLayout = ImageLayout.None;
             pictureBox37.Enabled = false;
-            pictureBox37.Location = new Point(8, 531);
+            pictureBox37.Location = new Point(7, 398);
+            pictureBox37.Margin = new Padding(3, 2, 3, 2);
             pictureBox37.Name = "pictureBox37";
-            pictureBox37.Size = new Size(90, 85);
+            pictureBox37.Size = new Size(79, 64);
             pictureBox37.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox37.TabIndex = 22;
             pictureBox37.TabStop = false;
@@ -740,9 +308,10 @@
             pictureBox38.BackColor = Color.Transparent;
             pictureBox38.BackgroundImageLayout = ImageLayout.None;
             pictureBox38.Enabled = false;
-            pictureBox38.Location = new Point(8, 427);
+            pictureBox38.Location = new Point(7, 320);
+            pictureBox38.Margin = new Padding(3, 2, 3, 2);
             pictureBox38.Name = "pictureBox38";
-            pictureBox38.Size = new Size(90, 85);
+            pictureBox38.Size = new Size(79, 64);
             pictureBox38.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox38.TabIndex = 40;
             pictureBox38.TabStop = false;
@@ -752,9 +321,10 @@
             pictureBox39.BackColor = Color.Transparent;
             pictureBox39.BackgroundImageLayout = ImageLayout.None;
             pictureBox39.Enabled = false;
-            pictureBox39.Location = new Point(7, 323);
+            pictureBox39.Location = new Point(6, 242);
+            pictureBox39.Margin = new Padding(3, 2, 3, 2);
             pictureBox39.Name = "pictureBox39";
-            pictureBox39.Size = new Size(90, 85);
+            pictureBox39.Size = new Size(79, 64);
             pictureBox39.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox39.TabIndex = 15;
             pictureBox39.TabStop = false;
@@ -764,9 +334,10 @@
             pictureBox40.BackColor = Color.Transparent;
             pictureBox40.BackgroundImageLayout = ImageLayout.None;
             pictureBox40.Enabled = false;
-            pictureBox40.Location = new Point(6, 219);
+            pictureBox40.Location = new Point(5, 164);
+            pictureBox40.Margin = new Padding(3, 2, 3, 2);
             pictureBox40.Name = "pictureBox40";
-            pictureBox40.Size = new Size(90, 85);
+            pictureBox40.Size = new Size(79, 64);
             pictureBox40.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox40.TabIndex = 41;
             pictureBox40.TabStop = false;
@@ -776,9 +347,10 @@
             pictureBox41.BackColor = Color.Transparent;
             pictureBox41.BackgroundImageLayout = ImageLayout.None;
             pictureBox41.Enabled = false;
-            pictureBox41.Location = new Point(6, 114);
+            pictureBox41.Location = new Point(5, 86);
+            pictureBox41.Margin = new Padding(3, 2, 3, 2);
             pictureBox41.Name = "pictureBox41";
-            pictureBox41.Size = new Size(90, 85);
+            pictureBox41.Size = new Size(79, 64);
             pictureBox41.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox41.TabIndex = 42;
             pictureBox41.TabStop = false;
@@ -788,24 +360,518 @@
             pictureBox42.BackColor = Color.Transparent;
             pictureBox42.BackgroundImageLayout = ImageLayout.None;
             pictureBox42.Enabled = false;
-            pictureBox42.Location = new Point(6, 13);
+            pictureBox42.Location = new Point(5, 10);
+            pictureBox42.Margin = new Padding(3, 2, 3, 2);
             pictureBox42.Name = "pictureBox42";
-            pictureBox42.Size = new Size(90, 85);
+            pictureBox42.Size = new Size(79, 64);
             pictureBox42.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox42.TabIndex = 43;
             pictureBox42.TabStop = false;
             // 
+            // pnlC6
+            // 
+            pnlC6.BackColor = Color.Transparent;
+            pnlC6.Controls.Add(pictureBox27);
+            pnlC6.Controls.Add(pictureBox32);
+            pnlC6.Controls.Add(pictureBox33);
+            pnlC6.Controls.Add(pictureBox34);
+            pnlC6.Controls.Add(pictureBox35);
+            pnlC6.Controls.Add(pictureBox36);
+            pnlC6.Location = new Point(445, 36);
+            pnlC6.Margin = new Padding(3, 2, 3, 2);
+            pnlC6.Name = "pnlC6";
+            pnlC6.Size = new Size(88, 474);
+            pnlC6.TabIndex = 58;
+            pnlC6.Click += pnlC_Click;
+            pnlC6.MouseEnter += pnlC_MouseEnter;
+            // 
+            // pictureBox27
+            // 
+            pictureBox27.BackColor = Color.Transparent;
+            pictureBox27.BackgroundImageLayout = ImageLayout.None;
+            pictureBox27.Enabled = false;
+            pictureBox27.Location = new Point(7, 398);
+            pictureBox27.Margin = new Padding(3, 2, 3, 2);
+            pictureBox27.Name = "pictureBox27";
+            pictureBox27.Size = new Size(79, 64);
+            pictureBox27.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox27.TabIndex = 22;
+            pictureBox27.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            pictureBox32.BackColor = Color.Transparent;
+            pictureBox32.BackgroundImageLayout = ImageLayout.None;
+            pictureBox32.Enabled = false;
+            pictureBox32.Location = new Point(7, 320);
+            pictureBox32.Margin = new Padding(3, 2, 3, 2);
+            pictureBox32.Name = "pictureBox32";
+            pictureBox32.Size = new Size(79, 64);
+            pictureBox32.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox32.TabIndex = 40;
+            pictureBox32.TabStop = false;
+            // 
+            // pictureBox33
+            // 
+            pictureBox33.BackColor = Color.Transparent;
+            pictureBox33.BackgroundImageLayout = ImageLayout.None;
+            pictureBox33.Enabled = false;
+            pictureBox33.Location = new Point(6, 242);
+            pictureBox33.Margin = new Padding(3, 2, 3, 2);
+            pictureBox33.Name = "pictureBox33";
+            pictureBox33.Size = new Size(79, 64);
+            pictureBox33.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox33.TabIndex = 15;
+            pictureBox33.TabStop = false;
+            // 
+            // pictureBox34
+            // 
+            pictureBox34.BackColor = Color.Transparent;
+            pictureBox34.BackgroundImageLayout = ImageLayout.None;
+            pictureBox34.Enabled = false;
+            pictureBox34.Location = new Point(5, 164);
+            pictureBox34.Margin = new Padding(3, 2, 3, 2);
+            pictureBox34.Name = "pictureBox34";
+            pictureBox34.Size = new Size(79, 64);
+            pictureBox34.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox34.TabIndex = 41;
+            pictureBox34.TabStop = false;
+            // 
+            // pictureBox35
+            // 
+            pictureBox35.BackColor = Color.Transparent;
+            pictureBox35.BackgroundImageLayout = ImageLayout.None;
+            pictureBox35.Enabled = false;
+            pictureBox35.Location = new Point(5, 86);
+            pictureBox35.Margin = new Padding(3, 2, 3, 2);
+            pictureBox35.Name = "pictureBox35";
+            pictureBox35.Size = new Size(79, 64);
+            pictureBox35.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox35.TabIndex = 42;
+            pictureBox35.TabStop = false;
+            // 
+            // pictureBox36
+            // 
+            pictureBox36.BackColor = Color.Transparent;
+            pictureBox36.BackgroundImageLayout = ImageLayout.None;
+            pictureBox36.Enabled = false;
+            pictureBox36.Location = new Point(5, 10);
+            pictureBox36.Margin = new Padding(3, 2, 3, 2);
+            pictureBox36.Name = "pictureBox36";
+            pictureBox36.Size = new Size(79, 64);
+            pictureBox36.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox36.TabIndex = 43;
+            pictureBox36.TabStop = false;
+            // 
+            // pnlC5
+            // 
+            pnlC5.BackColor = Color.Transparent;
+            pnlC5.Controls.Add(pictureBox21);
+            pnlC5.Controls.Add(pictureBox22);
+            pnlC5.Controls.Add(pictureBox23);
+            pnlC5.Controls.Add(pictureBox24);
+            pnlC5.Controls.Add(pictureBox25);
+            pnlC5.Controls.Add(pictureBox26);
+            pnlC5.Location = new Point(359, 37);
+            pnlC5.Margin = new Padding(3, 2, 3, 2);
+            pnlC5.Name = "pnlC5";
+            pnlC5.Size = new Size(88, 474);
+            pnlC5.TabIndex = 58;
+            pnlC5.Click += pnlC_Click;
+            pnlC5.MouseEnter += pnlC_MouseEnter;
+            // 
+            // pictureBox21
+            // 
+            pictureBox21.BackColor = Color.Transparent;
+            pictureBox21.BackgroundImageLayout = ImageLayout.None;
+            pictureBox21.Enabled = false;
+            pictureBox21.Location = new Point(7, 398);
+            pictureBox21.Margin = new Padding(3, 2, 3, 2);
+            pictureBox21.Name = "pictureBox21";
+            pictureBox21.Size = new Size(79, 64);
+            pictureBox21.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox21.TabIndex = 22;
+            pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            pictureBox22.BackColor = Color.Transparent;
+            pictureBox22.BackgroundImageLayout = ImageLayout.None;
+            pictureBox22.Enabled = false;
+            pictureBox22.Location = new Point(7, 320);
+            pictureBox22.Margin = new Padding(3, 2, 3, 2);
+            pictureBox22.Name = "pictureBox22";
+            pictureBox22.Size = new Size(79, 64);
+            pictureBox22.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox22.TabIndex = 40;
+            pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            pictureBox23.BackColor = Color.Transparent;
+            pictureBox23.BackgroundImageLayout = ImageLayout.None;
+            pictureBox23.Enabled = false;
+            pictureBox23.Location = new Point(6, 242);
+            pictureBox23.Margin = new Padding(3, 2, 3, 2);
+            pictureBox23.Name = "pictureBox23";
+            pictureBox23.Size = new Size(79, 64);
+            pictureBox23.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox23.TabIndex = 15;
+            pictureBox23.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            pictureBox24.BackColor = Color.Transparent;
+            pictureBox24.BackgroundImageLayout = ImageLayout.None;
+            pictureBox24.Enabled = false;
+            pictureBox24.Location = new Point(5, 164);
+            pictureBox24.Margin = new Padding(3, 2, 3, 2);
+            pictureBox24.Name = "pictureBox24";
+            pictureBox24.Size = new Size(79, 64);
+            pictureBox24.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox24.TabIndex = 41;
+            pictureBox24.TabStop = false;
+            // 
+            // pictureBox25
+            // 
+            pictureBox25.BackColor = Color.Transparent;
+            pictureBox25.BackgroundImageLayout = ImageLayout.None;
+            pictureBox25.Enabled = false;
+            pictureBox25.Location = new Point(5, 86);
+            pictureBox25.Margin = new Padding(3, 2, 3, 2);
+            pictureBox25.Name = "pictureBox25";
+            pictureBox25.Size = new Size(79, 64);
+            pictureBox25.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox25.TabIndex = 42;
+            pictureBox25.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            pictureBox26.BackColor = Color.Transparent;
+            pictureBox26.BackgroundImageLayout = ImageLayout.None;
+            pictureBox26.Enabled = false;
+            pictureBox26.Location = new Point(5, 10);
+            pictureBox26.Margin = new Padding(3, 2, 3, 2);
+            pictureBox26.Name = "pictureBox26";
+            pictureBox26.Size = new Size(79, 64);
+            pictureBox26.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox26.TabIndex = 43;
+            pictureBox26.TabStop = false;
+            // 
+            // pnlC4
+            // 
+            pnlC4.BackColor = Color.Transparent;
+            pnlC4.Controls.Add(pictureBox15);
+            pnlC4.Controls.Add(pictureBox16);
+            pnlC4.Controls.Add(pictureBox17);
+            pnlC4.Controls.Add(pictureBox18);
+            pnlC4.Controls.Add(pictureBox19);
+            pnlC4.Controls.Add(pictureBox20);
+            pnlC4.Location = new Point(271, 36);
+            pnlC4.Margin = new Padding(3, 2, 3, 2);
+            pnlC4.Name = "pnlC4";
+            pnlC4.Size = new Size(88, 474);
+            pnlC4.TabIndex = 58;
+            pnlC4.Click += pnlC_Click;
+            pnlC4.MouseEnter += pnlC_MouseEnter;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.BackColor = Color.Transparent;
+            pictureBox15.BackgroundImageLayout = ImageLayout.None;
+            pictureBox15.Enabled = false;
+            pictureBox15.Location = new Point(7, 398);
+            pictureBox15.Margin = new Padding(3, 2, 3, 2);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(79, 64);
+            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox15.TabIndex = 22;
+            pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.BackColor = Color.Transparent;
+            pictureBox16.BackgroundImageLayout = ImageLayout.None;
+            pictureBox16.Enabled = false;
+            pictureBox16.Location = new Point(7, 320);
+            pictureBox16.Margin = new Padding(3, 2, 3, 2);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(79, 64);
+            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox16.TabIndex = 40;
+            pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            pictureBox17.BackColor = Color.Transparent;
+            pictureBox17.BackgroundImageLayout = ImageLayout.None;
+            pictureBox17.Enabled = false;
+            pictureBox17.Location = new Point(6, 242);
+            pictureBox17.Margin = new Padding(3, 2, 3, 2);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(79, 64);
+            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox17.TabIndex = 15;
+            pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            pictureBox18.BackColor = Color.Transparent;
+            pictureBox18.BackgroundImageLayout = ImageLayout.None;
+            pictureBox18.Enabled = false;
+            pictureBox18.Location = new Point(5, 164);
+            pictureBox18.Margin = new Padding(3, 2, 3, 2);
+            pictureBox18.Name = "pictureBox18";
+            pictureBox18.Size = new Size(79, 64);
+            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox18.TabIndex = 41;
+            pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            pictureBox19.BackColor = Color.Transparent;
+            pictureBox19.BackgroundImageLayout = ImageLayout.None;
+            pictureBox19.Enabled = false;
+            pictureBox19.Location = new Point(5, 86);
+            pictureBox19.Margin = new Padding(3, 2, 3, 2);
+            pictureBox19.Name = "pictureBox19";
+            pictureBox19.Size = new Size(79, 64);
+            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox19.TabIndex = 42;
+            pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            pictureBox20.BackColor = Color.Transparent;
+            pictureBox20.BackgroundImageLayout = ImageLayout.None;
+            pictureBox20.Enabled = false;
+            pictureBox20.Location = new Point(5, 10);
+            pictureBox20.Margin = new Padding(3, 2, 3, 2);
+            pictureBox20.Name = "pictureBox20";
+            pictureBox20.Size = new Size(79, 64);
+            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox20.TabIndex = 43;
+            pictureBox20.TabStop = false;
+            // 
+            // pnlC3
+            // 
+            pnlC3.BackColor = Color.Transparent;
+            pnlC3.Controls.Add(pictureBox9);
+            pnlC3.Controls.Add(picC4);
+            pnlC3.Controls.Add(picC3);
+            pnlC3.Controls.Add(picC2);
+            pnlC3.Controls.Add(picC1);
+            pnlC3.Controls.Add(picC0);
+            pnlC3.Location = new Point(186, 36);
+            pnlC3.Margin = new Padding(3, 2, 3, 2);
+            pnlC3.Name = "pnlC3";
+            pnlC3.Size = new Size(88, 474);
+            pnlC3.TabIndex = 58;
+            pnlC3.Click += pnlC_Click;
+            pnlC3.MouseEnter += pnlC_MouseEnter;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = Color.Transparent;
+            pictureBox9.BackgroundImageLayout = ImageLayout.None;
+            pictureBox9.Enabled = false;
+            pictureBox9.Location = new Point(7, 398);
+            pictureBox9.Margin = new Padding(3, 2, 3, 2);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(79, 64);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 22;
+            pictureBox9.TabStop = false;
+            // 
+            // picC4
+            // 
+            picC4.BackColor = Color.Transparent;
+            picC4.BackgroundImageLayout = ImageLayout.None;
+            picC4.Enabled = false;
+            picC4.Location = new Point(7, 320);
+            picC4.Margin = new Padding(3, 2, 3, 2);
+            picC4.Name = "picC4";
+            picC4.Size = new Size(79, 64);
+            picC4.SizeMode = PictureBoxSizeMode.Zoom;
+            picC4.TabIndex = 40;
+            picC4.TabStop = false;
+            // 
+            // picC3
+            // 
+            picC3.BackColor = Color.Transparent;
+            picC3.BackgroundImageLayout = ImageLayout.None;
+            picC3.Enabled = false;
+            picC3.Location = new Point(6, 242);
+            picC3.Margin = new Padding(3, 2, 3, 2);
+            picC3.Name = "picC3";
+            picC3.Size = new Size(79, 64);
+            picC3.SizeMode = PictureBoxSizeMode.Zoom;
+            picC3.TabIndex = 15;
+            picC3.TabStop = false;
+            // 
+            // picC2
+            // 
+            picC2.BackColor = Color.Transparent;
+            picC2.BackgroundImageLayout = ImageLayout.None;
+            picC2.Enabled = false;
+            picC2.Location = new Point(5, 164);
+            picC2.Margin = new Padding(3, 2, 3, 2);
+            picC2.Name = "picC2";
+            picC2.Size = new Size(79, 64);
+            picC2.SizeMode = PictureBoxSizeMode.Zoom;
+            picC2.TabIndex = 41;
+            picC2.TabStop = false;
+            // 
+            // picC1
+            // 
+            picC1.BackColor = Color.Transparent;
+            picC1.BackgroundImageLayout = ImageLayout.None;
+            picC1.Enabled = false;
+            picC1.Location = new Point(5, 86);
+            picC1.Margin = new Padding(3, 2, 3, 2);
+            picC1.Name = "picC1";
+            picC1.Size = new Size(79, 64);
+            picC1.SizeMode = PictureBoxSizeMode.Zoom;
+            picC1.TabIndex = 42;
+            picC1.TabStop = false;
+            // 
+            // picC0
+            // 
+            picC0.BackColor = Color.Transparent;
+            picC0.BackgroundImageLayout = ImageLayout.None;
+            picC0.Enabled = false;
+            picC0.Location = new Point(5, 10);
+            picC0.Margin = new Padding(3, 2, 3, 2);
+            picC0.Name = "picC0";
+            picC0.Size = new Size(79, 64);
+            picC0.SizeMode = PictureBoxSizeMode.Zoom;
+            picC0.TabIndex = 43;
+            picC0.TabStop = false;
+            // 
+            // pnlC2
+            // 
+            pnlC2.BackColor = Color.Transparent;
+            pnlC2.Controls.Add(picB5);
+            pnlC2.Controls.Add(picB4);
+            pnlC2.Controls.Add(picB3);
+            pnlC2.Controls.Add(picB2);
+            pnlC2.Controls.Add(picB1);
+            pnlC2.Controls.Add(picB0);
+            pnlC2.Location = new Point(101, 36);
+            pnlC2.Margin = new Padding(3, 2, 3, 2);
+            pnlC2.Name = "pnlC2";
+            pnlC2.Size = new Size(88, 474);
+            pnlC2.TabIndex = 58;
+            pnlC2.Click += pnlC_Click;
+            pnlC2.MouseEnter += pnlC_MouseEnter;
+            // 
+            // picB5
+            // 
+            picB5.BackColor = Color.Transparent;
+            picB5.BackgroundImageLayout = ImageLayout.None;
+            picB5.Enabled = false;
+            picB5.Location = new Point(7, 398);
+            picB5.Margin = new Padding(3, 2, 3, 2);
+            picB5.Name = "picB5";
+            picB5.Size = new Size(79, 64);
+            picB5.SizeMode = PictureBoxSizeMode.Zoom;
+            picB5.TabIndex = 22;
+            picB5.TabStop = false;
+            // 
+            // picB4
+            // 
+            picB4.BackColor = Color.Transparent;
+            picB4.BackgroundImageLayout = ImageLayout.None;
+            picB4.Enabled = false;
+            picB4.Location = new Point(7, 320);
+            picB4.Margin = new Padding(3, 2, 3, 2);
+            picB4.Name = "picB4";
+            picB4.Size = new Size(79, 64);
+            picB4.SizeMode = PictureBoxSizeMode.Zoom;
+            picB4.TabIndex = 40;
+            picB4.TabStop = false;
+            // 
+            // picB3
+            // 
+            picB3.BackColor = Color.Transparent;
+            picB3.BackgroundImageLayout = ImageLayout.None;
+            picB3.Enabled = false;
+            picB3.Location = new Point(6, 242);
+            picB3.Margin = new Padding(3, 2, 3, 2);
+            picB3.Name = "picB3";
+            picB3.Size = new Size(79, 64);
+            picB3.SizeMode = PictureBoxSizeMode.Zoom;
+            picB3.TabIndex = 15;
+            picB3.TabStop = false;
+            // 
+            // picB2
+            // 
+            picB2.BackColor = Color.Transparent;
+            picB2.BackgroundImageLayout = ImageLayout.None;
+            picB2.Enabled = false;
+            picB2.Location = new Point(5, 164);
+            picB2.Margin = new Padding(3, 2, 3, 2);
+            picB2.Name = "picB2";
+            picB2.Size = new Size(79, 64);
+            picB2.SizeMode = PictureBoxSizeMode.Zoom;
+            picB2.TabIndex = 41;
+            picB2.TabStop = false;
+            // 
+            // picB1
+            // 
+            picB1.BackColor = Color.Transparent;
+            picB1.BackgroundImageLayout = ImageLayout.None;
+            picB1.Enabled = false;
+            picB1.Location = new Point(5, 86);
+            picB1.Margin = new Padding(3, 2, 3, 2);
+            picB1.Name = "picB1";
+            picB1.Size = new Size(79, 64);
+            picB1.SizeMode = PictureBoxSizeMode.Zoom;
+            picB1.TabIndex = 42;
+            picB1.TabStop = false;
+            // 
+            // picB0
+            // 
+            picB0.BackColor = Color.Transparent;
+            picB0.BackgroundImageLayout = ImageLayout.None;
+            picB0.Enabled = false;
+            picB0.Location = new Point(5, 10);
+            picB0.Margin = new Padding(3, 2, 3, 2);
+            picB0.Name = "picB0";
+            picB0.Size = new Size(79, 64);
+            picB0.SizeMode = PictureBoxSizeMode.Zoom;
+            picB0.TabIndex = 43;
+            picB0.TabStop = false;
+            // 
+            // pnlC1
+            // 
+            pnlC1.BackColor = Color.Transparent;
+            pnlC1.Controls.Add(picA5);
+            pnlC1.Controls.Add(picA4);
+            pnlC1.Controls.Add(picA3);
+            pnlC1.Controls.Add(picA2);
+            pnlC1.Controls.Add(picA1);
+            pnlC1.Controls.Add(picA0);
+            pnlC1.Location = new Point(15, 36);
+            pnlC1.Margin = new Padding(3, 2, 3, 2);
+            pnlC1.Name = "pnlC1";
+            pnlC1.Size = new Size(88, 474);
+            pnlC1.TabIndex = 57;
+            pnlC1.Click += pnlC_Click;
+            pnlC1.MouseEnter += pnlC_MouseEnter;
+            // 
             // FormPartie6x7
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1182, 1055);
+            ClientSize = new Size(1034, 791);
             Controls.Add(btnAbandon);
             Controls.Add(lblTourJoueur);
             Controls.Add(picJoueurActuel);
             Controls.Add(lblTitre6x7);
             Controls.Add(pnlPlateau6x7);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormPartie6x7";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Puissance 4";
@@ -818,42 +884,6 @@
             ((System.ComponentModel.ISupportInitialize)picA1).EndInit();
             ((System.ComponentModel.ISupportInitialize)picA0).EndInit();
             pnlPlateau6x7.ResumeLayout(false);
-            pnlC1.ResumeLayout(false);
-            pnlC2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)picB5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picB4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picB3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picB2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picB1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picB0).EndInit();
-            pnlC3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picC4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picC3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picC2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picC1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picC0).EndInit();
-            pnlC4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
-            pnlC5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
-            pnlC6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox32).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox33).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox34).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox35).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox36).EndInit();
             pnlC7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox37).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox38).EndInit();
@@ -861,6 +891,42 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox40).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox41).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox42).EndInit();
+            pnlC6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox32).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox33).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox34).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox35).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).EndInit();
+            pnlC5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
+            pnlC4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
+            pnlC3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picC4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picC3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picC2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picC1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picC0).EndInit();
+            pnlC2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picB5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picB4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picB3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picB2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picB1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picB0).EndInit();
+            pnlC1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }

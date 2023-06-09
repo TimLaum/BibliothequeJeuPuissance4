@@ -18,11 +18,34 @@ namespace SAE___Puissance_4
     public partial class FormPartie6x7 : Form
     {
         private FormPartiePerso? frmPrmPerso;
+        int columnNumber;
         public FormPartie6x7()
         {
             InitializeComponent();
         }
-
+        private void rejouer(bool win,string pseudo)
+        {
+            if (win) 
+            { 
+                DialogResult rejouer = MessageBox.Show($"Victoire du joueur {pseudo}\n\nSouhaitez-vous rejouer?", "Victoire !", MessageBoxButtons.YesNo);
+                if (rejouer == DialogResult.Yes)
+                    this.Close();
+                else
+                {
+                    Environment.Exit(0);
+                }
+            }
+            else
+            {
+                DialogResult rejouer = MessageBox.Show($"Égalité des deux joueurs!\n\nSouhaitez-vous rejouer?", "Égalité !", MessageBoxButtons.YesNo);
+                if (rejouer == DialogResult.Yes)
+                    this.Close();
+                else
+                {
+                    Environment.Exit(0);
+                }
+            }
+        }
         private void FormPartie6x7_Load(object sender, EventArgs e)
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
@@ -63,42 +86,52 @@ namespace SAE___Puissance_4
             this.Close();
         }
 
-        private void picC1_click(object sender, EventArgs e)
+
+
+        private void pictureBox30_Click(object sender, EventArgs e)
         {
-            int i = frmPrmPerso.Jeu.GetLignes() - 1;
-            int nbpanels = pnlPlateau6x7.Controls.Count;
-            PictureBox pic = new PictureBox();
-            while (i >= 0)
-            {
-                if (frmPrmPerso.Jeu.GetPion(i, 1) == 0)
-                {
-                    ChoixPicCouleurPion((PictureBox)pnlPlateau6x7.Controls[nbpanels % 6 * 7]);
-                }
-                i--;
-            }
+
         }
 
-        private void panel1_Click(object sender, EventArgs e)
+        private void pnlC_MouseEnter(object sender, EventArgs e)
         {
+            Panel panel = sender as Panel;
+
+            // Obtenez le nom du panneau
+            string panelName = panel.Name;
+
+            // Supprimez la partie "pnlC" du nom du panneau
+            string numericPart = panelName.Replace("pnlC", "");
+
+            // Convertissez la partie numérique en un entier
+            columnNumber = int.Parse(numericPart);
+            columnNumber = columnNumber - 1;
+        }
+
+        private void pnlC_Click(object sender, EventArgs e)
+        {
+            Panel panel = sender as Panel;
             List<(int, int)> CoupAJouer = new List<(int, int)>();
             int i = 0;
-            while (i < frmPrmPerso.Jeu.GetLignes())
+            while (i < frmPrmPerso.Jeu.GetColonnes())
             {
-                if (frmPrmPerso.Jeu.GetPion(i, 1) == 0)
+                if (frmPrmPerso.Jeu.GetPion(columnNumber, i) == 0)
                 {
-                    CoupAJouer.Add((i, 1));
-                    ChoixPicCouleurPion((PictureBox)pnlC1.Controls[i]);
+                    CoupAJouer.Add((columnNumber, i));
+                    ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
                     frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
-                    i = frmPrmPerso.Jeu.GetLignes();
+                    if(frmPrmPerso.Jeu.EstTerminee() == 1)
+                        rejouer(true,frmPrmPerso.Joueur1.GetPseudoJoueur());
+                    else if(frmPrmPerso.Jeu.EstTerminee() == 2)
+                        rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
+                    else if(frmPrmPerso.Jeu.EstTerminee() ==0 )
+                        rejouer(false, "");
+                    ChoixPicCouleurPion(picJoueurActuel);
+                    break;
 
                 }
                 i++;
             }
-
-        }
-
-        private void pictureBox30_Click(object sender, EventArgs e)
-        {
 
         }
     }

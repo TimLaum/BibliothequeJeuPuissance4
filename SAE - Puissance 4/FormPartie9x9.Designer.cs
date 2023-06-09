@@ -83,7 +83,7 @@
             picE6 = new PictureBox();
             picE7 = new PictureBox();
             picE8 = new PictureBox();
-            this.pnlC4 = new Panel();
+            pnlC4 = new Panel();
             picD0 = new PictureBox();
             picD1 = new PictureBox();
             picD2 = new PictureBox();
@@ -1378,5 +1378,6 @@
         private PictureBox picE6;
         private PictureBox picE7;
         private PictureBox picE8;
+        private Panel pnlC4;
     }
 }

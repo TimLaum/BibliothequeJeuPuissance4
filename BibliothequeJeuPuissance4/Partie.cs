@@ -31,13 +31,13 @@ namespace BibliothequeJeuPuissance4
         {
             var (ligne, colonne) = CoupAJouer[0];
             plateau[ligne, colonne] = N_Joueur;
-            if (JoueurActif == 1)
+            if (JoueurActif == 2)
             {
-                JoueurActif = 2;
+                JoueurActif = 1;
             }
             else
             {
-                JoueurActif = 1;
+                JoueurActif = 2;
             }
         }
         public void GenererPlateau()
@@ -62,11 +62,6 @@ namespace BibliothequeJeuPuissance4
 		{
             Console.WriteLine(Convert.ToString(plateau.GetLength(0))); 
             Console.WriteLine(Convert.ToString(plateau.GetLength(1)));
-        }
-
-        public int GetValPlateau(int c,int l)
-        {
-            return plateau[c, l];
         }
 		public int GetLignes()
 		{
@@ -107,7 +102,7 @@ namespace BibliothequeJeuPuissance4
                     else if((plateau[ligne, colonne] == 2 && plateau[ligne, colonne + 1] == 2 && plateau[ligne, colonne + 2] == 2 && plateau[ligne, colonne + 3] == 2))
                     {
                         return 2;
-                    }
+                    }               
                 }
             }
 
@@ -184,14 +179,7 @@ namespace BibliothequeJeuPuissance4
                     }
                 }
             }
-            if(verif == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return verif;
         }
     }
 }

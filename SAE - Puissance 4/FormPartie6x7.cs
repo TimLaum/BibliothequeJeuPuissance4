@@ -134,17 +134,28 @@ namespace SAE___Puissance_4
             {
                 if (frmPrmPerso.Jeu.GetPion(columnNumber, i) == 0)
                 {
-                    CoupAJouer.Add((columnNumber, i));
-                    ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
-                    frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
-                    if (frmPrmPerso.Jeu.EstTerminee() == 1)
-                        rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
-                    else if (frmPrmPerso.Jeu.EstTerminee() == 2)
-                        rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
-                    else if (frmPrmPerso.Jeu.EstTerminee() == 0)
-                        rejouer(false, "");
-                    ChoixPicCouleurPion(picJoueurActuel);
-                    break;
+                    if(frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur())
+                    {
+                        IA JoueurIA = new IA(4, 2);
+                        CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
+                        ChoixPicCouleurPion((PictureBox)panel.Controls[CoupAJouer[0].Item1]) ;
+                        frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+                    }
+                    else
+                    {
+
+                        CoupAJouer.Add((columnNumber, i));
+                        ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
+                        frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+                        if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                            rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
+                        else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+                            rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
+                        else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+                            rejouer(false, "");
+                        ChoixPicCouleurPion(picJoueurActuel);
+                        break;
+                    }
 
                 }
                 i++;

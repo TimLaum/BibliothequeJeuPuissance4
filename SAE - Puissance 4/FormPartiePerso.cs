@@ -73,6 +73,9 @@ namespace SAE___Puissance_4
             {
                 Joueur1 = new Joueur(1, colorJ1, txbJ1.Text);
                 Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
+                if (rbnIA.Checked) { 
+                    IA JoueurIA = new IA(4, 2);
+                }
                 Label lblPseudoJoueur = new Label();
                 Jeu = new Partie(ligne, colonne, JoueurDebutant);
 

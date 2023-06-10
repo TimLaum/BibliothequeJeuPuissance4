@@ -20,7 +20,7 @@ namespace SAE___Puissance_4
     {
         private FormPartiePerso? frmPrmPerso;
         int columnNumber;
-        
+        private SoundPlayer Musique = new SoundPlayer(Properties.Resources.Musique);
         public FormPartie6x7()
         {
             InitializeComponent();
@@ -60,6 +60,7 @@ namespace SAE___Puissance_4
             Panel_Transparence(pnlC5);
             Panel_Transparence(pnlC6);
             Panel_Transparence(pnlC7);
+            lblTourJoueur.Text = $"Au tour du joueur {frmPrmPerso.Jeu.GetJoueurActif()}";
         }
         private void Panel_Transparence(Panel p)
         {
@@ -79,7 +80,6 @@ namespace SAE___Puissance_4
             {
                 // Note: You may need to change the location specified based on
                 // the sounds loaded on your computer.
-                SoundPlayer Musique = new SoundPlayer(Properties.Resources.Musique);
                 Musique.PlayLooping();
             }
             catch (Exception ex)
@@ -116,18 +116,6 @@ namespace SAE___Puissance_4
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
-        private void pictureBox30_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pnlC_MouseEnter(object sender, EventArgs e)
         {
             Panel panel = sender as Panel;
@@ -143,6 +131,20 @@ namespace SAE___Puissance_4
             columnNumber = columnNumber - 1;
         }
 
+        private void appelleIA()
+        {
+            IA JoueurIA = new IA(4, 2);
+            
+            int i = 0;
+            List<(int, int)> CoupAJouer = new List<(int, int)>();
+            CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
+            string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item1+1);
+            Panel panel = Controls.Find(nomPanel,true).FirstOrDefault() as Panel;
+            ChoixPicCouleurPion((PictureBox)panel.Controls[CoupAJouer[0].Item2]);
+            frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+            ChoixPicCouleurPion(picJoueurActuel);
+
+        }
         private void pnlC_Click(object sender, EventArgs e)
         {
             Panel panel = sender as Panel;
@@ -150,89 +152,39 @@ namespace SAE___Puissance_4
             int i = 0;
             while (i < frmPrmPerso.Jeu.GetColonnes())
             {
-                if (frmPrmPerso.Jeu.GetPion(columnNumber, i) == 0)
+                if (frmPrmPerso.Jeu.EstPossible(columnNumber, i))
                 {
-                    if(frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur())
+                    CoupAJouer.Add((columnNumber, i));
+                    ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
+                    frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+                    if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                        rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
+                    else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+                        rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
+                    else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+                        rejouer(false, "");
+                    ChoixPicCouleurPion(picJoueurActuel);
+                    if (frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur())
                     {
-                        IA JoueurIA = new IA(4, 2);
-                        CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
-                        ChoixPicCouleurPion((PictureBox)panel.Controls[CoupAJouer[0].Item1]) ;
-                        frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+                        appelleIA();
                     }
-                    else
-                    {
-
-                        CoupAJouer.Add((columnNumber, i));
-                        ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
-                        frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
-                        if (frmPrmPerso.Jeu.EstTerminee() == 1)
-                            rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
-                        else if (frmPrmPerso.Jeu.EstTerminee() == 2)
-                            rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
-                        else if (frmPrmPerso.Jeu.EstTerminee() == 0)
-                            rejouer(false, "");
-                        ChoixPicCouleurPion(picJoueurActuel);
-                        break;
-                    }
-
+                    break;
+                    
                 }
                 i++;
+                
             }
 
         }
 
-        private void pnlC1_Paint(object sender, PaintEventArgs e)
+        private void FormPartie6x7_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Musique.Stop();
         }
 
-        private void pnlC2_Paint(object sender, PaintEventArgs e)
+        private void btnAbandon_Click(object sender, EventArgs e)
         {
-        }
-
-        private void pnlC3_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void pnlC4_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void pnlC5_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void pnlC6_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void pnlC7_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void picA2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picPlateau_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void picA3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void picA4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void picA5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pnlC1_Paint_1(object sender, PaintEventArgs e)
-        {
+            this.Close();
         }
     }
 }

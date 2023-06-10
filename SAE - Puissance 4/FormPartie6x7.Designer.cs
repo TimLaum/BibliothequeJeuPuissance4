@@ -180,7 +180,7 @@
             btnAbandon.TabIndex = 3;
             btnAbandon.Text = "Abandonner";
             btnAbandon.UseVisualStyleBackColor = true;
-            btnAbandon.Click += button1_Click;
+            btnAbandon.Click += btnAbandon_Click;
             // 
             // picA3
             // 
@@ -194,7 +194,6 @@
             picA3.SizeMode = PictureBoxSizeMode.StretchImage;
             picA3.TabIndex = 15;
             picA3.TabStop = false;
-            picA3.Click += picA3_Click;
             // 
             // picA5
             // 
@@ -208,7 +207,6 @@
             picA5.SizeMode = PictureBoxSizeMode.StretchImage;
             picA5.TabIndex = 22;
             picA5.TabStop = false;
-            picA5.Click += picA5_Click;
             // 
             // picA4
             // 
@@ -222,7 +220,6 @@
             picA4.SizeMode = PictureBoxSizeMode.StretchImage;
             picA4.TabIndex = 40;
             picA4.TabStop = false;
-            picA4.Click += picA4_Click;
             // 
             // picA2
             // 
@@ -236,7 +233,6 @@
             picA2.SizeMode = PictureBoxSizeMode.StretchImage;
             picA2.TabIndex = 41;
             picA2.TabStop = false;
-            picA2.Click += picA2_Click;
             // 
             // picA1
             // 
@@ -250,7 +246,6 @@
             picA1.SizeMode = PictureBoxSizeMode.StretchImage;
             picA1.TabIndex = 42;
             picA1.TabStop = false;
-            picA1.Click += pictureBox30_Click;
             // 
             // picA0
             // 
@@ -859,7 +854,6 @@
             pnlC1.Size = new Size(85, 510);
             pnlC1.TabIndex = 57;
             pnlC1.Click += pnlC_Click;
-            pnlC1.Paint += pnlC1_Paint_1;
             pnlC1.MouseEnter += pnlC_MouseEnter;
             // 
             // pictureBox2
@@ -890,7 +884,6 @@
             picPlateau.SizeMode = PictureBoxSizeMode.StretchImage;
             picPlateau.TabIndex = 59;
             picPlateau.TabStop = false;
-            picPlateau.Click += picPlateau_Click;
             // 
             // FormPartie6x7
             // 
@@ -915,6 +908,7 @@
             Name = "FormPartie6x7";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Puissance 4";
+            FormClosed += FormPartie6x7_FormClosed;
             Load += FormPartie6x7_Load;
             ((System.ComponentModel.ISupportInitialize)picJoueurActuel).EndInit();
             ((System.ComponentModel.ISupportInitialize)picA3).EndInit();

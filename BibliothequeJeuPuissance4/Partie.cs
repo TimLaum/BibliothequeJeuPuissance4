@@ -29,17 +29,22 @@ namespace BibliothequeJeuPuissance4
 
         public void JouerCoup(List<(int, int)> CoupAJouer,int N_Joueur)
         {
-            var (ligne, colonne) = CoupAJouer[0];
-            plateau[ligne, colonne] = N_Joueur;
-            if (JoueurActif == 2)
+            if (EstPossible(CoupAJouer[0].Item1, CoupAJouer[0].Item2))
             {
-                JoueurActif = 1;
-            }
-            else
-            {
-                JoueurActif = 2;
+                var (ligne, colonne) = CoupAJouer[0];
+                plateau[ligne,colonne] = N_Joueur;
+                if (JoueurActif == 2)
+                {
+                    JoueurActif = 1;
+                }
+                else
+                {
+                    JoueurActif = 2;
+                }
             }
         }
+
+
         public void GenererPlateau()
         {
             for(int i = 0; i < lignes; i++)
@@ -58,11 +63,7 @@ namespace BibliothequeJeuPuissance4
 			InitPlateau();
 		}
 
-		public void GetTaillePlateau()
-		{
-            Console.WriteLine(Convert.ToString(plateau.GetLength(0))); 
-            Console.WriteLine(Convert.ToString(plateau.GetLength(1)));
-        }
+		
 		public int GetLignes()
 		{
 			return lignes;

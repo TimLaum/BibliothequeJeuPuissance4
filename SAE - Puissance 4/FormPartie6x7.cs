@@ -90,6 +90,7 @@ namespace SAE___Puissance_4
 
         private void ChoixPicCouleurPion(PictureBox pic)
         {
+            VoirPlateau();
             if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
             {
                 string x = frmPrmPerso.Joueur1.GetCouleur();
@@ -141,8 +142,25 @@ namespace SAE___Puissance_4
             string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item1+1);
             Panel panel = Controls.Find(nomPanel,true).FirstOrDefault() as Panel;
             ChoixPicCouleurPion((PictureBox)panel.Controls[CoupAJouer[0].Item2]);
-            frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+            //frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
             ChoixPicCouleurPion(picJoueurActuel);
+            VoirPlateau();
+
+
+        }
+        private void VoirPlateau()
+        {
+            List<int> x = new List<int>();
+            for(int i=0;i< frmPrmPerso.Jeu.GetLignes(); i++)
+            {
+                for (int j = 0; j < frmPrmPerso.Jeu.GetColonnes(); j++)
+                {
+                    x.Add(frmPrmPerso.Jeu.GetPion(i,j ));
+                }
+
+            }
+            MessageBox.Show($"{frmPrmPerso.Jeu.GetPion(5,0)}");
+            DialogResult rejouer = MessageBox.Show($"{x[0]},{x[1]},{x[2]},{x[3]},{x[4]},{x[5]},{x[6]};\n{x[7]},{x[8]},{x[9]},{x[10]},{x[11]},{x[12]},{x[13]};\n{x[14]},{x[15]},{x[16]},{x[17]},{x[18]},{x[19]},{x[20]};\n {x[21]},{x[22]},{x[23]},{x[24]},{x[25]},{x[26]},{x[27]};\n{x[28]},{x[29]},{x[30]},{x[31]},{x[32]},{x[33]},{x[34]}\n{x[35]},{x[36]},{x[37]},{x[38]},{x[39]},{x[40]},{x[41]}");
 
         }
         private void pnlC_Click(object sender, EventArgs e)

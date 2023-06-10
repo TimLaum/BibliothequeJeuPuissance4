@@ -31,8 +31,8 @@ namespace BibliothequeJeuPuissance4
         {
             if (EstPossible(CoupAJouer[0].Item1, CoupAJouer[0].Item2))
             {
-                var (ligne, colonne) = CoupAJouer[0];
-                plateau[ligne,colonne] = N_Joueur;
+                //var (ligne, colonne) = CoupAJouer[0];
+                plateau[CoupAJouer[0].Item1, CoupAJouer[0].Item2] = N_Joueur;
                 if (JoueurActif == 2)
                 {
                     JoueurActif = 1;
@@ -42,6 +42,10 @@ namespace BibliothequeJeuPuissance4
                     JoueurActif = 2;
                 }
             }
+        }
+        public void InitPionPlateau(int Ligne,int Colonne,int N_Joueur)
+        {
+            plateau[Ligne,Colonne]=N_Joueur;
         }
 
 

@@ -17,8 +17,8 @@ namespace SAE___Puissance_4
         FormParametrage frmParam;
         string colorJ1 = "Rouge";
         string colorJ2IA = "Jaune";
-        int ligne = 7;
-        int colonne = 6;
+        int ligne = 6;
+        int colonne = 7;
         int JoueurDebutant = 1;
         bool exit;
         Random rnd = new Random();
@@ -109,8 +109,8 @@ namespace SAE___Puissance_4
         {
             if (rbn6x7.Checked)
             {
-                ligne = 7;
-                colonne = 6;
+                ligne = 6;
+                colonne = 7;
             }
             else if (rbn8x8.Checked)
             {

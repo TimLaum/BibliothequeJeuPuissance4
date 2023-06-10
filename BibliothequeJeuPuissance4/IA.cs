@@ -19,14 +19,24 @@ namespace BibliothequeJeuPuissance4
 
         public void JouerCoupIA(Partie partie, List<(int, int)> CoupAJouer)
         {
+
             if (partie.GetJoueurActif() == N_joueurIA)
             {
+
                 partie.JouerCoup(CoupAJouer, N_joueurIA);
             }
         }
-
+        
         public List<(int, int)> MeilleurCoup(Partie partie)
         {
+            List<int> CoupAjouer = new List<int>();
+            List<(int, int)> LP = new List<(int, int)>();
+            CoupAjouer = MinMax(partie, 3, 2);
+            LP.Add((CoupAjouer[1], CoupAjouer[2]));
+            JouerCoupIA(partie, LP);
+            return LP;
+
+            /*
             List<(int, int)> LCP = ListeCoupPossible(partie);
             int meilleurScore = int.MinValue;
             List<(int, int)> ListeMeilleurCoup = new List<(int, int)>();
@@ -48,32 +58,91 @@ namespace BibliothequeJeuPuissance4
             }
 
             return ListeMeilleurCoup;
+            */
         }
 
-        private int MinMax(Partie partie, int profondeur, List<(int, int)> LCP)
+        private List<int> MinMax(Partie noeud, int profondeur,int evalMax)
         {
-            if (profondeur == 0 || partie.EstTerminee() != -1)
-            {
-                return Evaluer(partie);
-            }
+            Partie f;
+            List<(int, int)> LP = new List<(int, int)>();
+            List<int> ListeRetour = new List<int>();
+            List<int> Values = new List<int>();
+            ListeRetour.Add(0);
+            ListeRetour.Add(0);
+            ListeRetour.Add(0);
 
+
+            if (profondeur == 0 || noeud.EstTerminee() == -1)
+            {
+                ListeRetour[0]= Evaluer(noeud);
+                return ListeRetour;
+            }
+            else
+            {
+                f=CopierPartie(noeud);
+                if (evalMax == 2)
+                {
+                    LP = ListeCoupPossible(noeud);
+                    for(int i=0;i< f.GetColonnes(); i++)
+                    {
+                        if (i > 1)
+                        {
+                         f.InitPionPlateau(LP[i-1].Item1, LP[i-1].Item2, 0);
+                        }
+                        f.InitPionPlateau(LP[i].Item1, LP[i].Item2,evalMax);
+                        Values = MinMax(f, profondeur - 1, 1);
+                        if (ListeRetour[0] < Values[0])
+                        {
+                            ListeRetour[1] = Values[1];
+                            ListeRetour[1] = Values[2];
+                        }
+                    }
+                    return ListeRetour;
+                }
+                else
+                {
+                    LP = ListeCoupPossible(noeud);
+                    for (int i = 0; i < f.GetColonnes(); i++)
+                    {
+                        if (i > 1)
+                        {
+                            f.InitPionPlateau(LP[i - 1].Item1, LP[i - 1].Item2, 0);
+                        }
+                        f.InitPionPlateau(LP[i].Item1, LP[i].Item2,evalMax);
+                        Values = MinMax(f, profondeur - 1, 2);
+                        if (ListeRetour[0] < Values[0])
+                        {
+                            ListeRetour[1] = Values[1];
+                            ListeRetour[1] = Values[2];
+                        }
+                    }
+                    return ListeRetour;
+                }
+            }
+            /*
             int meilleurScore = int.MinValue;
             
 
             foreach ((int ligne, int colonne) in LCP)
             {
-                Partie copiePartie = CopierPartie(partie);
+                Partie copiePartie = CopierPartie(noeud);
                 copiePartie.JouerCoup(new List<(int, int)> { (ligne, colonne) }, copiePartie.GetJoueurActif());
                 int score = MinMax(copiePartie, profondeur - 1,LCP);
                 meilleurScore = Math.Max(meilleurScore, score);
             }
 
             return meilleurScore;
+            */
         }
 
         private List<(int, int)> ListeCoupPossible(Partie partie)
         {
+            bool verif=false;
+            int c, l;
+
+
             List<(int, int)> listeCoupsPossibles = new List<(int, int)>();
+            /*
             for (int ligne = 0; ligne < partie.GetLignes(); ligne++)
             {
                 for (int colonne = 0; colonne < partie.GetColonnes(); colonne++)
@@ -96,7 +165,27 @@ namespace BibliothequeJeuPuissance4
                         
                     }
                 }
+            }*/
+            for( c = 0; c < partie.GetColonnes(); c++)
+            {
+                verif = false;
+
+                for ( l = partie.GetLignes(); l > 0; l--)
+                {
+                    if (!partie.EstPossible(l, c))
+                    {
+                        verif = true;
+                        l ++;
+                        break;
+                    }
+                }
+                if (verif)
+                {
+                    listeCoupsPossibles.Add((l, c));
+                }
+
             }
+
             return listeCoupsPossibles;
         }
 

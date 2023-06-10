@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Media;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace SAE___Puissance_4
     {
         private FormPartiePerso? frmPrmPerso;
         int columnNumber;
+        
         public FormPartie6x7()
         {
             InitializeComponent();
@@ -49,6 +51,7 @@ namespace SAE___Puissance_4
         private void FormPartie6x7_Load(object sender, EventArgs e)
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
+            playLooping();
             ChoixPicCouleurPion(picJoueurActuel);
             Panel_Transparence(pnlC1);
             Panel_Transparence(pnlC2);
@@ -69,6 +72,21 @@ namespace SAE___Puissance_4
         }
 
 
+
+        private void playLooping()
+        {
+            try
+            {
+                // Note: You may need to change the location specified based on
+                // the sounds loaded on your computer.
+                SoundPlayer Musique = new SoundPlayer(Properties.Resources.Musique);
+                Musique.PlayLooping();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error playing sound");
+            }
+        }
 
         private void ChoixPicCouleurPion(PictureBox pic)
         {

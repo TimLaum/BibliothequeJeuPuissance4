@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,6 +33,7 @@ namespace SAE___Puissance_4
             Panel_Transparence(pnlC7);
             Panel_Transparence(pnlC8);
             Panel_Transparence(pnlC9);
+            playLooping();
         }
 
         private void Panel_Transparence(Panel p)
@@ -43,6 +45,21 @@ namespace SAE___Puissance_4
             p.BackColor = Color.FromArgb(0, 0, 0, 0);
 
         }
+        private void playLooping()
+        {
+            try
+            {
+                // Note: You may need to change the location specified based on
+                // the sounds loaded on your computer.
+                SoundPlayer Musique = new SoundPlayer(Properties.Resources.Musique);
+                Musique.PlayLooping();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error playing sound");
+            }
+        }
+
         private void rejouer(bool win, string pseudo)
         {
             if (win)

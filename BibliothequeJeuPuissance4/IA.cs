@@ -83,7 +83,7 @@ namespace BibliothequeJeuPuissance4
                 if (evalMax == 2)
                 {
                     LP = ListeCoupPossible(noeud);
-                    for(int i=0;i< f.GetColonnes(); i++)
+                    for(int i=f.GetColonnes();i> 0; i--)
                     {
                         if (i > 1)
                         {
@@ -102,7 +102,7 @@ namespace BibliothequeJeuPuissance4
                 else
                 {
                     LP = ListeCoupPossible(noeud);
-                    for (int i = 0; i < f.GetColonnes(); i++)
+                    for (int i = f.GetColonnes(); i > 0; i--)
                     {
                         if (i > 1)
                         {

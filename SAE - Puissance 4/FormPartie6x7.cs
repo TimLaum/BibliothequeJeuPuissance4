@@ -167,13 +167,13 @@ namespace SAE___Puissance_4
         {
             Panel panel = sender as Panel;
             List<(int, int)> CoupAJouer = new List<(int, int)>();
-            int i = 0;
-            while (i < frmPrmPerso.Jeu.GetColonnes())
+            int i = frmPrmPerso.Jeu.GetLignes()-1;
+            while (i >= 0)
             {
-                if (frmPrmPerso.Jeu.EstPossible(columnNumber, i))
+                if (frmPrmPerso.Jeu.EstPossible(i, columnNumber))
                 {
-                    CoupAJouer.Add((columnNumber, i));
-                    ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
+                    CoupAJouer.Add((i, columnNumber));
+                    ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes()-1-i]);
                     frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
                     if (frmPrmPerso.Jeu.EstTerminee() == 1)
                         rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
@@ -189,7 +189,7 @@ namespace SAE___Puissance_4
                     break;
                     
                 }
-                i++;
+                i--;
                 
             }
 

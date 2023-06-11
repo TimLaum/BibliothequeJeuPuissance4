@@ -61,7 +61,7 @@ namespace SAE___Puissance_4
             Panel_Transparence(pnlC6);
             Panel_Transparence(pnlC7);
             lblTourJoueur.Text = $"Au tour du joueur {frmPrmPerso.Jeu.GetJoueurActif()}";
-            if (frmPrmPerso.Jeu.GetJoueurActif() == 2&& frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA")
+            if (frmPrmPerso.Jeu.GetJoueurActif() == 2 && frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA")
             {
                 appelleIA();
             }
@@ -137,23 +137,24 @@ namespace SAE___Puissance_4
 
         private void appelleIA()
         {
-            IA JoueurIA = new IA(4, 2);
+            IA JoueurIA = new IA(5, 2);
 
             int i = 0;
             List<(int, int)> CoupAJouer = new List<(int, int)>();
 
-                CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
-                string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item2 + 1);
-                Panel panel = Controls.Find(nomPanel, true).FirstOrDefault() as Panel;
-                ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - (CoupAJouer[0].Item1) - 1]);
-                frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
-                ChoixPicCouleurPion(picJoueurActuel);
-                if (frmPrmPerso.Jeu.EstTerminee() == 1)
-                    rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
-                else if (frmPrmPerso.Jeu.EstTerminee() == 2)
-                    rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
-                else if (frmPrmPerso.Jeu.EstTerminee() == 0)
-                    rejouer(false, "");
+            CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
+            string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item2 + 1);
+            Panel panel = Controls.Find(nomPanel, true).FirstOrDefault() as Panel;
+            ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - (CoupAJouer[0].Item1) - 1]);
+            frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+            ChoixPicCouleurPion(picJoueurActuel);
+            lblTourJoueur.Text = $"Au tour du joueur {frmPrmPerso.Jeu.GetJoueurActif()}";
+            if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
+            else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+                rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
+            else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+                rejouer(false, "");
         }
         private void VoirPlateau()
         {
@@ -182,12 +183,13 @@ namespace SAE___Puissance_4
                     CoupAJouer.Add((i, columnNumber));
                     ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - 1 - i]);
                     frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+                    lblTourJoueur.Text = $"Au tour du joueur {frmPrmPerso.Jeu.GetJoueurActif()}";
                     if (frmPrmPerso.Jeu.EstTerminee() == 1)
                     {
                         rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
                         break;
 
-                    }  
+                    }
                     else if (frmPrmPerso.Jeu.EstTerminee() == 2)
                     {
                         rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
@@ -215,6 +217,10 @@ namespace SAE___Puissance_4
                 i--;
 
             }
+
+        }
+        private void Son_Placement()
+        {
 
         }
 

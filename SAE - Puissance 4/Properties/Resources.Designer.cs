@@ -278,5 +278,14 @@ namespace SAE___Puissance_4.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Son_Placement_Pion {
+            get {
+                return ResourceManager.GetStream("Son_Placement_Pion", resourceCulture);
+            }
+        }
     }
 }

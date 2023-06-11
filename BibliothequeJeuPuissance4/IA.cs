@@ -68,9 +68,12 @@ namespace BibliothequeJeuPuissance4
             List<int> ListeRetour = new List<int>();
             List<int> Values = new List<int>();
             LP = ListeCoupPossible(noeud);
-            ListeRetour.Add(0);
-            ListeRetour.Add(LP[0].Item1);
-            ListeRetour.Add(LP[0].Item2);
+            if (LP.Count > 0)
+            {
+                ListeRetour.Add(0);
+                ListeRetour.Add(LP[0].Item1);
+                ListeRetour.Add(LP[0].Item2);
+            }
             if (profondeur == 0 || noeud.EstTerminee() != -1)
             {
 
@@ -128,7 +131,7 @@ namespace BibliothequeJeuPuissance4
         }
 
 
-        private List<(int, int)> ListeCoupPossible(Partie partie)
+        public List<(int, int)> ListeCoupPossible(Partie partie)
         {
             bool verif=false;
             int c, l;
@@ -163,7 +166,7 @@ namespace BibliothequeJeuPuissance4
             {
                 verif = false;
 
-                for ( l = partie.GetLignes()-1; l > 0; l--)
+                for ( l = partie.GetLignes()-1; l >= 0; l--)
                 {
                     if (partie.EstPossible(l, c))
                     {

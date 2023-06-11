@@ -381,7 +381,7 @@
             pictureBox27.BackColor = Color.Transparent;
             pictureBox27.BackgroundImageLayout = ImageLayout.None;
             pictureBox27.Enabled = false;
-            pictureBox27.Location = new Point(8, 432);
+            pictureBox27.Location = new Point(7, 432);
             pictureBox27.Margin = new Padding(3, 2, 3, 2);
             pictureBox27.Name = "pictureBox27";
             pictureBox27.Size = new Size(70, 70);
@@ -477,7 +477,7 @@
             pictureBox21.BackColor = Color.Transparent;
             pictureBox21.BackgroundImageLayout = ImageLayout.None;
             pictureBox21.Enabled = false;
-            pictureBox21.Location = new Point(7, 432);
+            pictureBox21.Location = new Point(8, 432);
             pictureBox21.Margin = new Padding(3, 2, 3, 2);
             pictureBox21.Name = "pictureBox21";
             pictureBox21.Size = new Size(70, 70);

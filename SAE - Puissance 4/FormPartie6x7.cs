@@ -219,7 +219,7 @@ namespace SAE___Puissance_4
                     {
                         if (frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur()) // Si le joueur 2 est l'IA et non un humain
                         {
-                            await Task.Delay(500); // Patiente 500 millisecondes pour éviter des coups trop rapides et donner un meilleur aspect au coup de l'IA
+                            await Task.Delay(100); // Patiente 500 millisecondes pour éviter des coups trop rapides et donner un meilleur aspect au coup de l'IA
                             appelleIA(); //Appel l'IA
                         }
                         break; //Arrête le while car la condition est remplie et il ne faut jouer qu'un coup sur la ligne cliquée

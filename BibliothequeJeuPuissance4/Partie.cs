@@ -134,6 +134,13 @@ namespace BibliothequeJeuPuissance4
                 return false;
             }
         }
+
+        public void InitPionPlateau(int Ligne, int Colonne, int N_Joueur)
+        {
+            plateau[Ligne, Colonne] = N_Joueur;
+        }
+
+
         /// <summary>
         /// Verifie si la partie est terminé et par quelle joueur
         /// </summary>

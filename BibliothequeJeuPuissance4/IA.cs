@@ -185,7 +185,7 @@ namespace BibliothequeJeuPuissance4
 
         public int Evaluer(Partie partie)
         {
-            int scoreActuel = 110;
+            int scoreActuel = 0;
             int scoreTemporaire =0;
 
 
@@ -201,10 +201,7 @@ namespace BibliothequeJeuPuissance4
 
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
 
-                        if (scoreTemporaire < scoreActuel)
-                        {
-                            scoreActuel = scoreTemporaire;
-                        }
+                        scoreActuel += scoreTemporaire;
                     
   
                 }
@@ -220,10 +217,9 @@ namespace BibliothequeJeuPuissance4
                     int pion4 = partie.GetPion(ligne, colonne + 3);
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
 
-                        if (scoreTemporaire < scoreActuel)
-                        {
-                            scoreActuel = scoreTemporaire;
-                        }
+                       
+                        scoreActuel += scoreTemporaire;
+                        
 
 
                 }
@@ -240,10 +236,7 @@ namespace BibliothequeJeuPuissance4
 
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
 
-                        if (scoreTemporaire < scoreActuel)
-                        {
-                            scoreActuel = scoreTemporaire;
-                        }
+                        scoreActuel += scoreTemporaire;
 
                 }
             }
@@ -259,10 +252,9 @@ namespace BibliothequeJeuPuissance4
 
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
 
-                        if (scoreTemporaire < scoreActuel)
-                        {
-                            scoreActuel = scoreTemporaire;
-                        }
+                        
+                        scoreActuel += scoreTemporaire;
+                        
                     
 
                 }
@@ -278,24 +270,24 @@ namespace BibliothequeJeuPuissance4
 
             if (pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 2)
             {
-                score = 100;
+                score += 100;
             }
             else
             {
                 if(pion1 == 0 && pion2 == 2 && pion3 == 2 && pion4 == 2){
-                    score = 60;
+                    score += 60;
                 }
                 else
                 {
                     if (pion1 == 0 && pion2 == 0 && pion3 == 2 && pion4 == 2)
                     {
-                        score = 30;
+                        score += 30;
                     }
                     else
                     {
                         if (pion1 == 0 && pion2 == 0 && pion3 == 0 && pion4 == 2)
                         {
-                            score = 10;
+                            score += 10;
                         }
                     }
                 }
@@ -305,25 +297,25 @@ namespace BibliothequeJeuPuissance4
 
             if ((pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 1))
             {
-                score = -100;
+                score -= 100;
             }
             else
             {
                 if (pion1 == 0 && pion2 == 1 && pion3 == 1 && pion4 == 1)
                 {
-                    score = -60;
+                    score -= 60;
                 }
                 else
                 {
                     if (pion1 == 0 && pion2 == 0 && pion3 == 1 && pion4 == 1)
                     {
-                        score = -30;
+                        score -= 30;
                     }
                     else
                     {
                         if (pion1 == 0 && pion2 == 0 && pion3 == 0 && pion4 == 1)
                         {
-                            score = -10;
+                            score -= 10;
                         }
 
                     }

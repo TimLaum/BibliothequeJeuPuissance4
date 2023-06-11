@@ -227,13 +227,13 @@
             btnAbandon9x9.TabIndex = 11;
             btnAbandon9x9.Text = "Abandonner la partie";
             btnAbandon9x9.UseVisualStyleBackColor = true;
-            btnAbandon9x9.Click += button1_Click;
+            btnAbandon9x9.Click += btnAbandon_Click;
             // 
             // lblTourJoueur9x9
             // 
             lblTourJoueur9x9.Anchor = AnchorStyles.Bottom;
             lblTourJoueur9x9.AutoSize = true;
-            lblTourJoueur9x9.Location = new Point(265, 700);
+            lblTourJoueur9x9.Location = new Point(239, 705);
             lblTourJoueur9x9.Name = "lblTourJoueur9x9";
             lblTourJoueur9x9.Size = new Size(105, 15);
             lblTourJoueur9x9.TabIndex = 10;
@@ -1457,6 +1457,7 @@
             Name = "FormPartie9x9";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Puissance 4";
+            FormClosed += FormPartie9x9_FormClosed;
             Load += FormPartie9x9_Load;
             ((System.ComponentModel.ISupportInitialize)picJActuel9x9).EndInit();
             pnlC9.ResumeLayout(false);

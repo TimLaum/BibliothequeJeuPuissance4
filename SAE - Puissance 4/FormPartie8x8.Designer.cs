@@ -218,7 +218,7 @@
             btnAbandon8x8.TabIndex = 6;
             btnAbandon8x8.Text = "Abandonner la partie";
             btnAbandon8x8.UseVisualStyleBackColor = true;
-            btnAbandon8x8.Click += button1_Click;
+            btnAbandon8x8.Click += btnAbandon_Click;
             // 
             // lblTourJoueur8x8
             // 
@@ -339,7 +339,6 @@
             pnlC8.Size = new Size(77, 510);
             pnlC8.TabIndex = 8;
             pnlC8.Click += pnlC_Click;
-            pnlC8.Paint += panel7_Paint;
             pnlC8.MouseEnter += pnlC_MouseEnter;
             // 
             // picH7
@@ -456,7 +455,6 @@
             pnlC7.Size = new Size(74, 510);
             pnlC7.TabIndex = 8;
             pnlC7.Click += pnlC_Click;
-            pnlC7.Paint += panel6_Paint;
             pnlC7.MouseEnter += pnlC_MouseEnter;
             // 
             // picG7
@@ -573,7 +571,6 @@
             pnlC6.Size = new Size(74, 510);
             pnlC6.TabIndex = 8;
             pnlC6.Click += pnlC_Click;
-            pnlC6.Paint += panel5_Paint;
             pnlC6.MouseEnter += pnlC_MouseEnter;
             // 
             // picF7
@@ -690,7 +687,6 @@
             pnlC5.Size = new Size(74, 510);
             pnlC5.TabIndex = 8;
             pnlC5.Click += pnlC_Click;
-            pnlC5.Paint += panel4_Paint;
             pnlC5.MouseEnter += pnlC_MouseEnter;
             // 
             // picE7
@@ -807,7 +803,6 @@
             pnlC4.Size = new Size(74, 510);
             pnlC4.TabIndex = 8;
             pnlC4.Click += pnlC_Click;
-            pnlC4.Paint += panel3_Paint;
             pnlC4.MouseEnter += pnlC_MouseEnter;
             // 
             // picD7
@@ -924,7 +919,6 @@
             pnlC3.Size = new Size(74, 510);
             pnlC3.TabIndex = 8;
             pnlC3.Click += pnlC_Click;
-            pnlC3.Paint += panel2_Paint;
             pnlC3.MouseEnter += pnlC_MouseEnter;
             // 
             // picC7
@@ -1041,7 +1035,6 @@
             pnlC2.Size = new Size(74, 510);
             pnlC2.TabIndex = 8;
             pnlC2.Click += pnlC_Click;
-            pnlC2.Paint += panel1_Paint;
             pnlC2.MouseEnter += pnlC_MouseEnter;
             // 
             // picB7
@@ -1158,7 +1151,6 @@
             pnlC1.Size = new Size(74, 510);
             pnlC1.TabIndex = 8;
             pnlC1.Click += pnlC_Click;
-            pnlC1.Paint += pnlC1_Paint;
             pnlC1.MouseEnter += pnlC_MouseEnter;
             // 
             // picA7
@@ -1291,6 +1283,7 @@
             Name = "FormPartie8x8";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Puissance 4";
+            FormClosed += FormPartie8x8_FormClosed;
             Load += FormPartie8x8_Load;
             ((System.ComponentModel.ISupportInitialize)picJActuel8x8).EndInit();
             pnlPlateau8x8.ResumeLayout(false);

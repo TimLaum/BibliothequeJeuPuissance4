@@ -14,9 +14,10 @@ namespace SAE___Puissance_4
 {
     public partial class FormPartie8x8 : Form
     {
-        private FormPartiePerso frmPrmPerso;
-        private int columnNumber;
-        private SoundPlayer JetonPose = new SoundPlayer(Properties.Resources.Son_Placement_Pion);
+        private FormPartiePerso? frmPrmPerso; //Variable pour récupérer les données du formulaire de partie personnalisée
+        private int columnNumber; //Variable pour récuperer l'indice de la colonne correspondant a un panel de la partie
+        SoundPlayer Musique = new SoundPlayer(Properties.Resources.Musique); //Détermination de la variable de la musique de fond 
+        private SoundPlayer JetonPose = new SoundPlayer(Properties.Resources.Son_Placement_Pion); //Son joué a chaque pion posé sur le formulaire
         public FormPartie8x8()
         {
             InitializeComponent();
@@ -25,7 +26,8 @@ namespace SAE___Puissance_4
         private void FormPartie8x8_Load(object sender, EventArgs e)
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
-            TourDuJoueur();
+            TourDuJoueur();//Détermine dès le chargement le tour du joueur pour la picture box picJActuel9x9 et le label lblTourJoueur9x9
+            //
             Panel_Transparence(pnlC1);
             Panel_Transparence(pnlC2);
             Panel_Transparence(pnlC3);
@@ -34,59 +36,70 @@ namespace SAE___Puissance_4
             Panel_Transparence(pnlC6);
             Panel_Transparence(pnlC7);
             Panel_Transparence(pnlC8);
-            playLooping();
+            //Transparence des panels pour le bon fonctionnement des designs dans le Form
+            if (frmPrmPerso.Jeu.GetJoueurActif() == 2 && frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA") //Si l'IA commence elle joue son coup dès le chargement du Form
+            {
+                appelleIA();
+            }
+            playLooping();//Joue la musique de fond en boucle
         }
 
-        private void Panel_Transparence(Panel p)
+        private void Panel_Transparence(Panel p) //Fonction pour rendre les panels transparents
         {
             var posi = this.PointToScreen(p.Location);
             posi = picPlateau.PointToClient(posi);
             p.Parent = picPlateau;
             p.Location = posi;
             p.BackColor = Color.FromArgb(0, 0, 0, 0);
-
         }
 
-        private void playLooping()
+        private void playLooping()//Fonction pour jouer la musique de fond en boucle
         {
             try
             {
-                // Note: You may need to change the location specified based on
-                // the sounds loaded on your computer.
-                SoundPlayer Musique = new SoundPlayer(Properties.Resources.Musique);
                 Musique.PlayLooping();
             }
-            catch (Exception ex)
+            catch (Exception ex)//Exception si il y a une erreur dans le lancement de la musique
             {
-                MessageBox.Show(ex.Message, "Error playing sound");
+                MessageBox.Show(ex.Message, "Erreur lors de la lecture de la musique de fond");
             }
         }
 
 
-        private void rejouer(bool win, string pseudo)
+        private void rejouer(bool win, string pseudo)//Fonction qui permet lorsque la partie est déterminée comme finie de rejouer en affichant un message selon qui a gagné ou si personne n'a gagné
         {
-            if (win)
+            try
             {
-                DialogResult rejouer = MessageBox.Show($"Victoire du joueur {pseudo}\n\nSouhaitez-vous rejouer?", "Victoire !", MessageBoxButtons.YesNo);
-                if (rejouer == DialogResult.Yes)
-                    this.Close();
-                else
+                if (win)//Si victoire
                 {
-                    Environment.Exit(0);
+                    DialogResult rejouer = MessageBox.Show($"Victoire du joueur {pseudo}\n\nSouhaitez-vous rejouer?", "Victoire !", MessageBoxButtons.YesNo);
+                    if (rejouer == DialogResult.Yes)//Rejouer
+                    {
+                        this.Close(); //Ferme le formulaire pour revenir au paramètrage
+                    }
+                    else//Quitter
+                    {
+                        Environment.Exit(0);
+                    }
+                }
+                else//Si égalité
+                {
+                    DialogResult rejouer = MessageBox.Show($"Égalité des deux joueurs!\n\nSouhaitez-vous rejouer?", "Égalité !", MessageBoxButtons.YesNo);
+                    if (rejouer == DialogResult.Yes)//Rejouer
+                        this.Close(); //Ferme le formulaire pour revenir au paramètrage
+                    else//Quitter
+                    {
+                        Environment.Exit(0);
+                    }
                 }
             }
-            else
+            catch (Exception ex)//Exception si la fonction à une erreur quelconque lors de l'appel
             {
-                DialogResult rejouer = MessageBox.Show($"Égalité des deux joueurs!\n\nSouhaitez-vous rejouer?", "Égalité !", MessageBoxButtons.YesNo);
-                if (rejouer == DialogResult.Yes)
-                    this.Close();
-                else
-                {
-                    Environment.Exit(0);
-                }
+                MessageBox.Show(ex.Message, "Erreur lors de la tentative pour rejouer");
             }
         }
-        private void ChoixPicCouleurPion(PictureBox pic)
+
+        private void ChoixPicCouleurPion(PictureBox pic)//Fonction qui attribue une image correspondant a un pion de couleur à une PictureBox donnée selon le numéro du joueur actif (Joueur1 == 1 / Joueur2IA == 2)
         {
             if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
             {
@@ -122,149 +135,122 @@ namespace SAE___Puissance_4
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pnlC_MouseEnter(object sender, EventArgs e) //Fonction qui renvoie l'indice de colonne d'un panel lorsque la souris entre à l'intérieur
         {
-            this.Close();
+            Panel panel = sender as Panel;// Récupère les informations du panel dans lequel se trouve la souris lors du click
+
+            string panelName = panel.Name;// Récupère le nom du panel dans une nouvelle variable
+
+            string numericPart = panelName.Replace("pnlC", "");//Tous nos panels ayant un nom générique pnlCX (X étant le numéro de la colonne du panel),
+                                                               //cette ligne permet de récuperer le nom du panel et d'enlever pnlC pour ne récupérer que l'indice de la colonne du panel
+
+            columnNumber = int.Parse(numericPart) - 1; //Transforme l'indice du panel de string à int dans une nouvelle variable
+                                                       //L'indice de colonne des panels commençant par 1 on retire 1 à la variable columnNumber
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
+        private void appelleIA() //Fonction qui, lorsqu'elle est appelée, Joue un coup optimisé par la classe IA qui détermine le meilleur coup possible
         {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void pnlC1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void pnlC_MouseEnter(object sender, EventArgs e)
-        {
-            Panel panel = sender as Panel;
-
-            // Obtenez le nom du panneau
-            string panelName = panel.Name;
-
-            // Supprimez la partie "pnlC" du nom du panneau
-            string numericPart = panelName.Replace("pnlC", "");
-
-            // Convertissez la partie numérique en un entier
-            columnNumber = int.Parse(numericPart);
-            columnNumber = columnNumber - 1;
-        }
-
-        private void appelleIA()
-        {
-            IA JoueurIA = new IA(5, 2);
+            IA JoueurIA = new IA(5, 2); // 5 = Profondeur maximum de l'IA / 2 = numéro du joueur (forcément 2 car l'IA remplace le joueur 2)
 
             int i = 0;
-            List<(int, int)> CoupAJouer = new List<(int, int)>();
+            List<(int, int)> CoupAJouer = new List<(int, int)>();//Liste qui récupère l'indice de ligne et colonne du coup à jouer
 
-            CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
-            string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item2 + 1);
-            Panel panel = Controls.Find(nomPanel, true).FirstOrDefault() as Panel;
-            ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - (CoupAJouer[0].Item1) - 1]);
-            JouerUnCoup(CoupAJouer);
-            if (frmPrmPerso.Jeu.EstTerminee() == 1)
+            CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu); //Appel la fonction MeilleurCoup de l'IA qui renvoie le meilleur coup à jouer
+
+            string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item2 + 1); //Récupère le nom du panel lié à l'indice de la colonne de la liste CoupAJouer
+
+            Panel panel = Controls.Find(nomPanel, true).FirstOrDefault() as Panel; //Relie le panel qui contient la pictureBox de la bonne colonne grâce à une fonction qui recherche le nom du panel que l'on a déterminé auparavant
+
+            ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - (CoupAJouer[0].Item1) - 1]);//Appel de la fonction qui donne l'image du pion selon le joueur à la pictureBox
+                                                                                                                     //correspondant à la ligne dans la liste CoupAJouer
+            JouerUnCoup(CoupAJouer);//Joue le coup dans le plateau avec la liste qui comprend la ligne et la colonne
+
+            if (frmPrmPerso.Jeu.EstTerminee() == 1)//Si le joueur 1 a gagné
                 rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
-            else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+            else if (frmPrmPerso.Jeu.EstTerminee() == 2)//Si l'IA a gagné
                 rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
-            else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+            else if (frmPrmPerso.Jeu.EstTerminee() == 0)//Si il y a égalité
                 rejouer(false, "");
         }
 
-        private void JouerUnCoup(List<(int, int)> CoupAJouer)
+        private void JouerUnCoup(List<(int, int)> CoupAJouer) //Fonction qui selon une liste de coordonnées (ligne, colonne), joue un coup dans le plateau de la partie, joue un son de pion posé, et actualise l'affichage 
         {
             frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
-            JetonPose.Play();
-            JetonPose.Dispose();
-            TourDuJoueur();
-
-
+            JetonPose.Play(); //Joue le son lorsqu'un pion est posé
+            JetonPose.Dispose(); //Débarasse les ressources associées au son JetonPose
+            TourDuJoueur(); //Actualise l'affichage
         }
 
-        private void TourDuJoueur()
+        private void TourDuJoueur()//Actualise les données d'affichage liées au label et a la pictureBox du joueur devant jouer le coup
         {
-            if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
+            if (frmPrmPerso.Jeu.GetJoueurActif() == 1) //Si le prochain coup doit être jouer par le joueur 1
             {
                 lblTourJoueur8x8.Text = $"Au tour du joueur : {frmPrmPerso.Joueur1.GetPseudoJoueur()}";
                 ChoixPicCouleurPion(picJActuel8x8);
             }
-            else
+            else //Si le prochain coup doit être jouer par le joueur 2 ou l'IA
             {
                 lblTourJoueur8x8.Text = $"Au tour du joueur : {frmPrmPerso.Joueur2IA.GetPseudoJoueur()}";
                 ChoixPicCouleurPion(picJActuel8x8);
             }
         }
 
-        private async void pnlC_Click(object sender, EventArgs e)
+        private async void pnlC_Click(object sender, EventArgs e)//Fonction qui joue un coup selon le panel cliqué (la fonction possède async car il y a une ligne qui ajoute du délai avant un prochain coup lors de l'appel de l'IA)
         {
-            Panel panel = sender as Panel;
-            List<(int, int)> CoupAJouer = new List<(int, int)>();
-            int i = frmPrmPerso.Jeu.GetLignes() - 1;
-            while (i >= 0)
+            Panel panel = sender as Panel; // Récupère les informations du panel dans lequel se trouve la souris lors du click
+            List<(int, int)> CoupAJouer = new List<(int, int)>(); // Liste permettant d'avoir la colonne et la ligne du coup qui sera joué
+            int i = frmPrmPerso.Jeu.GetLignes() - 1; // Récupération du nombre de lignes du plateau - 1 pour inspecter les lignes du tableau 1 par 1 en partant de la ligne la plus basse correspondant à la ligne de dépot des pions au début du jeu
+            while (i >= 0) //Tant que toutes les lignes ne sont pas vérifiées
             {
-                if (frmPrmPerso.Jeu.EstPossible(i, columnNumber))
+                if (frmPrmPerso.Jeu.EstPossible(i, columnNumber)) //Détermine si la valeur dans le tableau est a 0, dans ce cas le coup est jouable et la fonction renvoie true
                 {
-                    CoupAJouer.Add((i, columnNumber));
-                    ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - 1 - i]);
-                    JouerUnCoup(CoupAJouer);
-                    if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                    CoupAJouer.Add((i, columnNumber)); //On donne les indices du coup jouable a la variable CoupAJouer
+                    ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - 1 - i]); //Appel la fonction ChoixPicCouleurPion avec la pictureBox la plus basse possible du tableau sans valeur (==0)
+                                                                                                          //et lui donne l'image du pion du joueur actif (autrement dit le joueur ayant cliqué sur le panel)
+                    JouerUnCoup(CoupAJouer); // Joue le coup dans le tableau de la partie avec la ligne et colonne entrées dans CoupAJouer précédemment
+                    if (frmPrmPerso.Jeu.EstTerminee() == 1) //Si victoire du joueur 1
                     {
                         rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
                         break;
 
                     }
-                    else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+                    else if (frmPrmPerso.Jeu.EstTerminee() == 2)//Si victoire du joueur 2 
                     {
                         rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
                         break;
 
                     }
-                    else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+                    else if (frmPrmPerso.Jeu.EstTerminee() == 0)//Si égalité
                     {
                         rejouer(false, "");
                         break;
                     }
                     else
                     {
-                        if (frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur())
+                        if (frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur()) // Si le joueur 2 est l'IA et non un humain
                         {
-                            await Task.Delay(500);
-                            appelleIA();
+                            await Task.Delay(500); // Patiente 500 millisecondes pour éviter des coups trop rapides et donner un meilleur aspect au coup de l'IA
+                            appelleIA(); //Appel l'IA
                         }
-                        break;
+                        break; //Arrête le while car la condition est remplie et il ne faut jouer qu'un coup sur la ligne cliquée
 
                     }
 
 
                 }
-                i--;
+                i--; // Désincrémente i de 1 jusqu'a ce qu'il soit égal à 0
 
             }
 
+        }
+        private void FormPartie8x8_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Musique.Stop(); //Arrêt de la musique lors de la fermeture du Form
+        }
+
+        private void btnAbandon_Click(object sender, EventArgs e)//Retour au FormParametrage si le bouton d'abandon de partie est cliqué
+        {
+            this.Close();
         }
     }
 }

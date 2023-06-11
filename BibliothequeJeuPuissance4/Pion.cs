@@ -13,6 +13,7 @@ namespace BibliothequeJeuPuissance4
         /// Numéro du pion en lecture uniquement
         /// </summary>
         private int N_Pion { get;}
+
         /// <summary>
         /// Couleur du pionen lecture uniquement
         /// </summary>
@@ -47,11 +48,13 @@ namespace BibliothequeJeuPuissance4
         /// Numéro Joueur en lecture uniquement
         /// </summary>
         private int N_Joueur { get; } //Get pour dire qu'il est en lecture uniquement, a part lors de la construction, N_Joueur ne peut pas
-        //Voir sa valeur changer
+                                      //Voir sa valeur changer
+
         /// <summary>
         /// Pseudo Joueur en lecture uniquement
         /// </summary>
         private string PseudoJoueur { get;}
+
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -64,6 +67,7 @@ namespace BibliothequeJeuPuissance4
             PseudoJoueur = s;
             
         }
+
         /// <summary>
         /// Renvoi le numéro joueur
         /// </summary>
@@ -72,6 +76,7 @@ namespace BibliothequeJeuPuissance4
         {
             return N_Joueur;
         }
+
         /// <summary>
         /// Renvoi le pseudo joueur
         /// </summary>

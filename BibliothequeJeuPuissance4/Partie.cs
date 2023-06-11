@@ -15,18 +15,22 @@ namespace BibliothequeJeuPuissance4
         /// Le nombre de ligne du plateau en lecture uniquement
         /// </summary>
 		private int lignes {get;}
+
         /// <summary>
         /// Le nombre de colonne du plateau en lecture uniquement
         /// </summary>
         private int colonnes {get;}
+
         /// <summary>
         /// Le plateau de jeu
         /// </summary>
 		private int[,] plateau { get; set; }
+
         /// <summary>
         /// Le numéro du joueur actif
         /// </summary>
         private int JoueurActif { get; set; }
+
         /// <summary>
         /// Initialisation  du plateau
         /// </summary>
@@ -35,6 +39,7 @@ namespace BibliothequeJeuPuissance4
 			plateau = new int[lignes, colonnes];
             GenererPlateau();
 		}
+
         /// <summary>
         /// Renvoi du joueur actif
         /// </summary>
@@ -43,6 +48,7 @@ namespace BibliothequeJeuPuissance4
         {
             return JoueurActif;
         }
+
         /// <summary>
         /// Place le pion du joueur actuel à l'indice donné
         /// </summary>
@@ -64,6 +70,7 @@ namespace BibliothequeJeuPuissance4
                 }
             }
         }
+
         /// <summary>
         /// Rempli le plateau de 0
         /// </summary>
@@ -77,6 +84,7 @@ namespace BibliothequeJeuPuissance4
                 }
             }
         }
+
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -99,6 +107,7 @@ namespace BibliothequeJeuPuissance4
 		{
 			return lignes;
 		}
+
         /// <summary>
         /// Renvoi le nombre de colonne
         /// </summary>
@@ -107,6 +116,7 @@ namespace BibliothequeJeuPuissance4
 		{
 			return colonnes;
 		}
+
         /// <summary>
         /// Renvoi la valeur de la zone d'un pion avec un indice x,y
         /// </summary>
@@ -117,6 +127,7 @@ namespace BibliothequeJeuPuissance4
 		{
 			return plateau[l,c];
 		}
+
         /// <summary>
         /// Vérifie qu'un coup  est possible 
         /// </summary>
@@ -135,6 +146,13 @@ namespace BibliothequeJeuPuissance4
             }
         }
 
+        /// <summary>
+        /// Joue un coup dans le plateau
+        /// </summary>
+        /// <param name="Ligne">Indice x du coup</param>
+        /// <param name="Colonne">Indice y du coup</param>
+        /// <param name="N_Joueur">Numéro du joueur qui joue le coup</param>
+        /// <returns></returns>
         public void InitPionPlateau(int Ligne, int Colonne, int N_Joueur)
         {
             plateau[Ligne, Colonne] = N_Joueur;
@@ -212,12 +230,13 @@ namespace BibliothequeJeuPuissance4
                 }
             }
 
-            if (EstPlein())
+            if (EstPlein())//Vérifie si le plateau est plein
             {
                 return 0;
             }
             return -1;
         }
+
         /// <summary>
         /// Vérifie si le plateau est plein
         /// </summary>

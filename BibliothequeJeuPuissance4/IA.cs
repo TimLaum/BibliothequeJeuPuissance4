@@ -8,65 +8,61 @@ namespace BibliothequeJeuPuissance4
 {
     public class IA
     {
+        /// <summary>
+        /// Profondeur maximale où l'IA descend
+        /// </summary>
         private int profondeurMax;
-        private int N_joueurIA;
 
-        public IA(int profondeur, int joueur)
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="profondeur">Profondeur maximale où l'IA descend</param>
+        /// <param name="joueur"></param>
+        public IA(int profondeur)
         {
             profondeurMax = profondeur;
-            N_joueurIA = joueur;
         }
 
+        /// <summary>
+        /// Joue le coup que l'IA à trouvé
+        /// </summary>
+        /// <param name="partie">Classe partie</param>
+        /// <param name="CoupAJouer">Le Coup que l'IA doit jouer</param>
         public void JouerCoupIA(Partie partie, List<(int, int)> CoupAJouer)
         {
 
-            if (partie.GetJoueurActif() == N_joueurIA)
+            if (partie.GetJoueurActif() == 2)
             {
 
-                partie.JouerCoup(CoupAJouer, N_joueurIA);
+                partie.JouerCoup(CoupAJouer, 2);
             }
         }
-        
+        /// <summary>
+        /// Trouve le meilleur coup possible en appelant la méthode MinMax et le renvoi
+        /// </summary>
+        /// <param name="partie">Classe partie,qui est en cours</param>
+        /// <returns></returns>
         public List<(int, int)> MeilleurCoup(Partie partie)
         {
             List<int> CoupAjouer = new List<int>();
             List<(int, int)> LP = new List<(int, int)>();
             CoupAjouer = MinMax(partie, profondeurMax, 2);
             LP.Add((CoupAjouer[1], CoupAjouer[2]));
-            //JouerCoupIA(partie, LP);
             return LP;
-
-            /*
-            List<(int, int)> LCP = ListeCoupPossible(partie);
-            int meilleurScore = int.MinValue;
-            List<(int, int)> ListeMeilleurCoup = new List<(int, int)>();
-
-            foreach ((int ligne, int colonne) in LCP)
-            {
-                int score = MinMax(partie, profondeurMax,LCP);
-                if (score > meilleurScore)
-                {
-                    meilleurScore = score;
-                    ListeMeilleurCoup.Clear();
-                    ListeMeilleurCoup.Add((ligne, colonne));
-                }
-                else if (score == meilleurScore)
-                {
-                    ListeMeilleurCoup.Clear();
-                    ListeMeilleurCoup.Add((ligne, colonne));
-                }
-            }
-
-            return ListeMeilleurCoup;
-            */
         }
-
+        /// <summary>
+        /// Méthode récursive qui renvoi le score d'un coup et la position x,y du coup 
+        /// </summary>
+        /// <param name="noeud">Classe partie</param>
+        /// <param name="profondeur">Profondeur actuelle</param>
+        /// <param name="evalMax">Le numéro du joeur actif</param>
+        /// <returns></returns>
         private List<int> MinMax(Partie noeud, int profondeur,int evalMax)
         {
-            Partie f;
-            List<(int, int)> LP = new List<(int, int)>();
-            List<int> ListeRetour = new List<int>();
-            List<int> Values = new List<int>();
+            Partie f;//partie fils de noeud
+            List<(int, int)> LP = new List<(int, int)>();//Une liste de tuples des indices  des coups possible 
+            List<int> ListeRetour = new List<int>();//C'est l'élément renvoyer;Element du premier indice :score de la situation;Element du deuxième indice :indice x du meilleur coupactuel;indice y du meilleur coupactuel
+            List<int> Values = new List<int>();//Element du premier indice :score de la situation;Element du deuxième indice :indice x du meilleur coupactuel;indice y du meilleur coupactuel
             LP = ListeCoupPossible(noeud);
             if (LP.Count > 0)
             {
@@ -130,7 +126,11 @@ namespace BibliothequeJeuPuissance4
             }
         }
 
-
+        /// <summary>
+        /// Liste des coup possible sur un plateau de la classe partie
+        /// </summary>
+        /// <param name="partie">Classe partie à évaluer</param>
+        /// <returns></returns>
         public List<(int, int)> ListeCoupPossible(Partie partie)
         {
             bool verif=false;
@@ -138,30 +138,7 @@ namespace BibliothequeJeuPuissance4
 
 
             List<(int, int)> listeCoupsPossibles = new List<(int, int)>();
-            /*
-            for (int ligne = 0; ligne < partie.GetLignes(); ligne++)
-            {
-                for (int colonne = 0; colonne < partie.GetColonnes(); colonne++)
-                {
-                    if (partie.EstPossible(ligne, colonne))
-                    {
-                        if(colonne != 0)
-                        {
-                            if(!partie.EstPossible(ligne, colonne - 1))
-                            {
-                                listeCoupsPossibles.Add((ligne, colonne));
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            listeCoupsPossibles.Add((ligne, colonne));
-                            break;
-                        }
-                        
-                    }
-                }
-            }*/
+
             for( c = 0; c < partie.GetColonnes(); c++)
             {
                 verif = false;
@@ -183,6 +160,11 @@ namespace BibliothequeJeuPuissance4
             return listeCoupsPossibles;
         }
 
+        /// <summary>
+        /// Evalue la situation sur un plateau de la classe partie pour le Joueur Numéro 2 et renvoye le score de cette situation
+        /// </summary>
+        /// <param name="partie">Classe partie à evaluer</param>
+        /// <returns></returns>
         public int Evaluer(Partie partie)
         {
             int scoreActuel = 0;
@@ -190,7 +172,7 @@ namespace BibliothequeJeuPuissance4
 
 
 
-            for (int ligne = 0; ligne < partie.GetLignes() - 3; ligne++)
+            for (int ligne = 0; ligne < partie.GetLignes() - 3; ligne++)//Vérifie les colonnes
             {
                 for (int colonne = 0; colonne < partie.GetColonnes(); colonne++)
                 {
@@ -207,7 +189,7 @@ namespace BibliothequeJeuPuissance4
                 }
             }
 
-            for (int ligne = 0; ligne < partie.GetLignes(); ligne++)
+            for (int ligne = 0; ligne < partie.GetLignes(); ligne++)//Vérifie les lignes
             {
                 for (int colonne = 0; colonne < partie.GetColonnes() - 3; colonne++)
                 {
@@ -225,7 +207,7 @@ namespace BibliothequeJeuPuissance4
                 }
             }
 
-            for (int ligne = 0; ligne < partie.GetLignes() - 3; ligne++)
+            for (int ligne = 0; ligne < partie.GetLignes() - 3; ligne++)//Vérifie les diagonale gauche droite
             {
                 for (int colonne = 0; colonne < partie.GetColonnes() - 3; colonne++)
                 {
@@ -241,7 +223,7 @@ namespace BibliothequeJeuPuissance4
                 }
             }
 
-            for (int ligne = 3; ligne < partie.GetLignes(); ligne++)
+            for (int ligne = 3; ligne < partie.GetLignes(); ligne++)//Vérifie les diagonale droite gauche
             {
                 for (int colonne = 0; colonne < partie.GetColonnes() - 3; colonne++)
                 {
@@ -262,7 +244,14 @@ namespace BibliothequeJeuPuissance4
 
             return scoreActuel;
         }
-
+        /// <summary>
+        /// Evalue la situation de 4 zone  pions aligner sur un plateau de la classe partie  pour le Joueur Numéro 2 et renvoye le score de cette situation
+        /// </summary>
+        /// <param name="pion1">Le pion numéro 1</param>
+        /// <param name="pion2">Le pion numéro 1</param>
+        /// <param name="pion3">Le pion numéro 1</param>
+        /// <param name="pion4">Le pion numéro 1</param>
+        /// <returns></returns>
         private int EvaluerSequencePions(int pion1, int pion2, int pion3, int pion4)
         {
             int score = 0;
@@ -325,7 +314,11 @@ namespace BibliothequeJeuPuissance4
 
             return score;
         }
-
+        /// <summary>
+        /// Copie une classe partie et renvoye cette copie
+        /// </summary>
+        /// <param name="partie">Classe partie à copier</param>
+        /// <returns></returns>
         private Partie CopierPartie(Partie partie)
         {
             int lignes = partie.GetLignes();

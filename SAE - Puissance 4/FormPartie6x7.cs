@@ -87,6 +87,7 @@ namespace SAE___Puissance_4
             }
         }
 
+
         private void ChoixPicCouleurPion(PictureBox pic)//Fonction qui attribue une image correspondant a un pion de couleur à une PictureBox donnée selon le numéro du joueur actif (Joueur1 == 1 / Joueur2IA == 2)
         {
             if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
@@ -139,7 +140,7 @@ namespace SAE___Puissance_4
 
         private void appelleIA() //Fonction qui, lorsqu'elle est appelée, Joue un coup optimisé par la classe IA qui détermine le meilleur coup possible
         {
-            IA JoueurIA = new IA(5, 2); // 5 = Profondeur maximum de l'IA / 2 = numéro du joueur (forcément 2 car l'IA remplace le joueur 2)
+            IA JoueurIA = new IA(5); // 5 = Profondeur maximum de l'IA / 2 = numéro du joueur (forcément 2 car l'IA remplace le joueur 2)
 
             int i = 0;
             List<(int, int)> CoupAJouer = new List<(int, int)>();//Liste qui récupère l'indice de ligne et colonne du coup à jouer

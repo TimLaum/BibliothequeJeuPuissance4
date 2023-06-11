@@ -85,15 +85,15 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur1.GetCouleur();
                 if (x == "Rouge")
                 {
-                    pic.Image = Properties.Resources.PionRougeP8x8;
+                    pic.Image = Properties.Resources.PionRougeP6x7;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.PionJauneP8x8;
+                    pic.Image = Properties.Resources.PionJauneP6x7;
                 }
                 if (x == "Noir")
                 {
-                    pic.Image = Properties.Resources.PionNoirP8x8;
+                    pic.Image = Properties.Resources.PionNoirP6x7;
                 }
             }
             else
@@ -101,15 +101,15 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur2IA.GetCouleur();
                 if (x == "Noir")
                 {
-                    pic.Image = Properties.Resources.PionNoirP8x8;
+                    pic.Image = Properties.Resources.PionNoirP6x7;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.PionJauneP8x8;
+                    pic.Image = Properties.Resources.PionJauneP6x7;
                 }
                 if (x == "Rouge")
                 {
-                    pic.Image = Properties.Resources.PionRougeP8x8;
+                    pic.Image = Properties.Resources.PionRougeP6x7;
                 }
             }
         }
@@ -148,20 +148,20 @@ namespace SAE___Puissance_4
             else if (frmPrmPerso.Jeu.EstTerminee() == 0)
                 rejouer(false, "");
         }
-        
-        private void JouerUnCoup(List<(int,int)> CoupAJouer)
+
+        private void JouerUnCoup(List<(int, int)> CoupAJouer)
         {
             frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
             JetonPose.Play();
             JetonPose.Dispose();
             TourDuJoueur();
-            
+
 
         }
 
         private void TourDuJoueur()
         {
-            if(frmPrmPerso.Jeu.GetJoueurActif() == 1)
+            if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
             {
                 lblTourJoueur.Text = $"Au tour du joueur : {frmPrmPerso.Joueur1.GetPseudoJoueur()}";
                 ChoixPicCouleurPion(picJoueurActuel);
@@ -203,7 +203,7 @@ namespace SAE___Puissance_4
                         break;
                     }
                     else
-                    {           
+                    {
                         if (frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur())
                         {
                             await Task.Delay(500);

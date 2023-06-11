@@ -293,7 +293,7 @@ namespace BibliothequeJeuPuissance4
                     }
                     else
                     {
-                        if (pion1 == 0 && pion2 == 2 && pion3 == 2 && pion4 == 2)
+                        if (pion1 == 0 && pion2 == 0 && pion3 == 0 && pion4 == 2)
                         {
                             score = 10;
                         }
@@ -321,7 +321,7 @@ namespace BibliothequeJeuPuissance4
                     }
                     else
                     {
-                        if (pion1 == 0 && pion2 == 1 && pion3 == 1 && pion4 == 1)
+                        if (pion1 == 0 && pion2 == 0 && pion3 == 0 && pion4 == 1)
                         {
                             score = -10;
                         }

@@ -573,7 +573,7 @@
             pictureBox15.BackColor = Color.Transparent;
             pictureBox15.BackgroundImageLayout = ImageLayout.None;
             pictureBox15.Enabled = false;
-            pictureBox15.Location = new Point(7, 432);
+            pictureBox15.Location = new Point(8, 432);
             pictureBox15.Margin = new Padding(3, 2, 3, 2);
             pictureBox15.Name = "pictureBox15";
             pictureBox15.Size = new Size(70, 70);

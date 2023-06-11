@@ -69,8 +69,8 @@ namespace BibliothequeJeuPuissance4
             List<int> Values = new List<int>();
             LP = ListeCoupPossible(noeud);
             ListeRetour.Add(0);
-            ListeRetour.Add(0);
-            ListeRetour.Add(0);
+            ListeRetour.Add(LP[0].Item1);
+            ListeRetour.Add(LP[0].Item2);
             if (profondeur == 0 || noeud.EstTerminee() != -1)
             {
 

@@ -61,6 +61,10 @@ namespace SAE___Puissance_4
             Panel_Transparence(pnlC6);
             Panel_Transparence(pnlC7);
             lblTourJoueur.Text = $"Au tour du joueur {frmPrmPerso.Jeu.GetJoueurActif()}";
+            if (frmPrmPerso.Jeu.GetJoueurActif() == 2&& frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA")
+            {
+                appelleIA();
+            }
         }
         private void Panel_Transparence(Panel p)
         {
@@ -179,11 +183,22 @@ namespace SAE___Puissance_4
                     ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - 1 - i]);
                     frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
                     if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                    {
                         rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
+                        break;
+
+                    }  
                     else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+                    {
                         rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
+                        break;
+
+                    }
                     else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+                    {
                         rejouer(false, "");
+                        break;
+                    }
                     else
                     {
                         ChoixPicCouleurPion(picJoueurActuel);

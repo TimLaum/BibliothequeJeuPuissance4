@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BibliothequeJeuPuissance4;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace SAE___Puissance_4
     {
         private FormPartiePerso frmPrmPerso;
         private int columnNumber;
+        private SoundPlayer JetonPose = new SoundPlayer(Properties.Resources.Son_Placement_Pion);
         public FormPartie8x8()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace SAE___Puissance_4
         private void FormPartie8x8_Load(object sender, EventArgs e)
         {
             frmPrmPerso = (FormPartiePerso)this.Owner;
-            ChoixPicCouleurPion(picJActuel8x8);
+            TourDuJoueur();
             Panel_Transparence(pnlC1);
             Panel_Transparence(pnlC2);
             Panel_Transparence(pnlC3);
@@ -97,6 +99,10 @@ namespace SAE___Puissance_4
                 {
                     pic.Image = Properties.Resources.PionJauneP8x8;
                 }
+                if (x == "Noir")
+                {
+                    pic.Image = Properties.Resources.PionNoirP8x8;
+                }
             }
             else
             {
@@ -108,6 +114,10 @@ namespace SAE___Puissance_4
                 if (x == "Jaune")
                 {
                     pic.Image = Properties.Resources.PionJauneP8x8;
+                }
+                if (x == "Rouge")
+                {
+                    pic.Image = Properties.Resources.PionRougeP8x8;
                 }
             }
         }
@@ -165,29 +175,94 @@ namespace SAE___Puissance_4
             columnNumber = columnNumber - 1;
         }
 
-        private void pnlC_Click(object sender, EventArgs e)
+        private void appelleIA()
+        {
+            IA JoueurIA = new IA(5, 2);
+
+            int i = 0;
+            List<(int, int)> CoupAJouer = new List<(int, int)>();
+
+            CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
+            string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item2 + 1);
+            Panel panel = Controls.Find(nomPanel, true).FirstOrDefault() as Panel;
+            ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - (CoupAJouer[0].Item1) - 1]);
+            JouerUnCoup(CoupAJouer);
+            if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
+            else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+                rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
+            else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+                rejouer(false, "");
+        }
+
+        private void JouerUnCoup(List<(int, int)> CoupAJouer)
+        {
+            frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+            JetonPose.Play();
+            JetonPose.Dispose();
+            TourDuJoueur();
+
+
+        }
+
+        private void TourDuJoueur()
+        {
+            if (frmPrmPerso.Jeu.GetJoueurActif() == 1)
+            {
+                lblTourJoueur8x8.Text = $"Au tour du joueur : {frmPrmPerso.Joueur1.GetPseudoJoueur()}";
+                ChoixPicCouleurPion(picJActuel8x8);
+            }
+            else
+            {
+                lblTourJoueur8x8.Text = $"Au tour du joueur : {frmPrmPerso.Joueur2IA.GetPseudoJoueur()}";
+                ChoixPicCouleurPion(picJActuel8x8);
+            }
+        }
+
+        private async void pnlC_Click(object sender, EventArgs e)
         {
             Panel panel = sender as Panel;
             List<(int, int)> CoupAJouer = new List<(int, int)>();
-            int i = 0;
-            while (i < frmPrmPerso.Jeu.GetColonnes())
+            int i = frmPrmPerso.Jeu.GetLignes() - 1;
+            while (i >= 0)
             {
-                if (frmPrmPerso.Jeu.GetPion(columnNumber, i) == 0)
+                if (frmPrmPerso.Jeu.EstPossible(i, columnNumber))
                 {
-                    CoupAJouer.Add((columnNumber, i));
-                    ChoixPicCouleurPion((PictureBox)panel.Controls[i]);
-                    frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+                    CoupAJouer.Add((i, columnNumber));
+                    ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - 1 - i]);
+                    JouerUnCoup(CoupAJouer);
                     if (frmPrmPerso.Jeu.EstTerminee() == 1)
+                    {
                         rejouer(true, frmPrmPerso.Joueur1.GetPseudoJoueur());
+                        break;
+
+                    }
                     else if (frmPrmPerso.Jeu.EstTerminee() == 2)
+                    {
                         rejouer(true, frmPrmPerso.Joueur2IA.GetPseudoJoueur());
+                        break;
+
+                    }
                     else if (frmPrmPerso.Jeu.EstTerminee() == 0)
+                    {
                         rejouer(false, "");
-                    ChoixPicCouleurPion(picJActuel8x8);
-                    break;
+                        break;
+                    }
+                    else
+                    {
+                        if (frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA" && frmPrmPerso.Jeu.GetJoueurActif() == frmPrmPerso.Joueur2IA.GetN_Joueur())
+                        {
+                            await Task.Delay(500);
+                            appelleIA();
+                        }
+                        break;
+
+                    }
+
 
                 }
-                i++;
+                i--;
+
             }
 
         }

@@ -40,8 +40,8 @@
             lblJ2 = new Label();
             lblJ1 = new Label();
             panel3 = new Panel();
-            rbnRN = new RadioButton();
-            rbnBN = new RadioButton();
+            rbnNR = new RadioButton();
+            rbnJN = new RadioButton();
             rbnRJ = new RadioButton();
             panel2 = new Panel();
             rbnJoueur = new RadioButton();
@@ -75,11 +75,13 @@
             // rbnRandom
             // 
             rbnRandom.AutoSize = true;
+            rbnRandom.Checked = true;
             rbnRandom.Location = new Point(565, 368);
             rbnRandom.Margin = new Padding(3, 2, 3, 2);
             rbnRandom.Name = "rbnRandom";
             rbnRandom.Size = new Size(72, 19);
             rbnRandom.TabIndex = 25;
+            rbnRandom.TabStop = true;
             rbnRandom.Text = "Aléatoire";
             rbnRandom.UseVisualStyleBackColor = true;
             rbnRandom.CheckedChanged += rbnQuiDebute;
@@ -99,13 +101,11 @@
             // rbnJ1
             // 
             rbnJ1.AutoSize = true;
-            rbnJ1.Checked = true;
             rbnJ1.Location = new Point(142, 368);
             rbnJ1.Margin = new Padding(3, 2, 3, 2);
             rbnJ1.Name = "rbnJ1";
             rbnJ1.Size = new Size(69, 19);
             rbnJ1.TabIndex = 23;
-            rbnJ1.TabStop = true;
             rbnJ1.Text = "Joueur 1";
             rbnJ1.UseVisualStyleBackColor = true;
             rbnJ1.CheckedChanged += rbnQuiDebute;
@@ -180,8 +180,8 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(rbnRN);
-            panel3.Controls.Add(rbnBN);
+            panel3.Controls.Add(rbnNR);
+            panel3.Controls.Add(rbnJN);
             panel3.Controls.Add(rbnRJ);
             panel3.Location = new Point(290, 121);
             panel3.Margin = new Padding(3, 2, 3, 2);
@@ -189,29 +189,29 @@
             panel3.Size = new Size(386, 32);
             panel3.TabIndex = 18;
             // 
-            // rbnRN
+            // rbnNR
             // 
-            rbnRN.AutoSize = true;
-            rbnRN.Location = new Point(267, 8);
-            rbnRN.Margin = new Padding(3, 2, 3, 2);
-            rbnRN.Name = "rbnRN";
-            rbnRN.Size = new Size(93, 19);
-            rbnRN.TabIndex = 2;
-            rbnRN.Text = "Rouge / Noir";
-            rbnRN.UseVisualStyleBackColor = true;
-            rbnRN.CheckedChanged += rbnCouleur_CheckedChanged;
+            rbnNR.AutoSize = true;
+            rbnNR.Location = new Point(267, 8);
+            rbnNR.Margin = new Padding(3, 2, 3, 2);
+            rbnNR.Name = "rbnNR";
+            rbnNR.Size = new Size(93, 19);
+            rbnNR.TabIndex = 2;
+            rbnNR.Text = "Noir / Rouge";
+            rbnNR.UseVisualStyleBackColor = true;
+            rbnNR.CheckedChanged += rbnCouleur_CheckedChanged;
             // 
-            // rbnBN
+            // rbnJN
             // 
-            rbnBN.AutoSize = true;
-            rbnBN.Location = new Point(130, 8);
-            rbnBN.Margin = new Padding(3, 2, 3, 2);
-            rbnBN.Name = "rbnBN";
-            rbnBN.Size = new Size(89, 19);
-            rbnBN.TabIndex = 1;
-            rbnBN.Text = "Jaune / Noir";
-            rbnBN.UseVisualStyleBackColor = true;
-            rbnBN.CheckedChanged += rbnCouleur_CheckedChanged;
+            rbnJN.AutoSize = true;
+            rbnJN.Location = new Point(130, 8);
+            rbnJN.Margin = new Padding(3, 2, 3, 2);
+            rbnJN.Name = "rbnJN";
+            rbnJN.Size = new Size(89, 19);
+            rbnJN.TabIndex = 1;
+            rbnJN.Text = "Jaune / Noir";
+            rbnJN.UseVisualStyleBackColor = true;
+            rbnJN.CheckedChanged += rbnCouleur_CheckedChanged;
             // 
             // rbnRJ
             // 
@@ -410,8 +410,8 @@
         private Label lblJ2;
         private Label lblJ1;
         private Panel panel3;
-        private RadioButton rbnRN;
-        private RadioButton rbnBN;
+        private RadioButton rbnNR;
+        private RadioButton rbnJN;
         private RadioButton rbnRJ;
         private Panel panel2;
         private RadioButton rbnJoueur;

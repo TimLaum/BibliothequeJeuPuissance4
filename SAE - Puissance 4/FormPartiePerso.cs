@@ -38,7 +38,7 @@ namespace SAE___Puissance_4
             exit = true;
             if (frmParam.type_form)
             {
-                rbnIA.Checked=true;
+                rbnIA.Checked = true;
             }
 
         }
@@ -74,7 +74,8 @@ namespace SAE___Puissance_4
                 Joueur1 = new Joueur(1, colorJ1, txbJ1.Text);
                 Joueur2IA = new Joueur(2, colorJ2IA, (txbJ2.Enabled == true ? txbJ2.Text : "IA"));
 
-                if (rbnIA.Checked) { 
+                if (rbnIA.Checked)
+                {
                     IA JoueurIA = new IA(4, 2);
                 }
                 Label lblPseudoJoueur = new Label();
@@ -148,12 +149,12 @@ namespace SAE___Puissance_4
                 colorJ1 = "Rouge";
                 colorJ2IA = "Jaune";
             }
-            else if (rbnRN.Checked)
+            else if (rbnNR.Checked)
             {
-                colorJ1 = "Rouge";
-                colorJ2IA = "Noir";
+                colorJ1 = "Noir";
+                colorJ2IA = "Rouge";
             }
-            else if (rbnBN.Checked)
+            else if (rbnJN.Checked)
             {
                 colorJ1 = "Jaune";
                 colorJ2IA = "Noir";

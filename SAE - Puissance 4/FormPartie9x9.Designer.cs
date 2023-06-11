@@ -275,7 +275,7 @@
             pnlC9.Controls.Add(picI2);
             pnlC9.Controls.Add(picI1);
             pnlC9.Controls.Add(picI0);
-            pnlC9.Location = new Point(739, 130);
+            pnlC9.Location = new Point(740, 130);
             pnlC9.Margin = new Padding(3, 2, 3, 2);
             pnlC9.Name = "pnlC9";
             pnlC9.Size = new Size(68, 510);
@@ -533,7 +533,7 @@
             pnlC7.Controls.Add(picG2);
             pnlC7.Controls.Add(picG1);
             pnlC7.Controls.Add(picG0);
-            pnlC7.Location = new Point(607, 130);
+            pnlC7.Location = new Point(608, 130);
             pnlC7.Margin = new Padding(3, 2, 3, 2);
             pnlC7.Name = "pnlC7";
             pnlC7.Size = new Size(66, 510);
@@ -791,7 +791,7 @@
             pnlC5.Controls.Add(picE2);
             pnlC5.Controls.Add(picE1);
             pnlC5.Controls.Add(picE0);
-            pnlC5.Location = new Point(475, 130);
+            pnlC5.Location = new Point(476, 130);
             pnlC5.Margin = new Padding(3, 2, 3, 2);
             pnlC5.Name = "pnlC5";
             pnlC5.Size = new Size(66, 510);
@@ -1049,7 +1049,7 @@
             pnlC3.Controls.Add(picC2);
             pnlC3.Controls.Add(picC1);
             pnlC3.Controls.Add(picC0);
-            pnlC3.Location = new Point(343, 130);
+            pnlC3.Location = new Point(344, 130);
             pnlC3.Margin = new Padding(3, 2, 3, 2);
             pnlC3.Name = "pnlC3";
             pnlC3.Size = new Size(66, 510);
@@ -1178,7 +1178,7 @@
             pnlC2.Controls.Add(picB2);
             pnlC2.Controls.Add(picB1);
             pnlC2.Controls.Add(picB0);
-            pnlC2.Location = new Point(277, 130);
+            pnlC2.Location = new Point(278, 130);
             pnlC2.Margin = new Padding(3, 2, 3, 2);
             pnlC2.Name = "pnlC2";
             pnlC2.Size = new Size(66, 510);

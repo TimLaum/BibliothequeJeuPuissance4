@@ -67,7 +67,9 @@ namespace SAE___Puissance_4
             {
                 DialogResult rejouer = MessageBox.Show($"Victoire du joueur {pseudo}\n\nSouhaitez-vous rejouer?", "Victoire !", MessageBoxButtons.YesNo);
                 if (rejouer == DialogResult.Yes)
+                { 
                     this.Close();
+                }
                 else
                 {
                     Environment.Exit(0);

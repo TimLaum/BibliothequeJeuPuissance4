@@ -139,10 +139,10 @@ namespace SAE___Puissance_4
             int i = 0;
             List<(int, int)> CoupAJouer = new List<(int, int)>();
             CoupAJouer = JoueurIA.MeilleurCoup(frmPrmPerso.Jeu);
-            string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item1+1);
+            string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item2+1);
             Panel panel = Controls.Find(nomPanel,true).FirstOrDefault() as Panel;
-            ChoixPicCouleurPion((PictureBox)panel.Controls[CoupAJouer[0].Item2]);
-            //frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
+            ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes()-(CoupAJouer[0].Item1) - 1]);
+            frmPrmPerso.Jeu.JouerCoup(CoupAJouer, frmPrmPerso.Jeu.GetJoueurActif());
             ChoixPicCouleurPion(picJoueurActuel);
             VoirPlateau();
 

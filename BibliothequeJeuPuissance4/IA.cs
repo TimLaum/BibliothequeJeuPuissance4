@@ -33,7 +33,7 @@ namespace BibliothequeJeuPuissance4
             List<(int, int)> LP = new List<(int, int)>();
             CoupAjouer = MinMax(partie, 3, 2);
             LP.Add((CoupAjouer[1], CoupAjouer[2]));
-            JouerCoupIA(partie, LP);
+            //JouerCoupIA(partie, LP);
             return LP;
 
             /*
@@ -67,73 +67,66 @@ namespace BibliothequeJeuPuissance4
             List<(int, int)> LP = new List<(int, int)>();
             List<int> ListeRetour = new List<int>();
             List<int> Values = new List<int>();
+            LP = ListeCoupPossible(noeud);
             ListeRetour.Add(0);
             ListeRetour.Add(0);
             ListeRetour.Add(0);
-
-
-            if (profondeur == 0 || noeud.EstTerminee() == -1)
+            if (profondeur == 0 || noeud.EstTerminee() != -1)
             {
-                ListeRetour[0]= Evaluer(noeud);
+
+                ListeRetour[0]=(Evaluer(noeud));
+
                 return ListeRetour;
             }
             else
             {
                 f=CopierPartie(noeud);
+                
                 if (evalMax == 2)
                 {
-                    LP = ListeCoupPossible(noeud);
-                    for(int i=f.GetColonnes();i> 0; i--)
+                    ListeRetour[0] = -1000;
+                    for (int i=0;i< LP.Count; i++)
                     {
-                        if (i > 1)
+                        if (i >= 1)
                         {
                          f.InitPionPlateau(LP[i-1].Item1, LP[i-1].Item2, 0);
                         }
+
                         f.InitPionPlateau(LP[i].Item1, LP[i].Item2,evalMax);
                         Values = MinMax(f, profondeur - 1, 1);
+
                         if (ListeRetour[0] < Values[0])
                         {
-                            ListeRetour[1] = Values[1];
-                            ListeRetour[1] = Values[2];
+                            ListeRetour[0]= Values[0];
+                            ListeRetour[1] = LP[i].Item1;
+                            ListeRetour[2] = LP[i].Item2;
                         }
                     }
                     return ListeRetour;
                 }
                 else
                 {
-                    LP = ListeCoupPossible(noeud);
-                    for (int i = f.GetColonnes(); i > 0; i--)
+                    ListeRetour[0] = 1000;
+                    for (int i = 0; i < LP.Count; i++)
                     {
-                        if (i > 1)
+                        if (i >= 1)
                         {
                             f.InitPionPlateau(LP[i - 1].Item1, LP[i - 1].Item2, 0);
                         }
                         f.InitPionPlateau(LP[i].Item1, LP[i].Item2,evalMax);
                         Values = MinMax(f, profondeur - 1, 2);
-                        if (ListeRetour[0] < Values[0])
+                        if (ListeRetour[0] > Values[0])
                         {
-                            ListeRetour[1] = Values[1];
-                            ListeRetour[1] = Values[2];
+                            ListeRetour[0] = Values[0];
+                            ListeRetour[1] = LP[i].Item1;
+                            ListeRetour[2] = LP[i].Item2;
                         }
                     }
                     return ListeRetour;
                 }
             }
-            /*
-            int meilleurScore = int.MinValue;
-            
-
-            foreach ((int ligne, int colonne) in LCP)
-            {
-                Partie copiePartie = CopierPartie(noeud);
-                copiePartie.JouerCoup(new List<(int, int)> { (ligne, colonne) }, copiePartie.GetJoueurActif());
-                int score = MinMax(copiePartie, profondeur - 1,LCP);
-                meilleurScore = Math.Max(meilleurScore, score);
-            }
-
-            return meilleurScore;
-            */
         }
+
 
         private List<(int, int)> ListeCoupPossible(Partie partie)
         {
@@ -170,12 +163,11 @@ namespace BibliothequeJeuPuissance4
             {
                 verif = false;
 
-                for ( l = partie.GetLignes(); l > 0; l--)
+                for ( l = partie.GetLignes()-1; l > 0; l--)
                 {
-                    if (!partie.EstPossible(l, c))
+                    if (partie.EstPossible(l, c))
                     {
                         verif = true;
-                        l ++;
                         break;
                     }
                 }
@@ -185,13 +177,13 @@ namespace BibliothequeJeuPuissance4
                 }
 
             }
-
             return listeCoupsPossibles;
         }
 
-        private int Evaluer(Partie partie)
+        public int Evaluer(Partie partie)
         {
-            int score = 0;
+            int scoreActuel = 50;
+            int scoreTemporaire =0;
 
             for (int ligne = 0; ligne < partie.GetLignes(); ligne++)
             {
@@ -201,8 +193,16 @@ namespace BibliothequeJeuPuissance4
                     int pion2 = partie.GetPion(ligne, colonne + 1);
                     int pion3 = partie.GetPion(ligne, colonne + 2);
                     int pion4 = partie.GetPion(ligne, colonne + 3);
+                    scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
+                    if (scoreActuel != 100)
+                    {
+                        if (scoreTemporaire < scoreActuel)
+                        {
+                            scoreActuel = scoreTemporaire;
+                        }
+                    }
 
-                    score += EvaluerSequencePions(pion1, pion2, pion3, pion4);
+
                 }
             }
 
@@ -215,7 +215,18 @@ namespace BibliothequeJeuPuissance4
                     int pion3 = partie.GetPion(ligne + 2, colonne);
                     int pion4 = partie.GetPion(ligne + 3, colonne);
 
-                    score += EvaluerSequencePions(pion1, pion2, pion3, pion4);
+                    scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
+                    if (scoreActuel != 100)
+                    {
+                        if (scoreTemporaire < scoreActuel)
+                        {
+                            scoreActuel = scoreTemporaire;
+                        }
+                    }
+                    if (scoreTemporaire == 100)
+                    {
+                        scoreActuel = scoreTemporaire;
+                    }
                 }
             }
 
@@ -228,7 +239,18 @@ namespace BibliothequeJeuPuissance4
                     int pion3 = partie.GetPion(ligne + 2, colonne + 2);
                     int pion4 = partie.GetPion(ligne + 3, colonne + 3);
 
-                    score += EvaluerSequencePions(pion1, pion2, pion3, pion4);
+                    scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
+                    if (scoreActuel != 100)
+                    {
+                        if (scoreTemporaire < scoreActuel)
+                        {
+                            scoreActuel = scoreTemporaire;
+                        }
+                    }
+                    if (scoreTemporaire == 100)
+                    {
+                        scoreActuel = scoreTemporaire;
+                    }
                 }
             }
 
@@ -241,29 +263,82 @@ namespace BibliothequeJeuPuissance4
                     int pion3 = partie.GetPion(ligne - 2, colonne + 2);
                     int pion4 = partie.GetPion(ligne - 3, colonne + 3);
 
-                    score += EvaluerSequencePions(pion1, pion2, pion3, pion4);
+                    scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
+                    if (scoreActuel != 100)
+                    {
+                        if (scoreTemporaire < scoreActuel)
+                        {
+                            scoreActuel = scoreTemporaire;
+                        }
+                    }
+                    if (scoreTemporaire == 100)
+                    {
+                        scoreActuel = scoreTemporaire;
+                    }
                 }
             }
 
-            return score;
+            return scoreActuel;
         }
 
         private int EvaluerSequencePions(int pion1, int pion2, int pion3, int pion4)
         {
             int score = 0;
 
+
             if (pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 2)
             {
-                score += 100;
+                score = 100;
             }
-            else if (pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 1)
+            else
             {
-                score -= 100;
+                if(pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 0){
+                    score = 60;
+                }
+                else
+                {
+                    if (pion1 == 2 && pion2 == 2 && pion3 == 0 && pion4 == 0)
+                    {
+                        score = 30;
+                    }
+                    else
+                    {
+                        if (pion1 == 2 && pion2 == 0 && pion3 == 0 && pion4 == 0)
+                        {
+                            score = 10;
+                        }
+                    }
+                }
+
+
             }
-            else if ((pion1 == 2 || pion1 == 0) && (pion2 == 2 || pion2 == 0) &&
-                     (pion3 == 2 || pion3 == 0) && (pion4 == 2 || pion4 == 0))
+
+            if ((pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 1))
             {
-                score += 10;
+                score = -100;
+            }
+            else
+            {
+                if (pion1 == 1 && pion2 == 1 && pion3 == 1 && pion4 == 0)
+                {
+                    score = -60;
+                }
+                else
+                {
+                    if (pion1 == 1 && pion2 == 1 && pion3 == 0 && pion4 == 0)
+                    {
+                        score = -30;
+                    }
+                    else
+                    {
+                        if (pion1 == 1 && pion2 == 0 && pion3 == 0 && pion4 == 0)
+                        {
+                            score = -10;
+                        }
+
+                    }
+                }
+
             }
 
             return score;

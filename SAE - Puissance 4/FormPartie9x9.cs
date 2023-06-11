@@ -104,15 +104,15 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur1.GetCouleur();
                 if (x == "Rouge")
                 {
-                    pic.Image = Properties.Resources.PionRougeP8x8;
+                    pic.Image = Properties.Resources.PionRougeP9x9;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.PionJauneP8x8;
+                    pic.Image = Properties.Resources.PionJauneP9x9;
                 }
                 if (x == "Noir")
                 {
-                    pic.Image = Properties.Resources.PionNoirP8x8;
+                    pic.Image = Properties.Resources.PionNoirP9x9;
                 }
             }
             else
@@ -120,15 +120,15 @@ namespace SAE___Puissance_4
                 string x = frmPrmPerso.Joueur2IA.GetCouleur();
                 if (x == "Noir")
                 {
-                    pic.Image = Properties.Resources.PionNoirP8x8;
+                    pic.Image = Properties.Resources.PionNoirP9x9;
                 }
                 if (x == "Jaune")
                 {
-                    pic.Image = Properties.Resources.PionJauneP8x8;
+                    pic.Image = Properties.Resources.PionJauneP9x9;
                 }
                 if (x == "Rouge")
                 {
-                    pic.Image = Properties.Resources.PionRougeP8x8;
+                    pic.Image = Properties.Resources.PionRougeP9x9;
                 }
             }
         }

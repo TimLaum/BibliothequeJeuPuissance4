@@ -173,7 +173,6 @@ namespace BibliothequeJeuPuissance4
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
 
                         scoreActuel += scoreTemporaire;
-
                 }
             }
 
@@ -187,12 +186,7 @@ namespace BibliothequeJeuPuissance4
                     int pion4 = partie.GetPion(ligne - 3, colonne + 3);
 
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
-
-                        
-                        scoreActuel += scoreTemporaire;
-                        
-                    
-
+                    scoreActuel += scoreTemporaire;
                 }
             }
 

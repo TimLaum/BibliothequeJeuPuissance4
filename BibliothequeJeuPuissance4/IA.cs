@@ -24,20 +24,6 @@ namespace BibliothequeJeuPuissance4
         }
 
         /// <summary>
-        /// Joue le coup que l'IA à trouvé
-        /// </summary>
-        /// <param name="partie">Classe partie</param>
-        /// <param name="CoupAJouer">Le Coup que l'IA doit jouer</param>
-        public void JouerCoupIA(Partie partie, List<(int, int)> CoupAJouer)
-        {
-
-            if (partie.GetJoueurActif() == 2)
-            {
-
-                partie.JouerCoup(CoupAJouer, 2);
-            }
-        }
-        /// <summary>
         /// Trouve le meilleur coup possible en appelant la méthode MinMax et le renvoi
         /// </summary>
         /// <param name="partie">Classe partie,qui est en cours</param>
@@ -232,7 +218,7 @@ namespace BibliothequeJeuPuissance4
             else
             {
                 if(pion1 == 0 && pion2 == 2 && pion3 == 2 && pion4 == 2){
-                    score += 60;
+                    score += 80;
                 }
                 else
                 {

@@ -120,7 +120,7 @@ namespace SAE___Puissance_4
             }
             else
             {
-
+                txbJ2.Text = "Joueur 2";
                 txbJ2.Enabled = true;
                 txbJ2.BackColor = Color.White;
             }

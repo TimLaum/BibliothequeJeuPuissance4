@@ -64,9 +64,9 @@ namespace BibliothequeJeuPuissance4
             List<int> ListeRetour = new List<int>();//C'est l'élément renvoyer;Element du premier indice :score de la situation;Element du deuxième indice :indice x du meilleur coupactuel;indice y du meilleur coupactuel
             List<int> Values = new List<int>();//Element du premier indice :score de la situation;Element du deuxième indice :indice x du meilleur coupactuel;indice y du meilleur coupactuel
             LP = ListeCoupPossible(noeud);
+            ListeRetour.Add(0);
             if (LP.Count > 0)
             {
-                ListeRetour.Add(0);
                 ListeRetour.Add(LP[0].Item1);
                 ListeRetour.Add(LP[0].Item2);
             }

@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAE - Puissance 4", "SAE - 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_BibliothequeJeuPuissance4", "Test_BibliothequeJeuPuissance4\Test_BibliothequeJeuPuissance4.csproj", "{549AB69D-A641-4400-B441-BC18D7F8A47A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_IA", "Test_IA\Test_IA.csproj", "{1AD28E19-9416-4DE7-9409-E7D02609E5C9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{549AB69D-A641-4400-B441-BC18D7F8A47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{549AB69D-A641-4400-B441-BC18D7F8A47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{549AB69D-A641-4400-B441-BC18D7F8A47A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AD28E19-9416-4DE7-9409-E7D02609E5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AD28E19-9416-4DE7-9409-E7D02609E5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AD28E19-9416-4DE7-9409-E7D02609E5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AD28E19-9416-4DE7-9409-E7D02609E5C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@ Partie p;
 Partie p1;
 IA a;
 p = new Partie(6, 7, 1);
-a = new IA(4, 2);
+a = new IA(5);
 
 List<(int, int)> CoupAJouer = new List<(int, int)>();
 List<(int, int)> C = new List<(int, int)>();

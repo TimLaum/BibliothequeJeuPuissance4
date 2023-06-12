@@ -142,7 +142,9 @@
             // 
             lblTitre6x7.Anchor = AnchorStyles.Top;
             lblTitre6x7.AutoSize = true;
+            lblTitre6x7.BackColor = Color.Transparent;
             lblTitre6x7.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitre6x7.ForeColor = Color.Transparent;
             lblTitre6x7.Location = new Point(446, 67);
             lblTitre6x7.Name = "lblTitre6x7";
             lblTitre6x7.Size = new Size(280, 62);
@@ -164,6 +166,8 @@
             // 
             lblTourJoueur.Anchor = AnchorStyles.Bottom;
             lblTourJoueur.AutoSize = true;
+            lblTourJoueur.BackColor = Color.Transparent;
+            lblTourJoueur.ForeColor = SystemColors.Control;
             lblTourJoueur.Location = new Point(303, 933);
             lblTourJoueur.Name = "lblTourJoueur";
             lblTourJoueur.Size = new Size(130, 20);
@@ -838,6 +842,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1147, 972);
             Controls.Add(pictureBox2);
             Controls.Add(pnlC7);
@@ -852,6 +858,7 @@
             Controls.Add(pnlC2);
             Controls.Add(pnlC1);
             Controls.Add(picPlateau);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormPartie6x7";
             StartPosition = FormStartPosition.CenterScreen;

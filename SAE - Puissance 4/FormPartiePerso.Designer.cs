@@ -76,42 +76,50 @@
             // rbnRandom
             // 
             rbnRandom.AutoSize = true;
+            rbnRandom.BackColor = Color.Transparent;
             rbnRandom.Checked = true;
+            rbnRandom.ForeColor = SystemColors.Control;
             rbnRandom.Location = new Point(646, 491);
             rbnRandom.Name = "rbnRandom";
             rbnRandom.Size = new Size(91, 24);
             rbnRandom.TabIndex = 25;
             rbnRandom.TabStop = true;
             rbnRandom.Text = "Aléatoire";
-            rbnRandom.UseVisualStyleBackColor = true;
+            rbnRandom.UseVisualStyleBackColor = false;
             rbnRandom.CheckedChanged += rbnQuiDebute;
             // 
             // rbnJ2IA
             // 
             rbnJ2IA.AutoSize = true;
+            rbnJ2IA.BackColor = Color.Transparent;
+            rbnJ2IA.ForeColor = SystemColors.Control;
             rbnJ2IA.Location = new Point(382, 491);
             rbnJ2IA.Name = "rbnJ2IA";
             rbnJ2IA.Size = new Size(124, 24);
             rbnJ2IA.TabIndex = 24;
             rbnJ2IA.Text = "Joueur 2 ou IA";
-            rbnJ2IA.UseVisualStyleBackColor = true;
+            rbnJ2IA.UseVisualStyleBackColor = false;
             rbnJ2IA.CheckedChanged += rbnQuiDebute;
             // 
             // rbnJ1
             // 
             rbnJ1.AutoSize = true;
+            rbnJ1.BackColor = Color.Transparent;
+            rbnJ1.ForeColor = SystemColors.Control;
             rbnJ1.Location = new Point(162, 491);
             rbnJ1.Name = "rbnJ1";
             rbnJ1.Size = new Size(85, 24);
             rbnJ1.TabIndex = 23;
             rbnJ1.Text = "Joueur 1";
-            rbnJ1.UseVisualStyleBackColor = true;
+            rbnJ1.UseVisualStyleBackColor = false;
             rbnJ1.CheckedChanged += rbnQuiDebute;
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.Control;
             label5.Location = new Point(331, 448);
             label5.Name = "label5";
             label5.Size = new Size(245, 20);
@@ -121,7 +129,9 @@
             // lblPseudos
             // 
             lblPseudos.AutoSize = true;
+            lblPseudos.BackColor = Color.Transparent;
             lblPseudos.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPseudos.ForeColor = SystemColors.Control;
             lblPseudos.Location = new Point(123, 265);
             lblPseudos.Name = "lblPseudos";
             lblPseudos.Size = new Size(124, 38);
@@ -130,10 +140,12 @@
             // 
             // pnlPseudos
             // 
+            pnlPseudos.BackColor = Color.Transparent;
             pnlPseudos.Controls.Add(txbJ2);
             pnlPseudos.Controls.Add(txbJ1);
             pnlPseudos.Controls.Add(lblJ2);
             pnlPseudos.Controls.Add(lblJ1);
+            pnlPseudos.ForeColor = SystemColors.Control;
             pnlPseudos.Location = new Point(101, 289);
             pnlPseudos.Name = "pnlPseudos";
             pnlPseudos.Size = new Size(689, 140);
@@ -175,9 +187,11 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Transparent;
             panel3.Controls.Add(rbnNR);
             panel3.Controls.Add(rbnJN);
             panel3.Controls.Add(rbnRJ);
+            panel3.ForeColor = SystemColors.Control;
             panel3.Location = new Point(331, 161);
             panel3.Name = "panel3";
             panel3.Size = new Size(441, 43);
@@ -220,8 +234,10 @@
             // 
             // panel2
             // 
+            panel2.BackColor = Color.Transparent;
             panel2.Controls.Add(rbnJoueur);
             panel2.Controls.Add(rbnIA);
+            panel2.ForeColor = SystemColors.Control;
             panel2.Location = new Point(331, 209);
             panel2.Name = "panel2";
             panel2.Size = new Size(441, 43);
@@ -252,9 +268,11 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(rbn9x9);
             panel1.Controls.Add(rbn8x8);
             panel1.Controls.Add(rbn6x7);
+            panel1.ForeColor = SystemColors.Control;
             panel1.Location = new Point(331, 113);
             panel1.Name = "panel1";
             panel1.Size = new Size(441, 43);
@@ -298,6 +316,8 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(101, 223);
             label4.Name = "label4";
             label4.Size = new Size(146, 20);
@@ -307,6 +327,8 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(101, 175);
             label3.Name = "label3";
             label3.Size = new Size(127, 20);
@@ -316,7 +338,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(101, 125);
             label2.Name = "label2";
             label2.Size = new Size(118, 20);
@@ -326,7 +350,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(187, 9);
             label1.Name = "label1";
             label1.Size = new Size(469, 62);
@@ -335,6 +361,7 @@
             // 
             // panel4
             // 
+            panel4.BackColor = Color.Transparent;
             panel4.Location = new Point(101, 472);
             panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
@@ -356,6 +383,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = Properties.Resources.Design_sans_titre;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(859, 645);
             Controls.Add(btnRetour);
             Controls.Add(button1);
@@ -373,6 +402,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(panel4);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FormPartiePerso";

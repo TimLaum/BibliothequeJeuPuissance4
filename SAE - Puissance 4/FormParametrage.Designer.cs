@@ -42,6 +42,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(btnQuitter);
             panel1.Controls.Add(btnAPropos);
             panel1.Controls.Add(btnPartPerso);
@@ -110,7 +111,9 @@
             // lblTitre
             // 
             lblTitre.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitre.BackColor = Color.Transparent;
             lblTitre.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitre.ForeColor = SystemColors.Control;
             lblTitre.Location = new Point(517, 15);
             lblTitre.Name = "lblTitre";
             lblTitre.Size = new Size(281, 68);
@@ -122,9 +125,12 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1317, 813);
             Controls.Add(panel1);
             Controls.Add(lblTitre);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FormParametrage";

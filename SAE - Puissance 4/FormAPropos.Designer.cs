@@ -41,7 +41,9 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Transparent;
             label1.Location = new Point(242, 31);
             label1.Name = "label1";
             label1.Size = new Size(280, 62);
@@ -51,7 +53,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(279, 113);
             label2.Name = "label2";
             label2.Size = new Size(172, 46);
@@ -61,6 +65,8 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(171, 187);
             label3.Name = "label3";
             label3.Size = new Size(64, 20);
@@ -71,6 +77,8 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(171, 272);
             label4.Name = "label4";
             label4.Size = new Size(115, 20);
@@ -80,6 +88,8 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.ForeColor = SystemColors.Control;
             label5.Location = new Point(342, 187);
             label5.Name = "label5";
             label5.Size = new Size(36, 20);
@@ -89,6 +99,8 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.ForeColor = SystemColors.Control;
             label6.Location = new Point(342, 272);
             label6.Name = "label6";
             label6.Size = new Size(173, 100);
@@ -111,6 +123,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(738, 520);
             Controls.Add(btnRetour);
             Controls.Add(label6);
@@ -119,6 +133,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);

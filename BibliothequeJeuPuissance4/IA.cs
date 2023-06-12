@@ -123,9 +123,6 @@ namespace BibliothequeJeuPuissance4
         {
             int scoreActuel = 0;
             int scoreTemporaire =0;
-
-
-
             for (int ligne = 0; ligne < partie.GetLignes() - 3; ligne++)//Vérifie les colonnes
             {
                 for (int colonne = 0; colonne < partie.GetColonnes(); colonne++)
@@ -134,12 +131,8 @@ namespace BibliothequeJeuPuissance4
                     int pion2 = partie.GetPion(ligne + 1, colonne);
                     int pion3 = partie.GetPion(ligne + 2, colonne);
                     int pion4 = partie.GetPion(ligne + 3, colonne);
-
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
-
-                        scoreActuel += scoreTemporaire;
-                    
-  
+                    scoreActuel += scoreTemporaire;
                 }
             }
 
@@ -152,12 +145,7 @@ namespace BibliothequeJeuPuissance4
                     int pion3 = partie.GetPion(ligne, colonne + 2);
                     int pion4 = partie.GetPion(ligne, colonne + 3);
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
-
-                       
-                        scoreActuel += scoreTemporaire;
-                        
-
-
+                    scoreActuel += scoreTemporaire;
                 }
             }
 
@@ -169,10 +157,8 @@ namespace BibliothequeJeuPuissance4
                     int pion2 = partie.GetPion(ligne + 1, colonne + 1);
                     int pion3 = partie.GetPion(ligne + 2, colonne + 2);
                     int pion4 = partie.GetPion(ligne + 3, colonne + 3);
-
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
-
-                        scoreActuel += scoreTemporaire;
+                    scoreActuel += scoreTemporaire;
                 }
             }
 
@@ -184,12 +170,10 @@ namespace BibliothequeJeuPuissance4
                     int pion2 = partie.GetPion(ligne - 1, colonne + 1);
                     int pion3 = partie.GetPion(ligne - 2, colonne + 2);
                     int pion4 = partie.GetPion(ligne - 3, colonne + 3);
-
                     scoreTemporaire = EvaluerSequencePions(pion1, pion2, pion3, pion4);
                     scoreActuel += scoreTemporaire;
                 }
             }
-
             return scoreActuel;
         }
         /// <summary>

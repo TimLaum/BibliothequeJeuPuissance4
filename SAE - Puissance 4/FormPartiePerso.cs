@@ -76,7 +76,7 @@ namespace SAE___Puissance_4
 
                 if (rbnIA.Checked)
                 {
-                    IA JoueurIA = new IA(4);
+                    IA JoueurIA = new IA(3);
                 }
                 Label lblPseudoJoueur = new Label();
                 Jeu = new Partie(ligne, colonne, JoueurDebutant);

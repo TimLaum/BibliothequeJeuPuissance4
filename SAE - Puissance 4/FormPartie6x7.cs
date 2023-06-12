@@ -15,7 +15,7 @@ namespace SAE___Puissance_4
         /// </summary>
         private int columnNumber;
 
-        
+
         /// <summary>
         /// Détermination de la variable de la musique de fond 
         /// </summary>
@@ -25,7 +25,7 @@ namespace SAE___Puissance_4
         /// Son joué a chaque pion posé sur le formulaire
         /// </summary>
         private SoundPlayer JetonPose = new SoundPlayer(Properties.Resources.Son_Placement_Pion);
-        
+
         public FormPartie6x7()
         {
             InitializeComponent();
@@ -99,7 +99,7 @@ namespace SAE___Puissance_4
         /// </summary>
         /// <param name="p">Panel donné qui se verra modifier</param>
         /// <returns></returns>
-        private void Panel_Transparence(Panel p) 
+        private void Panel_Transparence(Panel p)
         {
             var posi = this.PointToScreen(p.Location);
             posi = picPlateau.PointToClient(posi);
@@ -170,7 +170,7 @@ namespace SAE___Puissance_4
         /// Méthode qui renvoie l'indice de colonne d'un panel lorsque la souris entre à l'intérieur
         /// </summary>
         /// <returns></returns>
-        private void pnlC_MouseEnter(object sender, EventArgs e) 
+        private void pnlC_MouseEnter(object sender, EventArgs e)
         {
             Panel panel = sender as Panel;// Récupère les informations du panel dans lequel se trouve la souris lors du click
 
@@ -252,8 +252,8 @@ namespace SAE___Puissance_4
         /// <returns></returns>
         private async void pnlC_Click(object sender, EventArgs e)
         {
-            Panel panel = sender as Panel; 
-            List<(int, int)> CoupAJouer = new List<(int, int)>(); 
+            Panel panel = sender as Panel;
+            List<(int, int)> CoupAJouer = new List<(int, int)>();
             int i = frmPrmPerso.Jeu.GetLignes() - 1; // Récupération du nombre de lignes du plateau - 1 pour inspecter les lignes du tableau 1 par 1 en partant de la ligne la plus basse correspondant à la ligne de dépot des pions au début du jeu
             while (i >= 0) //Tant que toutes les lignes ne sont pas vérifiées
             {

@@ -255,5 +255,59 @@ namespace BibliothequeJeuPuissance4
             }
             return true;
         }
+
+        /// <summary>
+        /// Copie une classe partie et renvoie cette copie
+        /// </summary>
+        /// <returns></returns>
+        public Partie CopierPartie()
+        {
+            int lignes = GetLignes();
+            int colonnes = GetColonnes();
+            Partie copiePartie = new Partie(lignes, colonnes, GetJoueurActif());
+            for (int ligne = 0; ligne < lignes; ligne++)
+            {
+                for (int colonne = 0; colonne < colonnes; colonne++)
+                {
+                    int pion = GetPion(ligne, colonne);
+                    copiePartie.JouerCoup(new List<(int, int)> { (ligne, colonne) }, pion);
+                }
+            }
+            return copiePartie;
+        }
+
+
+        /// <summary>
+        /// Liste des coup possible sur un plateau de la classe partie
+        /// </summary>
+        /// <returns></returns>
+        public List<(int, int)> ListeCoupPossible()
+        {
+            bool verif = false;
+            int c, l;
+
+
+            List<(int, int)> listeCoupsPossibles = new List<(int, int)>();
+
+            for (c = 0; c < GetColonnes(); c++)
+            {
+                verif = false;
+
+                for (l = GetLignes() - 1; l >= 0; l--)
+                {
+                    if (EstPossible(l, c))
+                    {
+                        verif = true;
+                        break;
+                    }
+                }
+                if (verif)
+                {
+                    listeCoupsPossibles.Add((l, c));
+                }
+
+            }
+            return listeCoupsPossibles;
+        }
     }
 }

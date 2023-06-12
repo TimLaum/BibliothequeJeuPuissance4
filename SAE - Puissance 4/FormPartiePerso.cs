@@ -87,6 +87,11 @@ namespace SAE___Puissance_4
             {
                 rbnIA.Checked = true;
             }
+            else
+            {
+                txbJ2.Text = "Joueur 2";
+            }
+            txbJ1.Text = "Joueur 1";
             JoueurDebutant = rnd.Next(1, 3);
 
         }

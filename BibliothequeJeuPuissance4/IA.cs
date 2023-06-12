@@ -63,7 +63,7 @@ namespace BibliothequeJeuPuissance4
             List<(int, int)> LP = new List<(int, int)>();//Une liste de tuples des indices  des coups possible 
             List<int> ListeRetour = new List<int>();//C'est l'élément renvoyer;Element du premier indice :score de la situation;Element du deuxième indice :indice x du meilleur coupactuel;indice y du meilleur coupactuel
             List<int> Values = new List<int>();//Element du premier indice :score de la situation;Element du deuxième indice :indice x du meilleur coupactuel;indice y du meilleur coupactuel
-            LP = ListeCoupPossible(noeud);
+            LP = noeud.ListeCoupPossible();
             ListeRetour.Add(0);
             if (LP.Count > 0)
             {
@@ -79,7 +79,7 @@ namespace BibliothequeJeuPuissance4
             }
             else
             {
-                f=CopierPartie(noeud);
+                 f = noeud.CopierPartie();
                 
                 if (evalMax == 2)
                 {
@@ -126,39 +126,7 @@ namespace BibliothequeJeuPuissance4
             }
         }
 
-        /// <summary>
-        /// Liste des coup possible sur un plateau de la classe partie
-        /// </summary>
-        /// <param name="partie">Classe partie à évaluer</param>
-        /// <returns></returns>
-        public List<(int, int)> ListeCoupPossible(Partie partie)
-        {
-            bool verif=false;
-            int c, l;
-
-
-            List<(int, int)> listeCoupsPossibles = new List<(int, int)>();
-
-            for( c = 0; c < partie.GetColonnes(); c++)
-            {
-                verif = false;
-
-                for ( l = partie.GetLignes()-1; l >= 0; l--)
-                {
-                    if (partie.EstPossible(l, c))
-                    {
-                        verif = true;
-                        break;
-                    }
-                }
-                if (verif)
-                {
-                    listeCoupsPossibles.Add((l, c));
-                }
-
-            }
-            return listeCoupsPossibles;
-        }
+        
 
         /// <summary>
         /// Evalue la situation sur un plateau de la classe partie pour le Joueur Numéro 2 et renvoye le score de cette situation
@@ -314,25 +282,7 @@ namespace BibliothequeJeuPuissance4
 
             return score;
         }
-        /// <summary>
-        /// Copie une classe partie et renvoye cette copie
-        /// </summary>
-        /// <param name="partie">Classe partie à copier</param>
-        /// <returns></returns>
-        private Partie CopierPartie(Partie partie)
-        {
-            int lignes = partie.GetLignes();
-            int colonnes = partie.GetColonnes();
-            Partie copiePartie = new Partie(lignes, colonnes,partie.GetJoueurActif());
-            for (int ligne = 0; ligne < lignes; ligne++)
-            {
-                for (int colonne = 0; colonne < colonnes; colonne++)
-                {
-                    int pion = partie.GetPion(ligne, colonne);
-                    copiePartie.JouerCoup(new List<(int, int)> { (ligne, colonne) }, pion);
-                }
-            }
-            return copiePartie;
-        }
+        
+        
     }
 }

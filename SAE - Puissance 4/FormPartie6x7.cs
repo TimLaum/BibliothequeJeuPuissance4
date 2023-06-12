@@ -47,6 +47,7 @@ namespace SAE___Puissance_4
             Panel_Transparence(pnlC5);
             Panel_Transparence(pnlC6);
             Panel_Transparence(pnlC7);
+            
             //Transparence des panels pour le bon fonctionnement des designs dans le Form
             if (frmPrmPerso.Jeu.GetJoueurActif() == 2 && frmPrmPerso.Joueur2IA.GetPseudoJoueur() == "IA") //Si l'IA commence elle joue son coup dès le chargement du Form
             {

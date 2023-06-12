@@ -110,10 +110,14 @@ namespace SAE___Puissance_4
             if (rbnIA.Checked)
             {
                 txbJ2.Enabled = false;
+                txbJ2.Text = "";
+                txbJ2.BackColor = Color.Gray;
             }
             else
             {
+
                 txbJ2.Enabled = true;
+                txbJ2.BackColor = Color.White;
             }
         }
 

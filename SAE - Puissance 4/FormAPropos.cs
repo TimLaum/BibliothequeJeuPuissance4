@@ -17,7 +17,11 @@ namespace SAE___Puissance_4
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Fonction qui ferme le Form lorsque le bouton est cliqué
+        /// </summary>
+        /// <returns></returns>
+        private void btnRetour_Click(object sender, EventArgs e)
         {
             this.Close();
         }

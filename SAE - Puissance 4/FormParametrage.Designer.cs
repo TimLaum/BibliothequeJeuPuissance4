@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormParametrage));
             panel1 = new Panel();
             btnQuitter = new Button();
             btnAPropos = new Button();
@@ -124,6 +125,7 @@
             ClientSize = new Size(1317, 813);
             Controls.Add(panel1);
             Controls.Add(lblTitre);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "FormParametrage";
             StartPosition = FormStartPosition.CenterScreen;

@@ -33,7 +33,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui s'instancie au lancement du Form et permet des modifications de variables dès l'instanciation
+        /// Méthode qui s'instancie au lancement du Form et permet des modifications de variables dès l'instanciation
         /// </summary>
         /// <returns></returns>
         private void FormPartie9x9_Load(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui permet lorsque la partie est déterminée comme finie de rejouer en affichant un message selon qui a gagné ou si personne n'a gagné
+        /// Méthode qui permet lorsque la partie est déterminée comme finie de rejouer en affichant un message selon qui a gagné ou si personne n'a gagné
         /// </summary>
         /// <param name="win">Booléen qui prend la valeur true si la partie est gagnée par un joueur ou false si égalité</param>
         /// <param name="pseudo">Pseudo du joueur gagnant</param>
@@ -97,7 +97,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction pour rendre les panels transparents
+        /// Méthode pour rendre les panels transparents
         /// </summary>
         /// <param name="p">Panel donné qui se verra modifier</param>
         /// <returns></returns>
@@ -111,7 +111,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction pour jouer la musique de fond en boucle
+        /// Méthode pour jouer la musique de fond en boucle
         /// </summary>
         /// <returns></returns>
         private void playLooping()
@@ -128,7 +128,7 @@ namespace SAE___Puissance_4
 
 
         /// <summary>
-        /// Fonction qui attribue une image correspondant à un pion de couleur à une PictureBox donnée selon le numéro du joueur actif (Joueur1 == 1 / Joueur2IA == 2)
+        /// Méthode qui attribue une image correspondant à un pion de couleur à une PictureBox donnée selon le numéro du joueur actif (Joueur1 == 1 / Joueur2IA == 2)
         /// </summary>
         /// <param name="pic">PictureBox à modifier</param>
         /// <returns></returns>
@@ -169,7 +169,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui renvoie l'indice de colonne d'un panel lorsque la souris entre à l'intérieur
+        /// Méthode qui renvoie l'indice de colonne d'un panel lorsque la souris entre à l'intérieur
         /// </summary>
         /// <returns></returns>
         private void pnlC_MouseEnter(object sender, EventArgs e)
@@ -188,7 +188,7 @@ namespace SAE___Puissance_4
 
 
         /// <summary>
-        /// Fonction qui, lorsqu'elle est appelée, Joue un coup optimisé par la classe IA qui détermine le meilleur coup possible
+        /// Méthode qui, lorsqu'elle est appelée, Joue un coup optimisé par la classe IA qui détermine le meilleur coup possible
         /// </summary>
         /// <returns></returns>
         private void appelleIA()
@@ -218,7 +218,7 @@ namespace SAE___Puissance_4
 
 
         /// <summary>
-        /// Fonction qui selon une liste de coordonnées (ligne, colonne), joue un coup dans le plateau de la partie, joue un son de pion posé, et actualise l'affichage
+        /// Méthode qui selon une liste de coordonnées (ligne, colonne), joue un coup dans le plateau de la partie, joue un son de pion posé, et actualise l'affichage
         /// </summary>
         /// <param name="CoupAJouer">Numéro Joueur et pion</param>
         /// <returns></returns>
@@ -231,7 +231,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui Actualise les données d'affichage liées au label et a la pictureBox du joueur devant jouer le coup
+        /// Méthode qui Actualise les données d'affichage liées au label et a la pictureBox du joueur devant jouer le coup
         /// </summary>
         /// <returns></returns>
         private void TourDuJoueur()
@@ -249,7 +249,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui joue un coup selon le panel cliqué (la fonction possède async car il y a une ligne qui ajoute du délai avant un prochain coup lors de l'appel de l'IA)
+        /// Méthode qui joue un coup selon le panel cliqué (la fonction possède async car il y a une ligne qui ajoute du délai avant un prochain coup lors de l'appel de l'IA)
         /// </summary>
         /// <returns></returns>
         private async void pnlC_Click(object sender, EventArgs e)
@@ -302,7 +302,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction activée lors de la fermeture du Form et qui arrête la musique
+        /// Méthode activée lors de la fermeture du Form et qui arrête la musique
         /// </summary>
         /// <returns></returns>
         private void FormPartie9x9_FormClosed(object sender, FormClosedEventArgs e)
@@ -311,7 +311,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction activée lors du click du bouton d'abandon de partie et qui ferme le Form
+        /// Méthode activée lors du click du bouton d'abandon de partie et qui ferme le Form
         /// </summary>
         /// <returns></returns>
         private void btnAbandon_Click(object sender, EventArgs e) //Retour au FormParametrage si le bouton d'abandon de partie est cliqué

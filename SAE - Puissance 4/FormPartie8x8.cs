@@ -41,7 +41,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui s'instancie au lancement du Form et permet des modifications de variables dès l'instanciation
+        /// Méthode qui s'instancie au lancement du Form et permet des modifications de variables dès l'instanciation
         /// </summary>
         /// <returns></returns>
         private void FormPartie8x8_Load(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui permet lorsque la partie est déterminée comme finie de rejouer en affichant un message selon qui a gagné ou si personne n'a gagné
+        /// Méthode qui permet lorsque la partie est déterminée comme finie de rejouer en affichant un message selon qui a gagné ou si personne n'a gagné
         /// </summary>
         /// <param name="win">Booléen qui prend la valeur true si la partie est gagnée par un joueur ou false si égalité</param>
         /// <param name="pseudo">Pseudo du joueur gagnant</param>
@@ -98,14 +98,14 @@ namespace SAE___Puissance_4
                     }
                 }
             }
-            catch (Exception ex)//Exception si la fonction à une erreur quelconque lors de l'appel
+            catch (Exception ex)//Exception si la Méthode à une erreur quelconque lors de l'appel
             {
                 MessageBox.Show(ex.Message, "Erreur lors de la tentative pour rejouer");
             }
         }
 
         /// <summary>
-        /// Fonction pour rendre les panels transparents
+        /// Méthode pour rendre les panels transparents
         /// </summary>
         /// <param name="p">Panel donné qui se verra modifier</param>
         /// <returns></returns>
@@ -119,7 +119,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction pour jouer la musique de fond en boucle
+        /// Méthode pour jouer la musique de fond en boucle
         /// </summary>
         /// <returns></returns>
         private void playLooping()
@@ -136,7 +136,7 @@ namespace SAE___Puissance_4
 
 
         /// <summary>
-        /// Fonction qui attribue une image correspondant à un pion de couleur à une PictureBox donnée selon le numéro du joueur actif (Joueur1 == 1 / Joueur2IA == 2)
+        /// Méthode qui attribue une image correspondant à un pion de couleur à une PictureBox donnée selon le numéro du joueur actif (Joueur1 == 1 / Joueur2IA == 2)
         /// </summary>
         /// <param name="pic">PictureBox à modifier</param>
         /// <returns></returns>
@@ -177,7 +177,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui renvoie l'indice de colonne d'un panel lorsque la souris entre à l'intérieur
+        /// Méthode qui renvoie l'indice de colonne d'un panel lorsque la souris entre à l'intérieur
         /// </summary>
         /// <returns></returns>
         private void pnlC_MouseEnter(object sender, EventArgs e)
@@ -196,7 +196,7 @@ namespace SAE___Puissance_4
 
 
         /// <summary>
-        /// Fonction qui, lorsqu'elle est appelée, Joue un coup optimisé par la classe IA qui détermine le meilleur coup possible
+        /// Méthode qui, lorsqu'elle est appelée, Joue un coup optimisé par la classe IA qui détermine le meilleur coup possible
         /// </summary>
         /// <returns></returns>
         private void appelleIA()
@@ -210,9 +210,9 @@ namespace SAE___Puissance_4
 
             string nomPanel = string.Format("pnlC{0}", CoupAJouer[0].Item2 + 1); //Récupère le nom du panel lié à l'indice de la colonne de la liste CoupAJouer
 
-            Panel panel = Controls.Find(nomPanel, true).FirstOrDefault() as Panel; //Relie le panel qui contient la pictureBox de la bonne colonne grâce à une fonction qui recherche le nom du panel que l'on a déterminé auparavant
+            Panel panel = Controls.Find(nomPanel, true).FirstOrDefault() as Panel; //Relie le panel qui contient la pictureBox de la bonne colonne grâce à une Méthode qui recherche le nom du panel que l'on a déterminé auparavant
 
-            ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - (CoupAJouer[0].Item1) - 1]);//Appel de la fonction qui donne l'image du pion selon le joueur à la pictureBox
+            ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - (CoupAJouer[0].Item1) - 1]);//Appel de la Méthode qui donne l'image du pion selon le joueur à la pictureBox
                                                                                                                      //correspondant à la ligne dans la liste CoupAJouer
             JouerUnCoup(CoupAJouer);//Joue le coup dans le plateau avec la liste qui comprend la ligne et la colonne
 
@@ -226,7 +226,7 @@ namespace SAE___Puissance_4
 
 
         /// <summary>
-        /// Fonction qui selon une liste de coordonnées (ligne, colonne), joue un coup dans le plateau de la partie, joue un son de pion posé, et actualise l'affichage
+        /// Méthode qui selon une liste de coordonnées (ligne, colonne), joue un coup dans le plateau de la partie, joue un son de pion posé, et actualise l'affichage
         /// </summary>
         /// <param name="CoupAJouer">Numéro Joueur et pion</param>
         /// <returns></returns>
@@ -239,7 +239,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui Actualise les données d'affichage liées au label et a la pictureBox du joueur devant jouer le coup
+        /// Méthode qui Actualise les données d'affichage liées au label et a la pictureBox du joueur devant jouer le coup
         /// </summary>
         /// <returns></returns>
         private void TourDuJoueur()
@@ -257,7 +257,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction qui joue un coup selon le panel cliqué (la fonction possède async car il y a une ligne qui ajoute du délai avant un prochain coup lors de l'appel de l'IA)
+        /// Méthode qui joue un coup selon le panel cliqué (la Méthode possède async car il y a une ligne qui ajoute du délai avant un prochain coup lors de l'appel de l'IA)
         /// </summary>
         /// <returns></returns>
         private async void pnlC_Click(object sender, EventArgs e)
@@ -270,7 +270,7 @@ namespace SAE___Puissance_4
                 if (frmPrmPerso.Jeu.EstPossible(i, columnNumber)) //Détermine si la valeur dans le tableau est a 0, dans ce cas le coup est jouable et la fonction renvoie true
                 {
                     CoupAJouer.Add((i, columnNumber)); //On donne les indices du coup jouable a la variable CoupAJouer
-                    ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - 1 - i]); //Appel la fonction ChoixPicCouleurPion avec la pictureBox la plus basse possible du tableau sans valeur (==0)
+                    ChoixPicCouleurPion((PictureBox)panel.Controls[frmPrmPerso.Jeu.GetLignes() - 1 - i]); //Appel la Méthode ChoixPicCouleurPion avec la pictureBox la plus basse possible du tableau sans valeur (==0)
                                                                                                           //et lui donne l'image du pion du joueur actif (autrement dit le joueur ayant cliqué sur le panel)
                     JouerUnCoup(CoupAJouer); // Joue le coup dans le tableau de la partie avec la ligne et colonne entrées dans CoupAJouer précédemment
                     if (frmPrmPerso.Jeu.EstTerminee() == 1) //Si victoire du joueur 1
@@ -310,7 +310,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction activée lors de la fermeture du Form et qui arrête la musique
+        /// Méthode activée lors de la fermeture du Form et qui arrête la musique
         /// </summary>
         /// <returns></returns>
         private void FormPartie8x8_FormClosed(object sender, FormClosedEventArgs e)
@@ -319,7 +319,7 @@ namespace SAE___Puissance_4
         }
 
         /// <summary>
-        /// Fonction activée lors du click du bouton d'abandon de partie et qui ferme le Form
+        /// Méthode activée lors du click du bouton d'abandon de partie et qui ferme le Form
         /// </summary>
         /// <returns></returns>
         private void btnAbandon_Click(object sender, EventArgs e) //Retour au FormParametrage si le bouton d'abandon de partie est cliqué

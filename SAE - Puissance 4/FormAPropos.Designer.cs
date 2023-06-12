@@ -34,7 +34,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            button1 = new Button();
+            btnRetour = new Button();
             SuspendLayout();
             // 
             // label1
@@ -94,16 +94,16 @@
             label6.TabIndex = 5;
             label6.Text = "Antoine PISSON\r\nAntoine COUTREEL\r\nMalcolm WALTER\r\nClaire VIGUOINE\r\nTimothée L'AUMONNIER";
             // 
-            // button1
+            // btnRetour
             // 
-            button1.Location = new Point(271, 448);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(199, 34);
-            button1.TabIndex = 6;
-            button1.Text = "RETOUR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnRetour.Location = new Point(271, 448);
+            btnRetour.Margin = new Padding(3, 2, 3, 2);
+            btnRetour.Name = "btnRetour";
+            btnRetour.Size = new Size(199, 34);
+            btnRetour.TabIndex = 6;
+            btnRetour.Text = "RETOUR";
+            btnRetour.UseVisualStyleBackColor = true;
+            btnRetour.Click += btnRetour_Click;
             // 
             // FormAPropos
             // 
@@ -111,7 +111,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(738, 520);
-            Controls.Add(button1);
+            Controls.Add(btnRetour);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -136,6 +136,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Button button1;
+        private Button btnRetour;
     }
 }

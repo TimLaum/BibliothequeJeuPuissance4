@@ -202,7 +202,6 @@ namespace Test_BibliothequeJeuPuissance4
             P.JouerCoup(Coups, 2);
             Coups[0] = (2, 4);
             P.JouerCoup(Coups,1);
-            P.InitPionPlateau(2, 4, 1);
             // Act
             res = P.EstTerminee();
             // Assert

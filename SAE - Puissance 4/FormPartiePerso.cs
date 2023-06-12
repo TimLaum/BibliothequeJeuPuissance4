@@ -160,5 +160,11 @@ namespace SAE___Puissance_4
                 colorJ2IA = "Noir";
             }
         }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            exit = false;
+            this.Close();
+        }
     }
 }

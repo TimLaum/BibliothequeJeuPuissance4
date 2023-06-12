@@ -55,6 +55,7 @@
             label2 = new Label();
             label1 = new Label();
             panel4 = new Panel();
+            btnRetour = new Button();
             pnlPseudos.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -63,7 +64,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(264, 418);
+            button1.Location = new Point(411, 417);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(235, 43);
@@ -356,12 +357,24 @@
             panel4.Size = new Size(603, 44);
             panel4.TabIndex = 27;
             // 
+            // btnRetour
+            // 
+            btnRetour.Location = new Point(118, 417);
+            btnRetour.Margin = new Padding(3, 2, 3, 2);
+            btnRetour.Name = "btnRetour";
+            btnRetour.Size = new Size(235, 43);
+            btnRetour.TabIndex = 28;
+            btnRetour.Text = "Retour";
+            btnRetour.UseVisualStyleBackColor = true;
+            btnRetour.Click += btnRetour_Click;
+            // 
             // FormPartiePerso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(752, 484);
+            Controls.Add(btnRetour);
             Controls.Add(button1);
             Controls.Add(rbnRandom);
             Controls.Add(rbnJ2IA);
@@ -425,5 +438,6 @@
         private Label label2;
         private Label label1;
         private Panel panel4;
+        private Button btnRetour;
     }
 }

@@ -259,7 +259,7 @@ namespace BibliothequeJeuPuissance4
 
             if (pion1 == 2 && pion2 == 2 && pion3 == 2 && pion4 == 2)
             {
-                score += 100;
+                score += 200;
             }
             else
             {

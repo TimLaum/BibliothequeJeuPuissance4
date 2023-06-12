@@ -99,10 +99,8 @@ namespace SAE___Puissance_4
                     this.Hide();
                     newPartie.ShowDialog(this);
                 }
-                exit = false;
-                this.Close();
-                //lblPseudoJoueur.Text = Convert.ToString(Joueur1.GetCouleur());
-                //MessageBox.Show(Convert.ToString(JoueurDebutant));
+                this.Show();
+
             }
 
         }

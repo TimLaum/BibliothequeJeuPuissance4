@@ -127,7 +127,7 @@
             MaximizeBox = false;
             Name = "FormParametrage";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Accueil";
             FormClosing += FormParametrage_FormClosing;
             Load += FormParametrage_Load;
             panel1.ResumeLayout(false);

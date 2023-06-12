@@ -194,7 +194,7 @@ namespace SAE___Puissance_4
         /// <returns></returns>
         private void appelleIA()
         {
-            IA JoueurIA = new IA(5); // 4 = Profondeur maximum de l'IA / 2 = numéro du joueur (forcément 2 car l'IA remplace le joueur 2)
+            IA JoueurIA = new IA(5); // 5 = Profondeur maximum de l'IA 
 
             int i = 0;
             List<(int, int)> CoupAJouer = new List<(int, int)>();//Liste qui récupère l'indice de ligne et colonne du coup à jouer

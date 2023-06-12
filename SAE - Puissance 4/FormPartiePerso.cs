@@ -38,21 +38,21 @@ namespace SAE___Puissance_4
         /// Variable qui determine par défaut le nombre de colonnes du plateau a 7
         /// </summary>
         int colonne = 7;
+        /// <summary>
+        /// Variable qui est appelée pour utiliser la fonction Random
+        /// </summary>
+        Random rnd = new Random();
 
         /// <summary>
         /// Variable qui determine par défaut le joueur qui débute la partie par le joueur1
         /// </summary>
-        int JoueurDebutant = 1;
+        int JoueurDebutant;
 
         /// <summary>
         /// Variable qui determine si le Form doit être fermé ou si l'application doit être quittée
         /// </summary>
         bool exit;
 
-        /// <summary>
-        /// Variable qui est appelée pour utiliser la fonction Random
-        /// </summary>
-        Random rnd = new Random();
 
         /// <summary>
         /// Variable qui est appelée pour utiliser la classe Partie
@@ -87,6 +87,7 @@ namespace SAE___Puissance_4
             {
                 rbnIA.Checked = true;
             }
+            JoueurDebutant = rnd.Next(1, 3);
 
         }
 

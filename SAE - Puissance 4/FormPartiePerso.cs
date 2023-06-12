@@ -160,7 +160,10 @@ namespace SAE___Puissance_4
                     newPartie.ShowDialog(this);
                 }
                 this.Show();
-
+                if(rbnRandom.Checked)
+                {
+                    JoueurDebutant = rnd.Next(1, 3);
+                }
             }
 
         }
